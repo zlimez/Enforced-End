@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     public float movement = 100.0f;
     public float sight = 100.0f;
     public float hear = 100.0f;
+    public float armour = 100.0f;
     public float health = 100.0f;
     public float meleeDamage = 10.0f;
     public float degradationTime = 1.0f;
@@ -78,6 +79,8 @@ public class PlayerController : MonoBehaviour
             sight -= 1.0f;
             hear -= 1.0f;
             movement -= 1.0f;
+            armour -= 1.0f;
+            health -= 1.0f;
         }
     }
 
@@ -92,6 +95,9 @@ public class PlayerController : MonoBehaviour
             case "movement":
             movement -= amount;
             break;
+            case "armour":
+            armour -= amount;
+            break;
         }
 
         switch (boosted) {
@@ -103,6 +109,9 @@ public class PlayerController : MonoBehaviour
             break;
             case "movement":
             movement += amount;
+            break;
+            case "armour":
+            armour += amount;
             break;
         }
     }
