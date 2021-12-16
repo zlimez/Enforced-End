@@ -5,10 +5,9 @@ using Pathfinding;
 
 public class RangedEnemyBehavior : MonoBehaviour
 {
-    GameObject player;
+    public static GameObject player;
     public GameObject projectile;
     public Transform firePoint;
-    public float speed = 5.0f;
     public float attackInterval = 2.0f;
     // Start is called before the first frame update
     void Start()
