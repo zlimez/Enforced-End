@@ -21,9 +21,22 @@ public class DialogueManager : MonoBehaviour
         sentences = new Queue<string>();
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown("f"))
+        {
+            DisplayNextSentence();
+        }
+        else if (Input.GetKeyDown("x"))
+        {
+            EndDialogue();
+        }
+    }
+
     public void StartDialogue(Dialogue dialogue)
     {
         animator.SetBool("IsOpen", true);
+        enabled = true;
         sentences.Clear();
         foreach (string sentence in dialogue.sentences) {
             sentences.Enqueue(sentence);
@@ -63,5 +76,6 @@ public class DialogueManager : MonoBehaviour
         animator.SetBool("IsOpen", false);
         isSentenceTyping = false;
         dialogueEndEvent?.Invoke();
+        enabled = false;
     }
 }
