@@ -7,11 +7,26 @@ public class StatBar : MonoBehaviour
 {
     public Slider slider;
     public static PlayerController player;
+    public static Slider[] allBars = new Slider[4];
     // Start is called before the first frame update
     void Awake() {
         player = player == null ? GameObject.Find("Player").GetComponent<PlayerController>() : player;
         Debug.Log(player.gameObject.name);
         slider = GetComponent<Slider>();
+        switch (gameObject.name) {
+            case "Movement bar":
+            allBars[0] = slider;
+            break;
+            case "Armour bar":
+            allBars[1] = slider;
+            break;
+            case "Hearing bar":
+            allBars[2] = slider;
+            break;
+            case "Sight bar":
+            allBars[3] = slider;
+            break;
+        }
     }
     void OnEnable() {
         switch (gameObject.name) {

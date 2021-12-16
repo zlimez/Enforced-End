@@ -16,8 +16,8 @@ public class PlayerController : MonoBehaviour
     public float sight = 100.0f;
     public float hear = 100.0f;
     public float armour = 100.0f;
+    public float dmgReduction = 10f;
     public float health = 100.0f;
-    public float meleeDamage = 10.0f;
     public float degradationTime = 1.0f;
     public float maxShootAngleDev = 10.0f; 
     void Start()
@@ -40,7 +40,6 @@ public class PlayerController : MonoBehaviour
                 equipped = weapon.MELEE;
             } else
                 equipped = weapon.RIFLE;
-
         }
         if (Input.GetMouseButtonDown(0)) {
             Vector2 point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -59,14 +58,6 @@ public class PlayerController : MonoBehaviour
         body.velocity = new Vector2(horizontal * runspeed * movement / 100.0f, vertical * runspeed * movement / 100.0f);
     }
 
-    // void OnCollisionStay2D(Collision2D col) {
-    //     if (Input.GetMouseButton(0)) {
-    //         // trigger attack animation
-    //         if (col.gameObject.tag == "Enemy")
-    //             col.gameObject.GetComponent<EnemyHealth>().deductHealth(meleeDamage);
-    //     }
-    // }
-
     void Shoot() {
         Instantiate(bullet, firePoint.position, firePoint.transform.rotation);
     }
@@ -76,43 +67,19 @@ public class PlayerController : MonoBehaviour
     IEnumerator degradeStats() {
         while (true) {
             yield return new WaitForSeconds(degradationTime);
-            sight -= 1.0f;
-            hear -= 1.0f;
+            if (sight > 0)
+                sight -= 1.0f;
+            if (hear > 0)
+                hear -= 1.0f;
             movement -= 1.0f;
-            armour -= 1.0f;
-            health -= 1.0f;
+            if (movement > 0)
+                armour -= 1.0f;
+            if (health > 0)
+                health -= 1.0f;
         }
     }
 
-    private void sacrificeForBoost(string sacrificed, string boosted, float amount) {
-        switch (sacrificed) {
-            case "sight": 
-            sight -= amount;
-            break;
-            case "hear":
-            hear -= amount;
-            break;
-            case "movement":
-            movement -= amount;
-            break;
-            case "armour":
-            armour -= amount;
-            break;
-        }
-
-        switch (boosted) {
-            case "sight": 
-            sight += amount;
-            break;
-            case "hear":
-            hear += amount;
-            break;
-            case "movement":
-            movement += amount;
-            break;
-            case "armour":
-            armour += amount;
-            break;
-        }
+    public void deductHealth(float dmg) {
+        health -= (dmg - dmgReduction * armour / 100);
     }
 }
