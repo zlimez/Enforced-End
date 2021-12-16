@@ -58,6 +58,10 @@ public class DialogueManager : MonoBehaviour
             return;
         }
         lastSentence = sentences.Dequeue();
+        if (lastSentence.Substring(0, 6) == "@name=") {
+            nameText.text = lastSentence.Substring(6);
+            return;
+        }
         StartCoroutine(TypeSentence(lastSentence));
         isSentenceTyping = true;
     }
