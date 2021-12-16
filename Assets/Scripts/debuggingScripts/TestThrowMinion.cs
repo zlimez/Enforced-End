@@ -19,8 +19,8 @@ public class TestThrowMinion : MonoBehaviour
             mousePosition.y - transform.position.y
         );
         // groundVelocity.Normalize();
-        groundVelocity = groundVelocity * new Vector2(0.5f, 0.5f);
-        fallingMinion.GetComponent<ThrownMinion>().Initialize(groundVelocity, 6);
+        // groundVelocity = groundVelocity * new Vector2(0.5f, 0.5f);
+        fallingMinion.GetComponent<ThrownMinion>().Initialize(groundVelocity, 5);
     }
 
     void Update() {
