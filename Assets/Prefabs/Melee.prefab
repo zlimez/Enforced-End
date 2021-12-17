@@ -71,7 +71,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2872072203527237278}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a9ec8ef3ce4646948af74951076a2e8, type: 3}
+  m_Script: {fileID: 11500000, guid: 1b4e24aa2ee584240bc6b6e3e2f3041c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
@@ -90,7 +90,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   enemyType: 
+  attackType: 
   player: {fileID: 0}
+  face: 0
   safeDistance: 0
   reachedEndOfPath: 0
   nextWaypointDistance: 1

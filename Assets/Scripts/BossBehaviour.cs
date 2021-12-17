@@ -4,17 +4,28 @@ using UnityEngine;
 
 public class BossBehaviour : MonoBehaviour
 {
+    public static PlayerController player;
+    private MeleeBehavior melee;
+    private RangedEnemyBehavior ranged;
+    private AOEBehaviour aoe;
+    private SummonBehaviour summon;
     public float attackInterval = 1.5f; 
     public float attackTimeCd;
+    public bool attackCompleted = true;
     public static List<string> attackTypes = new List<string>();
     // Start is called before the first frame update
     public static List<string> sortedAttack = new List<string>();
     public static double[] dist = new double[] {0.5, 0.2, 0.2, 0.1};
     void Awake() {
+        player = GameObject.Find("Player").GetComponent<PlayerController>();
+        // melee = GetComponent<MeleeBehavior>();
+        ranged = GetComponent<RangedEnemyBehavior>();
+        aoe = GetComponent<AOEBehaviour>();
+        summon = GetComponent<SummonBehaviour>();
         attackTypes.Add("melee");
         attackTypes.Add("ranged");
         attackTypes.Add("aoe");
-        attackTypes.Add("minions");
+        attackTypes.Add("summon");
         attackTimeCd = attackInterval;
         genAttackPattern();
     }
@@ -31,14 +42,32 @@ public class BossBehaviour : MonoBehaviour
             attackTimeCd = attackInterval;
             switch (determineAttack(selected)) {
                 case "melee":
+                melee.enabled = true;
+                ranged.enabled = false;
+                aoe.enabled = false;
+                summon.enabled = false;
                 break;
                 case "ranged":
+                melee.enabled = false;
+                ranged.enabled = true;
+                aoe.enabled = false;
+                summon.enabled = false;
                 break;
                 case "aoe":
+                melee.enabled = false;
+                ranged.enabled = false;
+                aoe.enabled = true;
+                summon.enabled = false;
                 break;
-                case "minions":
+                case "summon":
+                melee.enabled = false;
+                ranged.enabled = false;
+                aoe.enabled = false;
+                summon.enabled = true;
                 break;
             }
+        } else if (attackCompleted && attackTimeCd > 0) {
+            attackTimeCd -= Time.deltaTime;
         }
     }
 
@@ -53,6 +82,7 @@ public class BossBehaviour : MonoBehaviour
             int selected = Random.Range(0, attackTypes.Count - 1);
             sortedAttack.Add(attackTypes[selected]);
         }
+        gameObject.transform.GetChild(0).tag = sortedAttack[0];
     }
 
     public string determineAttack(float percentile) {

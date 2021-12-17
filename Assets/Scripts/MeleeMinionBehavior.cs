@@ -26,7 +26,7 @@ public class MeleeMinionBehavior : MonoBehaviour
     IEnumerator attackPlayer(PlayerController player) {
         while (true) {
             // attack animation
-            player.health -= damage;
+            player.deductHealth(damage);
             yield return new WaitForSeconds(attackInterval);
         }
     }

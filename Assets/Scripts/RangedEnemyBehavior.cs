@@ -23,6 +23,7 @@ public class RangedEnemyBehavior : MonoBehaviour
         if (attackInterval > 0) {
             attackInterval -= Time.deltaTime;
         } else {
+            // fire only when there is a clear shot
             Debug.Log("ready to fire");
             RaycastHit2D hit = Physics2D.Raycast(firePoint.position, firePoint.right);
             // if (hit.collider != null && ) 

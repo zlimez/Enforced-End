@@ -6,9 +6,15 @@ using Pathfinding;
 public class EnemyHealth : MonoBehaviour
 {
     public float health;
+    // For boss this is determined by the dominant attack 
     public string enemyType;
+    public string attackType;
     private Seeker seeker;
+    private Rigidbody2D rb;
     public PlayerController player;
+    // 0: right, 1: up, 2: left, 3: down
+    public int face;
+    // public bool facing_right;
     public float safeDistance;
     public bool reachedEndOfPath;
     private int currentWaypoint = 0;
@@ -19,19 +25,20 @@ public class EnemyHealth : MonoBehaviour
     void Start()
     {
         seeker = GetComponent<Seeker>();
+        // rb = GetComponent<Rigidbody2D>();
         player = GameObject.Find("Player").GetComponent<PlayerController>();
         switch (gameObject.transform.GetChild(0).tag) {
             case "Melee":
             enemyType = "Melee";
             safeDistance = 0.5f;
             health = 50.0f;
-            speed = 2.0f;
+            speed = 7.5f;
             break;
             case "Ranged":
             enemyType = "Ranged";
             safeDistance = 5.0f;
             health = 75.0f;
-            speed = 4.0f;
+            speed = 5f;
             break;
             case "AOE":
             enemyType = "AOE";
@@ -45,8 +52,10 @@ public class EnemyHealth : MonoBehaviour
      void Update () {
         float distToPlayer = Vector2.Distance(player.transform.position, transform.position);
         // close enough do not need to move
-        if (Mathf.Abs(distToPlayer - safeDistance) <= 0.2) 
+        if (Mathf.Abs(distToPlayer - safeDistance) <= 0.2) {
+            // rb.velocity = Vector2.zero;
             return;
+        }
          // for AOE and ranged they try to move away from player if too close
         if (distToPlayer < safeDistance) {
             if (enemyType == "Melee") {
@@ -94,6 +103,7 @@ public class EnemyHealth : MonoBehaviour
 
         Vector3 dir = (path.vectorPath[currentWaypoint] - transform.position).normalized;
         Vector3 velocity = dir * speed * speedFactor;
+        // rb.velocity = velocity;
         transform.position += velocity * Time.deltaTime;
     }
 
@@ -109,5 +119,24 @@ public class EnemyHealth : MonoBehaviour
         health -= amount;
         if (health <= 0) 
             Destroy(gameObject);
+    }
+
+    // public void Flip() {
+    //     facing_right = !facing_right;
+    //     transform.Rotate(0f, 180f, 0f);
+    // }
+
+        // up down left right where to face for the boss
+    public void determineFace(Vector2 dir) {
+        float angle = Vector2.SignedAngle(Vector2.right, dir);
+        if ((angle >= 0 && angle < 45) || (angle < 0 && angle > -45)) {
+            face = 0;
+        } else if (angle > 45 && angle <= 135) {
+            face = 1;
+        } else if ((angle > 135 && angle <= 180) || (angle >= -180 && angle <= -135)) {
+            face = 2;
+        } else {
+            face = 3;
+        }
     }
 }
