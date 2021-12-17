@@ -3030,6 +3030,11 @@ PrefabInstance:
       objectReference: {fileID: 2060307896}
     - target: {fileID: 9057442466303404111, guid: 8679e8e7997652244a98652213c2127c,
         type: 3}
+      propertyPath: radius
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 9057442466303404111, guid: 8679e8e7997652244a98652213c2127c,
+        type: 3}
       propertyPath: fullAudioLength
       value: 2
       objectReference: {fileID: 0}

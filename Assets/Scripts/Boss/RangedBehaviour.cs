@@ -36,8 +36,10 @@ public class RangedBehaviour : AttackBehaviour
     IEnumerator Shoot() {
         yield return new WaitForSeconds(targetTime);
         boss.animator.SetTrigger("FireLaser");
-        Instantiate(projectile, firePoint.position, firePoint.transform.rotation);
-        body.AddForce(firePoint.right.normalized * forceScale, ForceMode2D.Impulse);
+        Vector3 moveDir = (player.transform.position - transform.position).normalized;
+        GameObject go = Instantiate(projectile, firePoint.position, Quaternion.identity);
+        go.GetComponent<Projectiles>().SetVelocity(moveDir);
+        body.AddForce(-firePoint.right.normalized * forceScale, ForceMode2D.Impulse);
         yield return new WaitForSeconds(1.0f);
         boss.attackCompleted = true;
         yield return null;

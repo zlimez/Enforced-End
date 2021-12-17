@@ -44,31 +44,31 @@ public class EnemyHealth : MonoBehaviour
         switch (gameObject.transform.GetChild(0).tag) {
             case "Melee":
             behaviourType = "Melee";
-            safeDistance = 0.25f;
+            safeDistance = 2.0f;
             if (!isBoss)
                 maxHealth = 50.0f;
-            speed = 7.5f;
+            speed = 5.5f;
             break;
             case "Ranged":
             behaviourType = "Ranged";
             safeDistance = 5.0f;
             if (!isBoss)
                 maxHealth = 75.0f;
-            speed = 5f;
+            speed = 2.5f;
             break;
             case "AOE":
             behaviourType = "AOE";
             safeDistance = 2.0f;
             if (!isBoss)
                 maxHealth = 100.0f;
-            speed = 3.0f;
+            speed = 1.5f;
             break; 
             case "Summon":
             behaviourType = "Summon";
             safeDistance = 5.0f;
             if (!isBoss)
                 maxHealth = 100.0f;
-            speed = 3.0f;
+            speed = 1.5f;
             break;
         }
         health = maxHealth;
@@ -78,13 +78,18 @@ public class EnemyHealth : MonoBehaviour
         animator.SetFloat("Speed", 0f);
         float distToPlayer = Vector2.Distance(player.transform.position, transform.position);
         // close enough do not need to move
-        if (inAttackSeq || Mathf.Abs(distToPlayer - safeDistance) <= 0.2) {
+        if (inAttackSeq) {
             // rb.velocity = Vector2.zero;
             return;
         }
         // for AOE and ranged they try to move away from player if too close
         if (distToPlayer < safeDistance) {
-            if (behaviourType == "Melee" || behaviourType == "AOE") {
+            if (behaviourType == "Melee") {
+                Vector3 moveDir = (player.transform.position - transform.position).normalized * speed * Random.Range(0F, 1F);
+                transform.position += moveDir * Time.deltaTime;
+                return;
+            }
+            else if (behaviourType == "AOE") {
                 return;
             } else {
                 if (seeker.IsDone())

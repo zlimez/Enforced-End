@@ -11,11 +11,16 @@ public class Projectiles : MonoBehaviour
     // void Awake() {
     //     parentEnemy = GameObject.Find("Mouth");
     // }
-    void Start() {
-        GetComponent<Rigidbody2D>().velocity = transform.right * speed;
+    // void Start() {
+    //     GetComponent<Rigidbody2D>().velocity = -transform.right * speed;
+    // }
+
+    public void SetVelocity(Vector3 velocity) {
+        GetComponent<Rigidbody2D>().velocity = velocity * speed;
     }
 
     void OnTriggerEnter2D(Collider2D col) {
+        if (col.gameObject.GetComponent<EnemyHealth>() != null) return;
         PlayerController player = col.gameObject.GetComponent<PlayerController>();
         if (player != null) 
             player.health -= damage;

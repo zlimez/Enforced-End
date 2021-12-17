@@ -34,10 +34,10 @@ public class MeleeBehavior : AttackBehaviour
         yield return new WaitForSeconds(attackDelay);
         // start animation
         boss.animator.SetTrigger("Melee");
-        int playerDir = EnemyHealth.determineFace(EnemyHealth.player.transform.position - transform.position);
-        // if enemy is facing the correct direction 90 degree quadrants
-        if (healthAndNav.face == playerDir)
-            EnemyHealth.player.deductHealth(damage);
+        // int playerDir = EnemyHealth.determineFace(EnemyHealth.player.transform.position - transform.position);
+        // // if enemy is facing the correct direction 90 degree quadrants
+        // if (healthAndNav.face == playerDir)
+        EnemyHealth.player.deductHealth(damage);
         boss.attackCompleted = true;
         yield return new WaitForSeconds(0.5f);
         healthAndNav.inAttackSeq = false;

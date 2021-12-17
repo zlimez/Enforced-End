@@ -41,10 +41,7 @@ public class AOEBehaviour : AttackBehaviour
         // Debug.Log("aoe unleashed");
         boss.animator.SetTrigger("Shockwave");
         if (Vector2.Distance(transform.position, player.transform.position) <= radius) {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, player.transform.position - transform.position);
-            // player can hide behind wall
-            if (hit.collider.gameObject.GetComponent<PlayerController>() != null)
-                player.deductHealth(damage);
+            player.deductHealth(damage);
         }
     }
 
