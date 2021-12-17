@@ -12,7 +12,7 @@ public class CombatEvents : MonoBehaviour
     public UnityEvent ending;
     public ChangeSceneCrossfade changeSceneCrossfade;
     public void PlayerDied() {
-        changeSceneCrossfade.LoadNextLevelWithColor("InsidePlane", "#FFFFFF");
+        changeSceneCrossfade.LoadNextLevelWithColor("Title", "#FFFFFF");
     }
 
     public void WinPart1End() {
