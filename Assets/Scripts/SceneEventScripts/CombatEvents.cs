@@ -32,7 +32,7 @@ public class CombatEvents : MonoBehaviour
     }
 
     public void EndingCheck() {
-        cyborgAnimator.SetTrigger("Die");
+        // cyborgAnimator.SetTrigger("Die");
         if (playerController.armour > 60) {
             changeSceneCrossfade.LoadNextLevelWithColor("HospitalCutscene", "#FFFFFF");
         } else {

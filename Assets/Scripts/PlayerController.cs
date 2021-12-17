@@ -83,7 +83,7 @@ public class PlayerController : MonoBehaviour
             if (movement > 0)
                 armour -= 1.0f;
             if (health > 0)
-                health -= 1.0f;
+                health -= 0.1f;
         }
     }
 

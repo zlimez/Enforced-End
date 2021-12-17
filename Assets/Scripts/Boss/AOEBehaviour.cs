@@ -14,6 +14,7 @@ public class AOEBehaviour : AttackBehaviour
     public bool attacked = false;
     public AudioSource source;
     public EnemyHealth healthAndNav;
+    public GameObject shockwaveSprite;
     private BossBehaviour boss;
 
     void Awake()
@@ -76,7 +77,9 @@ public class AOEBehaviour : AttackBehaviour
         source.Stop();
         source.volume = 0;
         boss.attackCompleted = true;
-        yield return new WaitForSeconds(0.5f);
+        shockwaveSprite.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        shockwaveSprite.SetActive(false);
         healthAndNav.inAttackSeq = false;
         yield return null;
     }
