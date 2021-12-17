@@ -11,7 +11,6 @@ public class AOEEnemyBehaviour : MonoBehaviour
     public float fullAudioLength = 5.0f;
     public bool attackSeqCompleted = true;
     public AudioSource source;
-    public GameObject testPrefab;
     public Collider2D col;
     // Start is called before the first frame update
     void Awake()
@@ -36,7 +35,6 @@ public class AOEEnemyBehaviour : MonoBehaviour
     public void inflictDmg() {
         // start animation
         Debug.Log("aoe unleashed");
-        Instantiate(testPrefab, new Vector2(0, 0), Quaternion.identity);
         if (Vector2.Distance(transform.position, player.transform.position) <= radius) {
             col.enabled = false;
             RaycastHit2D hit = Physics2D.Raycast(transform.position, player.transform.position - transform.position);

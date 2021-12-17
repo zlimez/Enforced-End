@@ -40,7 +40,7 @@ public class EnemyHealth : MonoBehaviour
         switch (gameObject.transform.GetChild(0).tag) {
             case "Melee":
             behaviourType = "Melee";
-            safeDistance = 0.5f;
+            safeDistance = 0.75f;
             if (!isBoss)
                 health = 50.0f;
             speed = 7.5f;
@@ -71,7 +71,7 @@ public class EnemyHealth : MonoBehaviour
 
     void Update () {
         float distToPlayer = Vector2.Distance(player.transform.position, transform.position);
-        // close enough do not need to move
+        // in attack sequence or close enough do not need to move 
         if (inAttackSeq || Mathf.Abs(distToPlayer - safeDistance) <= 0.2) {
             // rb.velocity = Vector2.zero;
             return;
@@ -123,11 +123,11 @@ public class EnemyHealth : MonoBehaviour
 
         Vector3 dir = (path.vectorPath[currentWaypoint] - transform.position).normalized;
         Vector3 velocity = dir * speed * speedFactor;
-        Debug.Log("dir" + (Vector2) dir);
-        Debug.Log("speed" + (Vector2) velocity);
+        // Debug.Log("dir" + (Vector2) dir);
+        // Debug.Log("speed" + (Vector2) velocity);
         face = determineFace(dir);
         // rb.velocity = velocity;
-        if ((velocity.x < 0 && facing_right) || (velocity.x > 0 && !facing_right)) 
+        if (((player.transform.position - transform.position).x < 0 && facing_right) || ((player.transform.position - transform.position).x > 0 && !facing_right)) 
             Flip();
         transform.position += velocity * Time.deltaTime;
     }

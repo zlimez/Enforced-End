@@ -12,6 +12,7 @@ public class SummonBehaviour : MonoBehaviour
     public float spawnDistance = 4f; 
     public float minionDegreeSep = 10f;
     public bool attacked = false;
+    public bool selected = false;
     private EnemyHealth healthAndNav;
     public BossBehaviour boss;
     void Awake()
@@ -20,14 +21,10 @@ public class SummonBehaviour : MonoBehaviour
         boss = GetComponent<BossBehaviour>();
     }
 
-    void OnEnabled() {
-        attacked = false;
-    }
-
     // Update is called once per frame
     void Update()
     {
-        if (!attacked) {
+        if (selected && !attacked) {
             attacked = true;
             healthAndNav.inAttackSeq = true;
             StartCoroutine(SpawnMinions());
@@ -39,19 +36,28 @@ public class SummonBehaviour : MonoBehaviour
         int minionCount = 0;
         float angleDev = summonCount % 2 == 0 ? summonCount / 2 * -minionDegreeSep : (summonCount - 1) / 2 * minionDegreeSep;
         while (minionCount < summonCount) {
-            yield return new WaitForSeconds(minionSpawnInterval);
             Vector2 spawnDir = Quaternion.AngleAxis(angleDev, Vector3.forward) * (EnemyHealth.player.transform.position - transform.position).normalized * spawnDistance;
             SpawnFallingMinion(spawnDir);
             minionCount += 1;
+            yield return new WaitForSeconds(minionSpawnInterval);
         }
         healthAndNav.inAttackSeq = false;
         boss.attackCompleted = true;
         Debug.Log("Completed summon");
-        this.enabled = false;
+        deselectAttack();
     }
 
     void SpawnFallingMinion(Vector2 groundVelocity) {
         GameObject fallingMinion = Instantiate(droppingMinionPrefab, transform.position, Quaternion.identity);
         fallingMinion.GetComponent<ThrownMinion>().Initialize(groundVelocity, 5);
+    }
+
+    public void selectAttack() {
+        selected = true;
+    }
+
+    void deselectAttack() {
+        selected = false;
+        attacked = false;
     }
 }

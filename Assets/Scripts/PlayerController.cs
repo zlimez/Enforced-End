@@ -41,11 +41,10 @@ public class PlayerController : MonoBehaviour
             } else
                 equipped = weapon.RIFLE;
         }
-        if (Input.GetMouseButtonDown(0)) {
+        if (Input.GetMouseButtonDown(0) && !Pause.GameIsPaused) {
             Vector2 point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             transform.right = point - (Vector2) transform.position;
             //trigger attack animation
-            Debug.Log(transform.right);
             if (equipped == weapon.RIFLE) {
                 Shoot();
             } else {
@@ -61,8 +60,6 @@ public class PlayerController : MonoBehaviour
     void Shoot() {
         Instantiate(bullet, firePoint.position, firePoint.transform.rotation);
     }
-
-    // laser attack
 
     IEnumerator degradeStats() {
         while (true) {
@@ -80,6 +77,7 @@ public class PlayerController : MonoBehaviour
     }
 
     public void deductHealth(float dmg) {
+        Debug.Log("health deducted " + dmg);
         health -= (dmg - dmgReduction * armour / 100);
     }
 }

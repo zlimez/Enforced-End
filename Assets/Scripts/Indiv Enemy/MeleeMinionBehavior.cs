@@ -10,7 +10,7 @@ public class MeleeMinionBehavior : MonoBehaviour
 
    
     void OnCollisionEnter2D(Collision2D col) {
-        Debug.Log("Contact with player");
+        // Debug.Log("Contact with player");
         if (col.gameObject.name == "Player") {
             coroutine = attackPlayer(col.gameObject.GetComponent<PlayerController>());
             StartCoroutine(coroutine);
@@ -18,7 +18,7 @@ public class MeleeMinionBehavior : MonoBehaviour
     }
 
     void OnCollisionExit2D() {
-        Debug.Log("Contact stopped");
+        // Debug.Log("Contact stopped");
         StopCoroutine(coroutine);
         coroutine = null;
     }

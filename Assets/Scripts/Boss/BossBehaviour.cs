@@ -15,7 +15,7 @@ public class BossBehaviour : MonoBehaviour
     public static List<string> attackTypes = new List<string>();
     // Start is called before the first frame update
     public static List<string> sortedAttack = new List<string>();
-    public static double[] dist = new double[] {0.5, 0.2, 0.2, 0.1};
+    public static double[] dist = new double[] {0.5, 0.7, 0.9, 1.0}; // 0.5, 0.2, 0.2, 0.1 cumulative
     void Awake() {
         healthAndNav = GetComponent<EnemyHealth>();
         melee = GetComponent<MeleeBehavior>();
@@ -35,24 +35,26 @@ public class BossBehaviour : MonoBehaviour
         if (attackTimeCd <= 0) {
             float selected = Random.Range(0f, 1f);
             string chosenAttack = determineAttack(selected);
+            Debug.Log("attack chosen " + chosenAttack);
             healthAndNav.changeBehaviour(chosenAttack);
             attackTimeCd = attackInterval;
             attackCompleted = false;
             switch (chosenAttack) {
                 case "Melee":
-                melee.enabled = true;
+                melee.selectAttack();
                 break;
                 case "Ranged":
-                ranged.enabled = true;
+                ranged.selectAttack();
                 break;
                 case "AOE":
-                aoe.enabled = true;
+                aoe.selectAttack();
                 break;
                 case "Summon":
-                summon.enabled = true;
+                summon.selectAttack();
                 break;
             }
         } else if (attackCompleted && attackTimeCd > 0) {
+//            Debug.Log("countdown to next attack begin");
             attackTimeCd -= Time.deltaTime;
         }
     }
@@ -76,6 +78,7 @@ public class BossBehaviour : MonoBehaviour
     }
 
     public string determineAttack(float percentile) {
+        // Debug.Log("percentile " + percentile);
         if (percentile <= dist[0]) {
             return sortedAttack[0];
         } else if (percentile <= dist[1]) {
