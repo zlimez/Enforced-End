@@ -6,6 +6,7 @@ using UnityEngine.Events;
 
 public class DialogueManager : MonoBehaviour
 {
+    public static DialogueManager _instance;
     public Text nameText;
     public Text dialogueText;
     public Animator animator;
@@ -18,8 +19,22 @@ public class DialogueManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        sentences = new Queue<string>();
-        enabled = false;
+        if (_instance != null && _instance != this) {
+            Destroy(this.gameObject);
+        } 
+        else {
+            _instance = this;
+            sentences = new Queue<string>();
+            enabled = false;
+            TriggerStartDialogue();
+        }
+    }
+
+    private void TriggerStartDialogue() {
+        DialogueStartTrigger[] dialogueStartTriggers = FindObjectsOfType<DialogueStartTrigger>();
+        if (dialogueStartTriggers.Length >= 1) {
+            dialogueStartTriggers[0].TriggerDialogue();
+        }
     }
 
     void Update()
@@ -59,9 +74,9 @@ public class DialogueManager : MonoBehaviour
             return;
         }
         lastSentence = sentences.Dequeue();
-        if (lastSentence.Substring(0, 6) == "@name=") {
+        if (lastSentence.Length >= 6 && lastSentence.Substring(0, 6) == "@name=") {
             nameText.text = lastSentence.Substring(6);
-            return;
+            lastSentence = sentences.Dequeue();
         }
         StartCoroutine(TypeSentence(lastSentence));
         isSentenceTyping = true;
