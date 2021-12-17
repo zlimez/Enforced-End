@@ -1720,7 +1720,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &775418284
 Transform:
   m_ObjectHideFlags: 0
@@ -4649,12 +4649,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 8
-  damage: 0
+  damage: 10
   coolDown: 3
   fullAudioLength: 5
-  attackSeqCompleted: 0
+  attackSeqCompleted: 1
   source: {fileID: 1224524418}
-  testPrefab: {fileID: 0}
+  testPrefab: {fileID: 4674529117052063147, guid: 3939b2c3a560e4605af913a70f556b64,
+    type: 3}
 --- !u!4 &1227977521 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3506770014850351943, guid: 89726fa36c61041f0a8d0c61f5feda06,
@@ -10466,7 +10467,7 @@ PrefabInstance:
     - target: {fileID: 6324882537187199945, guid: 24b548150b4a949abbc9bcc81abf1855,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6324882537187199949, guid: 24b548150b4a949abbc9bcc81abf1855,
         type: 3}
@@ -10541,6 +10542,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6743058333543447678, guid: 8c46c86270405436cbf5e7b73a3935a0,
+        type: 3}
+      propertyPath: m_Mass
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6743058333543447679, guid: 8c46c86270405436cbf5e7b73a3935a0,
         type: 3}

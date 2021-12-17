@@ -5,11 +5,12 @@ using Pathfinding;
 
 public class EnemyHealth : MonoBehaviour
 {
+    public bool isBoss;
     public float health;
+    // freeze movement when in attackSeq
     public bool inAttackSeq = false;
     // For boss this is determined by the dominant attack 
-    public string enemyType;
-    public string attackType;
+    public string behaviourType;
     private Seeker seeker;
     private Rigidbody2D rb;
     public static PlayerController player;
@@ -31,31 +32,37 @@ public class EnemyHealth : MonoBehaviour
     }
 
     void Start() {
-        // for boss tag is determined only after attack pattern is generated
+        // for base boss tag is determined only after attack pattern is generated
+        if (gameObject.name.StartsWith("Boss"))
+            health = 200f;
         switch (gameObject.transform.GetChild(0).tag) {
             case "Melee":
-            enemyType = "Melee";
+            behaviourType = "Melee";
             safeDistance = 0.5f;
-            health = 50.0f;
+            if (!isBoss)
+                health = 50.0f;
             speed = 7.5f;
             break;
             case "Ranged":
-            enemyType = "Ranged";
+            behaviourType = "Ranged";
             safeDistance = 5.0f;
-            health = 75.0f;
+            if (!isBoss)
+                health = 75.0f;
             speed = 5f;
             break;
             case "AOE":
-            enemyType = "AOE";
+            behaviourType = "AOE";
             safeDistance = 2.0f;
-            health = 100.0f;
+            if (!isBoss)
+                health = 100.0f;
             speed = 3.0f;
             break; 
             case "Summon":
-            enemyType = "Summon";
-            // safeDistance = ;
-            // health = ;
-            // speed = ;
+            behaviourType = "Summon";
+            safeDistance = 5.0f;
+            if (!isBoss)
+                health = 100.0f;
+            speed = 3.0f;
             break;
         }
     }
@@ -69,7 +76,7 @@ public class EnemyHealth : MonoBehaviour
         }
          // for AOE and ranged they try to move away from player if too close
         if (distToPlayer < safeDistance) {
-            if (enemyType == "Melee") {
+            if (behaviourType == "Melee") {
                 return;
             } else {
                 if (seeker.IsDone())
@@ -151,6 +158,28 @@ public class EnemyHealth : MonoBehaviour
             return 2;
         } else {
             return 3;
+        }
+    }
+
+    // for boss fight movement pattern change with selected attack
+    public void changeBehaviour(string attackType) {
+        switch (attackType) {
+            case "Melee":
+            behaviourType = "Melee";
+            safeDistance = 0.5f;
+            break;
+            case "Ranged":
+            behaviourType = "Ranged";
+            safeDistance = 5.0f;
+            break;
+            case "AOE":
+            behaviourType = "AOE";
+            safeDistance = 2.0f;
+            break; 
+            case "Summon":
+            behaviourType = "Summon";
+            safeDistance = 3.0f;
+            break;
         }
     }
 }

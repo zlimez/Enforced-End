@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BossBehaviour : MonoBehaviour
 {
+    private EnemyHealth healthAndNav;
     private MeleeBehavior melee;
     private RangedEnemyBehavior ranged;
     private AOEBehaviour aoe;
@@ -16,13 +17,14 @@ public class BossBehaviour : MonoBehaviour
     public static List<string> sortedAttack = new List<string>();
     public static double[] dist = new double[] {0.5, 0.2, 0.2, 0.1};
     void Awake() {
+        healthAndNav = GetComponent<EnemyHealth>();
         melee = GetComponent<MeleeBehavior>();
         ranged = GetComponent<RangedEnemyBehavior>();
         aoe = GetComponent<AOEBehaviour>();
         summon = GetComponent<SummonBehaviour>();
         attackTypes.Add("Melee");
         attackTypes.Add("Ranged");
-        attackTypes.Add("Aoe");
+        attackTypes.Add("AOE");
         attackTypes.Add("Summon");
         attackTimeCd = attackInterval;
         genAttackPattern();
@@ -37,30 +39,20 @@ public class BossBehaviour : MonoBehaviour
     {
         if (attackTimeCd <= 0) {
             float selected = Random.Range(0f, 1f);
+            string chosenAttack = determineAttack(selected);
+            healthAndNav.changeBehaviour(chosenAttack);
             attackTimeCd = attackInterval;
-            switch (determineAttack(selected)) {
+            switch (chosenAttack) {
                 case "Melee":
                 melee.enabled = true;
-                ranged.enabled = false;
-                aoe.enabled = false;
-                summon.enabled = false;
                 break;
                 case "Ranged":
-                melee.enabled = false;
                 ranged.enabled = true;
-                aoe.enabled = false;
-                summon.enabled = false;
                 break;
-                case "Aoe":
-                melee.enabled = false;
-                ranged.enabled = false;
+                case "AOE":
                 aoe.enabled = true;
-                summon.enabled = false;
                 break;
                 case "Summon":
-                melee.enabled = false;
-                ranged.enabled = false;
-                aoe.enabled = false;
                 summon.enabled = true;
                 break;
             }
@@ -69,7 +61,7 @@ public class BossBehaviour : MonoBehaviour
         }
     }
 
-    // melee (cyborg jump slash 4 units) high speed t ofrce close combat player need to dodge)
+    // close dist melee
     // middle dist AOE (8 units radius) mid speed movement encourage players to hide behind obstacles
     // laser (targeting mechanism must outrun)
     // Encourage close combat early on with back stab bonus mech?

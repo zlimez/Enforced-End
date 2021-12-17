@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class AOEEnemyBehaviour : MonoBehaviour
 {
-    public static GameObject playerObject;
     public static PlayerController player;
     public float radius = 8;
     public float damage;
@@ -35,19 +34,19 @@ public class AOEEnemyBehaviour : MonoBehaviour
     public void inflictDmg() {
         // start animation
         Debug.Log("aoe unleashed");
+        Instantiate(testPrefab, new Vector2(0, 0), Quaternion.identity);
         if (Vector2.Distance(transform.position, player.transform.position) <= radius) {
             RaycastHit2D hit = Physics2D.Raycast(transform.position, player.transform.position - transform.position);
             // player can hide behind wall
             if (hit.collider.gameObject.GetComponent<PlayerController>() != null)
                 player.deductHealth(damage);
         }
-        Instantiate(testPrefab, transform.position, Quaternion.identity);
     }
 
     // gradual increase in volume
     IEnumerator AudioQueue() {
         while (true) {
-            Debug.Log("Vol " + source.volume);
+            // Debug.Log("Vol " + source.volume);
             yield return new WaitForSeconds(0.1f);
             source.volume += 0.02f;
         }

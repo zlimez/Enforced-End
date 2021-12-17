@@ -9,13 +9,15 @@ public class MeleeBehavior : MonoBehaviour
     public float damage;
     public BossBehaviour boss;
     private EnemyHealth healthAndNav;
+    public bool attacked = false;
 
     void Awake() {
         boss = GetComponent<BossBehaviour>();
         healthAndNav = GetComponent<EnemyHealth>();
     }
     void Update() {
-        if (Vector2.Distance(transform.position, EnemyHealth.player.transform.position) <= meleeWpnRadius) {
+        if (!attacked && Vector2.Distance(transform.position, EnemyHealth.player.transform.position) <= meleeWpnRadius) {
+            attacked = true;
             healthAndNav.inAttackSeq = true;
             StartCoroutine(attackSeq());
         } 
@@ -30,6 +32,6 @@ public class MeleeBehavior : MonoBehaviour
             EnemyHealth.player.deductHealth(damage);
         boss.attackCompleted = true;
         healthAndNav.inAttackSeq = false;
+        this.enabled = false;
     }
-
 }

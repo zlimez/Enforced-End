@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class AOEBehaviour : MonoBehaviour
 {
-    public static GameObject playerObject;
     public static PlayerController player;
     // boss will only start charging up for attack when player is within this distance
     public float maxChargingDistance = 4;
     public float radius = 8;
-    public float damage;
+    public float damage = 10f;
     public float fullAudioLength = 5.0f;
-    public bool attackSeqCompleted = true;
+    public bool attacked = false;
     public AudioSource source;
     public GameObject testPrefab;
     // Start is called before the first frame update
@@ -23,9 +22,9 @@ public class AOEBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector2.Distance(transform.position, player.transform.position) < maxChargingDistance) {
+        if (!attacked && Vector2.Distance(transform.position, player.transform.position) < maxChargingDistance) {
             Debug.Log("ready for aoe");
-            attackSeqCompleted = false;
+            attacked = true;
             StartCoroutine(attackSeq());
         }
     }
@@ -61,6 +60,6 @@ public class AOEBehaviour : MonoBehaviour
         inflictDmg();
         source.Stop();
         source.volume = 0;
-        attackSeqCompleted = true;
+        this.enabled = false;
     }
 }
