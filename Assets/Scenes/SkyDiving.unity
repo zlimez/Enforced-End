@@ -1752,9 +1752,9 @@ MonoBehaviour:
     name: ???
     sentences:
     - Bzzzzzz
-    - Beetle13, this is Operator 17, over.
+    - Beetle 13, this is Operator 17, over.
     - '@name=Self'
-    - Hear you loud and clear Alice, over.
+    - Alice, I hear you loud and clear, over.
     - '@name=Alice'
     - May I ask that you do not refer to me by name during missions?
     - As you already know, I will be in charge of managing this mission.

@@ -35,6 +35,11 @@ And it seems that they are... evolving.
 
 `wind-breeze-01` from https://www.soundjay.com/wind-sound-effect.html
 
+`Hospital background`: Photo by <a href="https://unsplash.com/@adhy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Adhy Savala</a> on <a href="https://unsplash.com/s/photos/hospital?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
+`cyberpunk-street-files` from https://ansimuz.itch.io/cyberpunk-street-environment
+  
+
 Dragon Slayer by Makai Symphony | https://soundcloud.com/makai-symphony
 Music promoted by https://www.chosic.com/free-music/all/
 Creative Commons Attribution-ShareAlike 3.0 Unported
@@ -51,6 +56,10 @@ Music promoted by https://www.chosic.com/free-music/all/
 Creative Commons Attribution-ShareAlike 3.0 Unported
 https://creativecommons.org/licenses/by-sa/3.0/deed.en_US 
 
+Hope by LesFM | https://lesfm.net/romantic-background-music/
+Music promoted by https://www.chosic.com/free-music/all/
+Creative Commons CC BY 3.0
+https://creativecommons.org/licenses/by/3.0/
 
 # Videos watched:
 
