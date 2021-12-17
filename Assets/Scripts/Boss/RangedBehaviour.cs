@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RangedBehaviour : AttackBehaviour
 {
-    public static GameObject player;
+    public GameObject player;
     private Rigidbody2D body;
     public GameObject projectile;
     public Transform firePoint;
@@ -17,7 +17,6 @@ public class RangedBehaviour : AttackBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        player = player == null ? GameObject.Find("Player") : player;
         body = GetComponent<Rigidbody2D>();
         boss = GetComponent<BossBehaviour>();
         layermask = ~(LayerMask.GetMask("Enemy"));

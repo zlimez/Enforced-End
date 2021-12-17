@@ -6,6 +6,7 @@ using Pathfinding;
 public class EnemyHealth : MonoBehaviour
 {
     public bool isBoss;
+    public float maxHealth;
     public float health;
     // freeze movement when in attackSeq
     public bool inAttackSeq = false;
@@ -35,39 +36,40 @@ public class EnemyHealth : MonoBehaviour
     void Start() {
         // for base boss tag is determined only after attack pattern is generated
         if (gameObject.name.StartsWith("Boss")) {
-            health = 200f;
+            maxHealth = 200f;
             isBoss = true;
         }
         switch (gameObject.transform.GetChild(0).tag) {
             case "Melee":
             behaviourType = "Melee";
-            safeDistance = 0.5f;
+            safeDistance = 0.25f;
             if (!isBoss)
-                health = 50.0f;
+                maxHealth = 50.0f;
             speed = 7.5f;
             break;
             case "Ranged":
             behaviourType = "Ranged";
             safeDistance = 5.0f;
             if (!isBoss)
-                health = 75.0f;
+                maxHealth = 75.0f;
             speed = 5f;
             break;
             case "AOE":
             behaviourType = "AOE";
             safeDistance = 2.0f;
             if (!isBoss)
-                health = 100.0f;
+                maxHealth = 100.0f;
             speed = 3.0f;
             break; 
             case "Summon":
             behaviourType = "Summon";
             safeDistance = 5.0f;
             if (!isBoss)
-                health = 100.0f;
+                maxHealth = 100.0f;
             speed = 3.0f;
             break;
         }
+        health = maxHealth;
     }
 
     void Update () {

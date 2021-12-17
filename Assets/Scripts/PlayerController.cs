@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerController : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D body;
     public GameObject bullet;
     public Transform firePoint;
+    public Animator animator;
+    private UnityEvent onDeathEvent;
     public weapon equipped = weapon.RIFLE;
     float horizontal;
     float vertical;
@@ -31,7 +34,8 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         if (health <= 0) {
-            // Game Over
+            onDeathEvent.Invoke();
+            enabled = false;
         }
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
@@ -55,6 +59,7 @@ public class PlayerController : MonoBehaviour
     }
 
     void FixedUpdate() {
+        animator.SetFloat("Speed", horizontal + vertical);
         body.velocity = new Vector2(horizontal * runspeed * movement / 100.0f, vertical * runspeed * movement / 100.0f);
     }
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AOEBehaviour : AttackBehaviour
 {
-    public static PlayerController player;
+    public PlayerController player;
     // boss will only start charging up for attack when player is within this distance
     public float maxChargingDistance = 4;
     public float radius = 8;
@@ -14,11 +14,10 @@ public class AOEBehaviour : AttackBehaviour
     public bool attacked = false;
     public AudioSource source;
     public EnemyHealth healthAndNav;
-    public BossBehaviour boss;
+    private BossBehaviour boss;
 
     void Awake()
     {
-        player = player == null ? GameObject.Find("Player").GetComponent<PlayerController>() : player;
         healthAndNav = GetComponent<EnemyHealth>();
         boss = GetComponent<BossBehaviour>();
     }
