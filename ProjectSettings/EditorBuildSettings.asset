@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EventBossMapTest.unity
     guid: 28e3d655ff0d12846a22a99f93666077
+  - enabled: 1
+    path: Assets/Scenes/HospitalCutscene.unity
+    guid: abb0f8617d4a49143a9f49dba90d1801
   m_configObjects: {}

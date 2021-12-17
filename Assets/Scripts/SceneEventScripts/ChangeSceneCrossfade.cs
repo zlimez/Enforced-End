@@ -24,6 +24,10 @@ public class ChangeSceneCrossfade : MonoBehaviour
         changeFaderColor(color);
         StartCoroutine(LoadLevel(scenename));
     }
+    public void ForceTriggerTransition(string color) {
+        changeFaderColor(color);
+        transition.SetTrigger("Start");
+    }
 
     void changeFaderColor(string color) {
         Color newCol;

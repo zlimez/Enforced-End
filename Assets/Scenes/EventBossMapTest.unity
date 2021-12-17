@@ -184,7 +184,19 @@ MonoBehaviour:
     - 1...
     dialogueEndEvent:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 297793901}
+          m_TargetAssemblyTypeName: CombatEvents, Assembly-CSharp
+          m_MethodName: PlayerDied
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &247668373
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,7 +234,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -326, y: 201}
+  m_AnchoredPosition: {x: -199, y: 161}
   m_SizeDelta: {x: 104.4442, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &247668375
@@ -408,6 +420,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 297793900}
+  - component: {fileID: 297793901}
   m_Layer: 0
   m_Name: DialogueContainer
   m_TagString: Untagged
@@ -438,6 +451,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &297793901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297793899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 469dc0e3e85f31449bdbe516da7f6907, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cyborgAnimator: {fileID: 1343460113}
+  playerController: {fileID: 1434001682}
+  winPart2:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1288573847}
+        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+        m_MethodName: TriggerDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  ending:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1026721475}
+        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+        m_MethodName: TriggerDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  changeSceneCrossfade: {fileID: 411951459}
 --- !u!1 &297928531
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,6 +563,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &411951459 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8455546333027155883, guid: ec3855dfa59ac7742877df4260cb2769,
+    type: 3}
+  m_PrefabInstance: {fileID: 1321658564}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c01a3a75b5243441909ab24f2e36159, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &432315752
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -698,9 +768,9 @@ MonoBehaviour:
     dialogueEndEvent:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1343460114}
-          m_TargetAssemblyTypeName: WinPart1End, Assembly-CSharp
-          m_MethodName: TriggerNextEvent
+        - m_Target: {fileID: 297793901}
+          m_TargetAssemblyTypeName: CombatEvents, Assembly-CSharp
+          m_MethodName: WinPart1End
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -769,7 +839,19 @@ MonoBehaviour:
     - 1...
     dialogueEndEvent:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 297793901}
+          m_TargetAssemblyTypeName: CombatEvents, Assembly-CSharp
+          m_MethodName: PlayerDied
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &640702327
 GameObject:
   m_ObjectHideFlags: 0
@@ -1028,6 +1110,7 @@ RectTransform:
   - {fileID: 1491994291}
   - {fileID: 1864138452}
   - {fileID: 2102140951}
+  - {fileID: 893226510}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1036,6 +1119,113 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &893226509
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 893226510}
+  - component: {fileID: 893226512}
+  - component: {fileID: 893226511}
+  - component: {fileID: 893226513}
+  m_Layer: 5
+  m_Name: Clock
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &893226510
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893226509}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1524768597}
+  m_Father: {fileID: 788580816}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 60}
+  m_SizeDelta: {x: 92.813, y: 53.50699}
+  m_Pivot: {x: 0.49999976, y: 0.49999997}
+--- !u!114 &893226511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893226509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 509024273, guid: 8c0dda8786b8ff4468f2cca0c251f080, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &893226512
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893226509}
+  m_CullTransparentMesh: 1
+--- !u!114 &893226513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893226509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24f05a7ba5f718740b965fad21e019fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countdownText: {fileID: 1524768598}
+  nextEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 297793901}
+        m_TargetAssemblyTypeName: CombatEvents, Assembly-CSharp
+        m_MethodName: CountdownEnd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  totalTime: 5
 --- !u!1 &948965902
 GameObject:
   m_ObjectHideFlags: 0
@@ -1195,12 +1385,26 @@ MonoBehaviour:
     - "You are the only one left in my world\u2026"
     - '@name=Self'
     - I love you too, Alice-
+    - '@name=Alice'
+    - '!!!'
     - '@name=Thinking'
     - "I might have lost, but as long as Alice is still alive\u2026"
     - I have no regrets...
     dialogueEndEvent:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 297793901}
+          m_TargetAssemblyTypeName: CombatEvents, Assembly-CSharp
+          m_MethodName: EndingCheck
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1048655877
 GameObject:
   m_ObjectHideFlags: 0
@@ -2357,11 +2561,28 @@ MonoBehaviour:
       and has started its meltdown sequence.
     - Get out of there!
     - '@name=Self'
-    - Can I really outrun the blast?
+    - Have all the citizens been evacuated yet?
+    - '@name=Alice'
+    - As far as we know, yes.
+    - '@name=Self'
+    - Thank goodness. Now there is nothing left to worry about.
+    - But can I really outrun the blast?
     - ...
     dialogueEndEvent:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 893226513}
+          m_TargetAssemblyTypeName: WinPart2Countdown, Assembly-CSharp
+          m_MethodName: StartCountdown
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1303680724
 GameObject:
   m_ObjectHideFlags: 0
@@ -2496,7 +2717,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1343460112}
   - component: {fileID: 1343460111}
-  - component: {fileID: 1343460114}
   - component: {fileID: 1343460113}
   m_Layer: 0
   m_Name: Cyborg_Walking_0
@@ -2593,34 +2813,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1343460114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1343460110}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87da038e8b526724ca773e3a376b8120, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cyborgAnimator: {fileID: 0}
-  nextEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1288573847}
-        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
-        m_MethodName: TriggerDialogue
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &1431415558
 GameObject:
   m_ObjectHideFlags: 0
@@ -2755,6 +2947,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 432315752}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1434001682 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6743058333543447677, guid: 8c46c86270405436cbf5e7b73a3935a0,
+    type: 3}
+  m_PrefabInstance: {fileID: 432315752}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434001681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ab55516c34eb4f3cb6ef5b5dddaaedd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1468126839
 GameObject:
   m_ObjectHideFlags: 0
@@ -5877,6 +6081,86 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1491994290}
   m_CullTransparentMesh: 1
+--- !u!1 &1524768596
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1524768597}
+  - component: {fileID: 1524768599}
+  - component: {fileID: 1524768598}
+  m_Layer: 5
+  m_Name: CountdownText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1524768597
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524768596}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 893226510}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1524768598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524768596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 1, b: 0.07586002, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 71000cdd39455754c80e9bf0e4fe9e4c, type: 3}
+    m_FontSize: 24
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 00:00
+--- !u!222 &1524768599
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524768596}
+  m_CullTransparentMesh: 1
 --- !u!1 &1731324692
 GameObject:
   m_ObjectHideFlags: 0
@@ -5945,7 +6229,19 @@ MonoBehaviour:
     - Or... at least I hope so...
     dialogueEndEvent:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 297793901}
+          m_TargetAssemblyTypeName: CombatEvents, Assembly-CSharp
+          m_MethodName: PlayerDied
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1864138451
 GameObject:
   m_ObjectHideFlags: 0
@@ -6244,7 +6540,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 479705721}
+      - m_Target: {fileID: 1026721475}
         m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
         m_MethodName: TriggerDialogue
         m_Mode: 1
