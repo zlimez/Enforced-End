@@ -279,7 +279,7 @@ MonoBehaviour:
   behaviourType: 
   animator: {fileID: 7494706291468776785}
   face: 0
-  facing_right: 1
+  facing_right: 0
   safeDistance: 0
   reachedEndOfPath: 0
   nextWaypointDistance: 1
@@ -324,8 +324,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2d5c8542defd40aeb8147454a78f369, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 7494706291468776785}
   attackInterval: 1.5
+  animator: {fileID: 7494706291468776785}
   attackTimeCd: 0
   attackStuckInterval: 3
   attackStuckTimeCd: 0
@@ -351,7 +351,6 @@ MonoBehaviour:
   meleeWpnRadius: 1
   attackDelay: 0.4
   damage: 0
-  boss: {fileID: 0}
   attacked: 0
 --- !u!114 &9057442466303404096
 MonoBehaviour:
@@ -365,6 +364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c789477d334be47928cde7a436dc498d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   projectile: {fileID: 4674529117052063147, guid: 3939b2c3a560e4605af913a70f556b64,
     type: 3}
   firePoint: {fileID: 9057442467107885149}
@@ -384,6 +384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78e434e780a43485491734cf3390dc3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   maxChargingDistance: 4
   radius: 8
   damage: 10
@@ -392,7 +393,6 @@ MonoBehaviour:
   attacked: 0
   source: {fileID: 9057442466303404110}
   healthAndNav: {fileID: 0}
-  boss: {fileID: 0}
 --- !u!82 &9057442466303404110
 AudioSource:
   m_ObjectHideFlags: 0
@@ -508,7 +508,6 @@ MonoBehaviour:
   spawnDistance: 4
   minionDegreeSep: 10
   attacked: 0
-  boss: {fileID: 0}
 --- !u!50 &9057442466303404098
 Rigidbody2D:
   serializedVersion: 4
