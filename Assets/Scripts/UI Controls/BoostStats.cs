@@ -13,7 +13,9 @@ public class BoostStats : MonoBehaviour
     public TextMeshProUGUI balanceText;
 
     void Start() {
-        player = GameObject.Find("Player").GetComponent<PlayerController>();
+        if (player == null) {
+            player = GameObject.Find("Player").GetComponent<PlayerController>();
+        }
     }
     // Update is called once per frame
     void Update()
