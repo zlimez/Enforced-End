@@ -10,8 +10,8 @@ public class BossBehaviour : MonoBehaviour
     private AOEBehaviour aoe;
     private SummonBehaviour summon;
     private AttackBehaviour currentChosenAttack;
-    public Animator animator;
     public float attackInterval = 2.0f; 
+    public Animator animator;
     public float attackTimeCd;
     public float attackStuckInterval = 9.0f;
     public float attackStuckTimeCd;

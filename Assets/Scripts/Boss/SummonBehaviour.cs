@@ -13,7 +13,7 @@ public class SummonBehaviour : AttackBehaviour
     public float minionDegreeSep = 10f;
     public bool attacked = false;
     private EnemyHealth healthAndNav;
-    public BossBehaviour boss;
+    private BossBehaviour boss;
     void Awake()
     {
         healthAndNav = GetComponent<EnemyHealth>();

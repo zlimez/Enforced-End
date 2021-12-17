@@ -7,7 +7,7 @@ public class MeleeBehavior : AttackBehaviour
     public float meleeWpnRadius = 1.0f;
     public float attackDelay = 0.4f;
     public float damage;
-    public BossBehaviour boss;
+    private BossBehaviour boss;
     private EnemyHealth healthAndNav;
     public bool attacked = false;
 
