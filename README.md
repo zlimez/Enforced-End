@@ -21,11 +21,15 @@ And it seems that they are... evolving.
 
 # Assets used:
 
-`Robot Warfare Asset Pack 22-11-24` from mattwalkden.itch.io
+`Robot Warfare Asset Pack 22-11-24` from https://mattwalkden.itch.io
 
 `Rpg Tilesets` from https://v-ktor.itch.io/32x32-rpg-tilesets
 
 `Visual Novel GUI Pack 002` from https://wningningw.itch.io/visual-novel-gui-pack-002
+
+<!-- `Simple Sky Pixel Backgrounds` from https://caniaeast.itch.io/simple-sky-pixel-backgrounds -->
+
+`Pixel Art Semi-Realistic Clouds` from https://latenightcoffe.itch.io/2d-pixel-art-semi-realistic-clouds
 
 `airplane-interior-1` from https://www.soundjay.com/transportation-ambience-1.html
 
