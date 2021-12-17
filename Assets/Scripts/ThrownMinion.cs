@@ -27,6 +27,12 @@ public class ThrownMinion : MonoBehaviour
         this.verticalVelocity = verticalVelocity;
     }
 
+    public void InitializeFallOnly(float verticalPosition) {
+        this.groundVelocity = new Vector2(0, 0);
+        this.verticalVelocity = 0;
+        trnsBody.position += new Vector3(0, verticalPosition, 0);
+    }
+
     void UpdatePosition() {
         if (isGrounded) {
             return;
