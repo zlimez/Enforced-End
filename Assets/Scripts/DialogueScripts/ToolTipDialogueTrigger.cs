@@ -9,15 +9,16 @@ public class ToolTipDialogueTrigger : MonoBehaviour
 
     void Start() {
         dialogue.dialogueEndEvent.AddListener(enableInteract);
+        enabled = false;
     }
 
     void Update()
     {
         if (Input.GetKeyDown("f"))
         {
+            enabled = false;
             TriggerDialogue();
             TooltipManager._instance.HideToolTip();
-            enabled = false;
         }
     }
 

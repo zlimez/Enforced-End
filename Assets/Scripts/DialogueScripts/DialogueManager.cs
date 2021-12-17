@@ -19,6 +19,7 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         sentences = new Queue<string>();
+        enabled = false;
     }
 
     void Update()
@@ -36,7 +37,6 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(Dialogue dialogue)
     {
         animator.SetBool("IsOpen", true);
-        enabled = true;
         sentences.Clear();
         foreach (string sentence in dialogue.sentences) {
             sentences.Enqueue(sentence);
@@ -44,6 +44,7 @@ public class DialogueManager : MonoBehaviour
         nameText.text = dialogue.name;
         dialogueEndEvent = dialogue.dialogueEndEvent;
         DisplayNextSentence();
+        enabled = true;
     }
 
     public void DisplayNextSentence() {
