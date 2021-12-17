@@ -11,7 +11,7 @@ public class LoseEvent : MonoBehaviour
     public UnityEvent loseHalf;
     public UnityEvent loseQuarter;
 
-    void onLose() {
+    public void onLose() {
         float healthPercent = cyborgHealthController.health / cyborgHealthController.maxHealth;
         if (healthPercent > 0.5f) {
             loseFull.Invoke();

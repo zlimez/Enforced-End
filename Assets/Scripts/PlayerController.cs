@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     public GameObject bullet;
     public Transform firePoint;
     public Animator animator;
-    private UnityEvent onDeathEvent;
+    public UnityEvent onDeathEvent;
     public weapon equipped = weapon.RIFLE;
     float horizontal;
     float vertical;
@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         if (health <= 0) {
-            onDeathEvent.Invoke();
+            onDeathEvent?.Invoke();
             enabled = false;
         }
         horizontal = Input.GetAxisRaw("Horizontal");

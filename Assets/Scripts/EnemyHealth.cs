@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
+using UnityEngine.Events;
 
 public class EnemyHealth : MonoBehaviour
 {
     public bool isBoss;
+    public UnityEvent onBossDeathEvent;
     public float maxHealth;
     public float health;
     // freeze movement when in attackSeq
@@ -152,8 +154,14 @@ public class EnemyHealth : MonoBehaviour
 
     public void deductHealth(float amount) {
         health -= amount;
-        if (health <= 0) 
-            Destroy(gameObject);
+        if (health <= 0) {
+            if (isBoss) {
+                onBossDeathEvent.Invoke();
+                enabled = false;
+            } else {
+                Destroy(gameObject);
+            }
+        }
     }
 
     public void Flip() {
