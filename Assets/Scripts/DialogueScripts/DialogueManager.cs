@@ -87,7 +87,7 @@ public class DialogueManager : MonoBehaviour
         dialogueText.text = "";
         foreach (char letter in sentence.ToCharArray()) {
             dialogueText.text += letter;
-            yield return null;
+            yield return new WaitForSeconds(0.05f);
         }
         isSentenceTyping = false;
     }
@@ -95,8 +95,8 @@ public class DialogueManager : MonoBehaviour
     public void EndDialogue() {
         StopAllCoroutines();
         animator.SetBool("IsOpen", false);
+        enabled = false;
         isSentenceTyping = false;
         dialogueEndEvent?.Invoke();
-        enabled = false;
     }
 }
