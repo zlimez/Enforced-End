@@ -6,15 +6,16 @@ using Pathfinding;
 public class EnemyHealth : MonoBehaviour
 {
     public float health;
+    public bool inAttackSeq = false;
     // For boss this is determined by the dominant attack 
     public string enemyType;
     public string attackType;
     private Seeker seeker;
     private Rigidbody2D rb;
-    public PlayerController player;
+    public static PlayerController player;
     // 0: right, 1: up, 2: left, 3: down
     public int face;
-    // public bool facing_right;
+    public bool facing_right = true;
     public float safeDistance;
     public bool reachedEndOfPath;
     private int currentWaypoint = 0;
@@ -22,11 +23,15 @@ public class EnemyHealth : MonoBehaviour
     public float speed;
     public Path path;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         seeker = GetComponent<Seeker>();
         // rb = GetComponent<Rigidbody2D>();
-        player = GameObject.Find("Player").GetComponent<PlayerController>();
+        player = player == null ? GameObject.Find("Player").GetComponent<PlayerController>() : player;
+    }
+
+    void Start() {
+        // for boss tag is determined only after attack pattern is generated
         switch (gameObject.transform.GetChild(0).tag) {
             case "Melee":
             enemyType = "Melee";
@@ -46,13 +51,19 @@ public class EnemyHealth : MonoBehaviour
             health = 100.0f;
             speed = 3.0f;
             break; 
+            case "Summon":
+            enemyType = "Summon";
+            // safeDistance = ;
+            // health = ;
+            // speed = ;
+            break;
         }
     }
 
      void Update () {
         float distToPlayer = Vector2.Distance(player.transform.position, transform.position);
         // close enough do not need to move
-        if (Mathf.Abs(distToPlayer - safeDistance) <= 0.2) {
+        if (inAttackSeq || Mathf.Abs(distToPlayer - safeDistance) <= 0.2) {
             // rb.velocity = Vector2.zero;
             return;
         }
@@ -103,7 +114,10 @@ public class EnemyHealth : MonoBehaviour
 
         Vector3 dir = (path.vectorPath[currentWaypoint] - transform.position).normalized;
         Vector3 velocity = dir * speed * speedFactor;
+        face = determineFace(dir);
         // rb.velocity = velocity;
+        if ((velocity.x < 0 && facing_right) || (velocity.x > 0 && !facing_right)) 
+            Flip();
         transform.position += velocity * Time.deltaTime;
     }
 
@@ -121,22 +135,22 @@ public class EnemyHealth : MonoBehaviour
             Destroy(gameObject);
     }
 
-    // public void Flip() {
-    //     facing_right = !facing_right;
-    //     transform.Rotate(0f, 180f, 0f);
-    // }
+    public void Flip() {
+        facing_right = !facing_right;
+        transform.Rotate(0f, 180f, 0f);
+    }
 
         // up down left right where to face for the boss
-    public void determineFace(Vector2 dir) {
+    public static int determineFace(Vector2 dir) {
         float angle = Vector2.SignedAngle(Vector2.right, dir);
         if ((angle >= 0 && angle < 45) || (angle < 0 && angle > -45)) {
-            face = 0;
+            return 0;
         } else if (angle > 45 && angle <= 135) {
-            face = 1;
+            return 1;
         } else if ((angle > 135 && angle <= 180) || (angle >= -180 && angle <= -135)) {
-            face = 2;
+            return 2;
         } else {
-            face = 3;
+            return 3;
         }
     }
 }

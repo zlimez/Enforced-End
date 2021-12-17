@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BossBehaviour : MonoBehaviour
 {
-    public static PlayerController player;
     private MeleeBehavior melee;
     private RangedEnemyBehavior ranged;
     private AOEBehaviour aoe;
@@ -17,15 +16,14 @@ public class BossBehaviour : MonoBehaviour
     public static List<string> sortedAttack = new List<string>();
     public static double[] dist = new double[] {0.5, 0.2, 0.2, 0.1};
     void Awake() {
-        player = GameObject.Find("Player").GetComponent<PlayerController>();
-        // melee = GetComponent<MeleeBehavior>();
+        melee = GetComponent<MeleeBehavior>();
         ranged = GetComponent<RangedEnemyBehavior>();
         aoe = GetComponent<AOEBehaviour>();
         summon = GetComponent<SummonBehaviour>();
-        attackTypes.Add("melee");
-        attackTypes.Add("ranged");
-        attackTypes.Add("aoe");
-        attackTypes.Add("summon");
+        attackTypes.Add("Melee");
+        attackTypes.Add("Ranged");
+        attackTypes.Add("Aoe");
+        attackTypes.Add("Summon");
         attackTimeCd = attackInterval;
         genAttackPattern();
     }
@@ -41,25 +39,25 @@ public class BossBehaviour : MonoBehaviour
             float selected = Random.Range(0f, 1f);
             attackTimeCd = attackInterval;
             switch (determineAttack(selected)) {
-                case "melee":
+                case "Melee":
                 melee.enabled = true;
                 ranged.enabled = false;
                 aoe.enabled = false;
                 summon.enabled = false;
                 break;
-                case "ranged":
+                case "Ranged":
                 melee.enabled = false;
                 ranged.enabled = true;
                 aoe.enabled = false;
                 summon.enabled = false;
                 break;
-                case "aoe":
+                case "Aoe":
                 melee.enabled = false;
                 ranged.enabled = false;
                 aoe.enabled = true;
                 summon.enabled = false;
                 break;
-                case "summon":
+                case "Summon":
                 melee.enabled = false;
                 ranged.enabled = false;
                 aoe.enabled = false;

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AOEBehaviour : MonoBehaviour
+public class AOEEnemyBehaviour : MonoBehaviour
 {
     public static GameObject playerObject;
     public static PlayerController player;
@@ -10,7 +10,7 @@ public class AOEBehaviour : MonoBehaviour
     public float damage;
     public float coolDown = 3.0f;
     public float fullAudioLength = 5.0f;
-    public bool attackSeqCompleted = false;
+    public bool attackSeqCompleted = true;
     public AudioSource source;
     public GameObject testPrefab;
     // Start is called before the first frame update

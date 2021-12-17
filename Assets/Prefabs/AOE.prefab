@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 2916829260275612133}
   - component: {fileID: 6324882537187199947}
   - component: {fileID: 6324882537187199949}
-  - component: {fileID: 6324882537187199946}
   m_Layer: 9
   m_Name: AOE
   m_TagString: Enemy
@@ -222,33 +221,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
+  inAttackSeq: 0
   enemyType: 
   attackType: 
-  player: {fileID: 0}
+  face: 0
+  facing_right: 1
   safeDistance: 0
   reachedEndOfPath: 0
   nextWaypointDistance: 1
   speed: 0
---- !u!114 &6324882537187199946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6324882537187199945}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78e434e780a43485491734cf3390dc3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  radius: 8
-  damage: 5
-  coolDown: 3
-  fullAudioLength: 5
-  attackSeqCompleted: 1
-  source: {fileID: 6324882537187199948}
-  testPrefab: {fileID: 4674529117052063147, guid: 3939b2c3a560e4605af913a70f556b64,
-    type: 3}
 --- !u!1 &6324882537309978293
 GameObject:
   m_ObjectHideFlags: 0

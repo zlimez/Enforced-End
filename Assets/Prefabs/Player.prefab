@@ -126,8 +126,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6743058333543447679}
   - component: {fileID: 6743058333543447678}
-  - component: {fileID: 6743058333543447677}
   - component: {fileID: 1067870877}
+  - component: {fileID: 6743058333543447677}
   m_Layer: 13
   m_Name: Player
   m_TagString: Untagged
@@ -173,28 +173,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &6743058333543447677
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6743058333543447676}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ab55516c34eb4f3cb6ef5b5dddaaedd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 4069606092839164777, guid: 816315d34cf9046a8a7a054a0c1c6d4d, type: 3}
-  firePoint: {fileID: 654537561392696925}
-  runspeed: 10
-  movement: 100
-  sight: 100
-  hear: 100
-  health: 100
-  meleeDamage: 10
-  degradationTime: 1
-  maxShootAngleDev: 40
 --- !u!58 &1067870877
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -211,3 +189,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &6743058333543447677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6743058333543447676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ab55516c34eb4f3cb6ef5b5dddaaedd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 4069606092839164777, guid: 816315d34cf9046a8a7a054a0c1c6d4d, type: 3}
+  firePoint: {fileID: 654537561392696925}
+  equipped: 0
+  runspeed: 10
+  movement: 100
+  sight: 100
+  hear: 100
+  armour: 100
+  dmgReduction: 10
+  health: 100
+  degradationTime: 1
+  maxShootAngleDev: 40
