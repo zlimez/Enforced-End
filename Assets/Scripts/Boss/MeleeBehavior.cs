@@ -12,7 +12,6 @@ public class MeleeBehavior : AttackBehaviour
     public bool attacked = false;
 
     void Awake() {
-        
         boss = GetComponent<BossBehaviour>();
         healthAndNav = GetComponent<EnemyHealth>();
     }
@@ -40,6 +39,5 @@ public class MeleeBehavior : AttackBehaviour
             EnemyHealth.player.deductHealth(damage);
         boss.attackCompleted = true;
         healthAndNav.inAttackSeq = false;
-        this.enabled = false;
     }
 }

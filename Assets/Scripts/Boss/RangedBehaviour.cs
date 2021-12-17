@@ -47,6 +47,5 @@ public class RangedBehaviour : AttackBehaviour
         Instantiate(projectile, firePoint.position, firePoint.transform.rotation);
         body.AddForce(-firePoint.right.normalized * forceScale, ForceMode2D.Impulse);
         boss.attackCompleted = true;
-        this.enabled = false;
     }
 }

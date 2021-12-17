@@ -130,6 +130,7 @@ public class EnemyHealth : MonoBehaviour
         if ((velocity.x < 0 && facing_right) || (velocity.x > 0 && !facing_right)) 
             Flip();
         transform.position += velocity * Time.deltaTime;
+        // gameObject.GetComponent<Rigidbody2D>().MovePosition(transform.position + velocity * Time.deltaTime);
     }
 
     public void OnPathComplete (Path p) {

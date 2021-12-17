@@ -19,7 +19,7 @@ public class BossBehaviour : MonoBehaviour
     public static List<AttackBehaviour> attackTypes = new List<AttackBehaviour>();
     // Start is called before the first frame update
     public static List<AttackBehaviour> sortedAttack = new List<AttackBehaviour>();
-    public static double[] distribution = new double[] {0.4, 0.4, 0.1, 0.1};
+    public static double[] distribution = new double[] {0.4, 0.8, 0.9, 1.0};
     void Awake() {
         healthAndNav = GetComponent<EnemyHealth>();
         melee = GetComponent<MeleeBehavior>();

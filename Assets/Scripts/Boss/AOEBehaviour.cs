@@ -68,6 +68,5 @@ public class AOEBehaviour : AttackBehaviour
         source.volume = 0;
         healthAndNav.inAttackSeq = false;
         boss.attackCompleted = true;
-        this.enabled = false;
     }
 }
