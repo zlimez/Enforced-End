@@ -123,13 +123,14 @@ public class EnemyHealth : MonoBehaviour
 
         Vector3 dir = (path.vectorPath[currentWaypoint] - transform.position).normalized;
         Vector3 velocity = dir * speed * speedFactor;
-        Debug.Log("dir" + (Vector2) dir);
-        Debug.Log("speed" + (Vector2) velocity);
+        // Debug.Log("dir" + (Vector2) dir);
+        // Debug.Log("speed" + (Vector2) velocity);
         face = determineFace(dir);
         // rb.velocity = velocity;
         if ((velocity.x < 0 && facing_right) || (velocity.x > 0 && !facing_right)) 
             Flip();
         transform.position += velocity * Time.deltaTime;
+        // gameObject.GetComponent<Rigidbody2D>().MovePosition(transform.position + velocity * Time.deltaTime);
     }
 
     public void OnPathComplete (Path p) {

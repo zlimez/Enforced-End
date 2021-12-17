@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SummonBehaviour : MonoBehaviour
+public class SummonBehaviour : AttackBehaviour
 {
     // Start is called before the first frame update
     public GameObject droppingMinionPrefab;
-    public int summonCount = 5;
-    public float minionSpawnInterval = 1;
+    public int summonCount = 1;
+    public float minionSpawnInterval = 2.0f;
     // minions are spawned with boss at the centre concentrated in the sector nearest to player
     public float spawnDistance = 4f; 
     public float minionDegreeSep = 10f;
@@ -20,18 +20,26 @@ public class SummonBehaviour : MonoBehaviour
         boss = GetComponent<BossBehaviour>();
     }
 
-    void OnEnabled() {
-        attacked = false;
+    override public bool attack() {
+        healthAndNav.inAttackSeq = true;
+        // StartCoroutine(SpawnMinions());
+        SpawnMinion();
+        return true;
     }
 
-    // Update is called once per frame
-    void Update()
+    public override string getAttackTag()
     {
-        if (!attacked) {
-            attacked = true;
-            healthAndNav.inAttackSeq = true;
-            StartCoroutine(SpawnMinions());
-        }
+        return "Summon";
+    }
+
+    void SpawnMinion() {
+        // start animation
+        boss.animator.SetTrigger("SpawnMinion");
+        float angleDev = summonCount % 2 == 0 ? summonCount / 2 * -minionDegreeSep : (summonCount - 1) / 2 * minionDegreeSep;
+        Vector2 spawnDir = Quaternion.AngleAxis(angleDev, Vector3.forward) * (EnemyHealth.player.transform.position - transform.position).normalized * spawnDistance;
+        SpawnFallingMinion(spawnDir);
+        healthAndNav.inAttackSeq = false;
+        boss.attackCompleted = true;
     }
 
     IEnumerator SpawnMinions() {
@@ -46,8 +54,6 @@ public class SummonBehaviour : MonoBehaviour
         }
         healthAndNav.inAttackSeq = false;
         boss.attackCompleted = true;
-        Debug.Log("Completed summon");
-        this.enabled = false;
     }
 
     void SpawnFallingMinion(Vector2 groundVelocity) {

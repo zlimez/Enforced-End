@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RangedBehaviour : MonoBehaviour
+public class RangedBehaviour : AttackBehaviour
 {
     public static GameObject player;
     private Rigidbody2D body;
@@ -23,31 +23,31 @@ public class RangedBehaviour : MonoBehaviour
         layermask = ~(LayerMask.GetMask("Enemy"));
     }
 
-    void OnEnabled() {
-        attacked = false;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (!attacked) {
-            attacked = true;
-            firePoint.transform.right = player.transform.position - transform.position;
-            // fire only when there is a clear shot
-            Debug.Log("ready to fire");
-            RaycastHit2D hit = Physics2D.Raycast(firePoint.position, firePoint.right, layermask);
-            if (hit.collider.gameObject.GetComponent<PlayerController>() != null) {
-                Debug.Log("fire to " + hit.transform.name);
+    override public bool attack() {
+        firePoint.transform.right = player.transform.position - transform.position;
+        // fire only when there is a clear shot
+        RaycastHit hit;
+        if (Physics.Linecast (firePoint.position, player.transform.position, out hit)) {
+            if(hit.transform.tag == "player") {
+                // Debug.Log("fire to " + hit.transform.name);
+                boss.animator.SetTrigger("ChargeLaser");
                 StartCoroutine(Shoot());
+                return true;
             }
         }
+        return false;
+    }
+
+    public override string getAttackTag()
+    {
+        return "Ranged";
     }
 
     IEnumerator Shoot() {
         yield return new WaitForSeconds(targetTime);
+        boss.animator.SetTrigger("FireLaser");
         Instantiate(projectile, firePoint.position, firePoint.transform.rotation);
         body.AddForce(-firePoint.right.normalized * forceScale, ForceMode2D.Impulse);
         boss.attackCompleted = true;
-        this.enabled = false;
     }
 }
