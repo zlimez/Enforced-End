@@ -26,11 +26,12 @@ public class DialogueManager : MonoBehaviour
             _instance = this;
             sentences = new Queue<string>();
             enabled = false;
-            TriggerStartDialogue();
+            StartCoroutine(TriggerStartDialogue());
         }
     }
 
-    private void TriggerStartDialogue() {
+    IEnumerator TriggerStartDialogue() {
+        yield return new WaitForSeconds(3);
         DialogueStartTrigger[] dialogueStartTriggers = FindObjectsOfType<DialogueStartTrigger>();
         if (dialogueStartTriggers.Length >= 1) {
             dialogueStartTriggers[0].TriggerDialogue();
