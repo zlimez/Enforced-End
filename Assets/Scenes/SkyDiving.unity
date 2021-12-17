@@ -1752,7 +1752,7 @@ MonoBehaviour:
     name: ???
     sentences:
     - Bzzzzzz
-    - Beetle13, this is Operator 17, over.
+    - Beetle 13, this is Operator 17, over.
     - '@name=Self'
     - Hear you loud and clear Alice, over.
     - '@name=Alice'
