@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ThrownMinion : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class ThrownMinion : MonoBehaviour
     private float verticalVelocity;
 
     private bool isGrounded;
+
+    private UnityEvent hitGroundEvent;
 
     // Update is called once per frame
     void Update()
@@ -31,6 +34,10 @@ public class ThrownMinion : MonoBehaviour
         this.groundVelocity = new Vector2(0, 0);
         this.verticalVelocity = 0;
         trnsBody.position += new Vector3(0, verticalPosition, 0);
+    }
+
+    public void InitializeHitGroundEvent(UnityEvent hitGroundEvent) {
+        this.hitGroundEvent = hitGroundEvent;
     }
 
     void UpdatePosition() {
@@ -51,6 +58,11 @@ public class ThrownMinion : MonoBehaviour
     }
 
     void OnGroundHit() {
+        if (hitGroundEvent != null) {
+            hitGroundEvent.Invoke();
+            Destroy(this.gameObject);
+            return;
+        }
         Instantiate(minionPrefab, trnsObject.position, Quaternion.identity);
         Destroy(this.gameObject);
     }

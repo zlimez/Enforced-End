@@ -95,8 +95,8 @@ public class DialogueManager : MonoBehaviour
     public void EndDialogue() {
         StopAllCoroutines();
         animator.SetBool("IsOpen", false);
+        enabled = false;
         isSentenceTyping = false;
         dialogueEndEvent?.Invoke();
-        enabled = false;
     }
 }
