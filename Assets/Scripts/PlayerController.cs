@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate() {
         animator.SetFloat("Speed", horizontal + vertical);
         body.velocity = new Vector2(horizontal * runspeed * movement / 100.0f, vertical * runspeed * movement / 100.0f);
-        if ((horizontal > 0 && !facingRight) || (horizontal < 0 && facingRight)) 
+        if ((horizontal > 0 && facingRight) || (horizontal < 0 && !facingRight)) 
             Flip();
     }
 
@@ -88,7 +88,7 @@ public class PlayerController : MonoBehaviour
     }
 
     public void deductHealth(float dmg) {
-        health -= (dmg - dmgReduction * armour / 100);
+        health -= Mathf.Max(0.0f, (dmg - dmgReduction * armour / 100f));
     }
 
     void Flip() {

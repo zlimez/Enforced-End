@@ -75,13 +75,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBoss: 0
+  onBossDeathEvent:
+    m_PersistentCalls:
+      m_Calls: []
   maxHealth: 0
   health: 0
   inAttackSeq: 0
   behaviourType: 
   animator: {fileID: 1352716976067273662}
   face: 0
-  facing_right: 1
+  facingLeft: 0
   safeDistance: 0
   reachedEndOfPath: 0
   nextWaypointDistance: 1

@@ -15,6 +15,7 @@ public class ThrownMinion : MonoBehaviour
     private float verticalVelocity;
 
     private bool isGrounded;
+    private bool isRealTime = false;
 
     private UnityEvent hitGroundEvent;
 
@@ -40,13 +41,18 @@ public class ThrownMinion : MonoBehaviour
         this.hitGroundEvent = hitGroundEvent;
     }
 
+    public void SetIsRealTime(bool isRealTime) {
+        this.isRealTime = isRealTime;
+    }
+
     void UpdatePosition() {
         if (isGrounded) {
             return;
         }
-        verticalVelocity += gravity * Time.deltaTime;
-        trnsBody.position += new Vector3(0, verticalVelocity, 0) * Time.deltaTime;
-        trnsObject.position += (Vector3) groundVelocity * Time.deltaTime;
+        float delta = isRealTime ? Time.unscaledDeltaTime : Time.deltaTime;
+        verticalVelocity += gravity * delta;
+        trnsBody.position += new Vector3(0, verticalVelocity, 0) * delta;
+        trnsObject.position += (Vector3) groundVelocity * delta;
     }
 
     void CheckGroundHit() {

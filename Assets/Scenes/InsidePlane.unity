@@ -5087,6 +5087,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueBox
       objectReference: {fileID: 0}
+    - target: {fileID: 835426885718089088, guid: 151c9fb6b0bf49e4793b5a3e323576f1,
+        type: 3}
+      propertyPath: boostMenu
+      value: 
+      objectReference: {fileID: 1233095900}
     - target: {fileID: 835426885718089091, guid: 151c9fb6b0bf49e4793b5a3e323576f1,
         type: 3}
       propertyPath: m_Pivot.x

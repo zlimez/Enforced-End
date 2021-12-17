@@ -25,7 +25,7 @@ public class RangedBehaviour : AttackBehaviour
     override public bool attack() {
         firePoint.transform.right = player.transform.position - transform.position;
         // fire only when there is a clear shot
-        RaycastHit2D hit = Physics2D.Linecast (firePoint.position, player.transform.position);
+        RaycastHit2D hit = Physics2D.Linecast(firePoint.position, player.transform.position);
         if (hit && hit.transform.tag == "Player") {
             boss.animator.SetTrigger("ChargeLaser");
             StartCoroutine(Shoot());

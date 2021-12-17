@@ -35,10 +35,15 @@ public class BossBehaviour : MonoBehaviour
         attackStuckTimeCd = attackStuckInterval;
         genAttackPattern();
         ReselectAttack();
+        StartCoroutine(DelayHealthAndNav());
     }
     // Update is called once per frame
     void Update()
     {
+        if (!healthAndNav.enabled) {
+            enabled = false;
+            return;
+        }
         if (attackTimeCd <= 0) {
             ReselectAttack();
         } else if (attackStuckTimeCd <= 0) {
@@ -89,5 +94,12 @@ public class BossBehaviour : MonoBehaviour
             return sortedAttack[2];
         } else 
             return sortedAttack[3];
+    }
+
+    IEnumerator DelayHealthAndNav() {
+        healthAndNav.inAttackSeq = true;
+        yield return new WaitForSeconds(0.2f);
+        healthAndNav.inAttackSeq = false;
+        yield return null;
     }
 }

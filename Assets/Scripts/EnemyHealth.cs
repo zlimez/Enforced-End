@@ -153,6 +153,7 @@ public class EnemyHealth : MonoBehaviour
     }
 
     public void deductHealth(float amount) {
+        if (!enabled) return;
         health -= amount;
         if (health <= 0) {
             if (isBoss) {
