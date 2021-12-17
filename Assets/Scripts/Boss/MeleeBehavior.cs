@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MeleeBehavior : MonoBehaviour
+public class MeleeBehavior : AttackBehaviour
 {
     public float meleeWpnRadius = 1.0f;
     public float attackDelay = 0.4f;
@@ -12,19 +12,23 @@ public class MeleeBehavior : MonoBehaviour
     public bool attacked = false;
 
     void Awake() {
+        
         boss = GetComponent<BossBehaviour>();
         healthAndNav = GetComponent<EnemyHealth>();
     }
 
-    void OnEnabled() {
-        attacked = false;
-    }
-    void Update() {
-        if (!attacked && Vector2.Distance(transform.position, EnemyHealth.player.transform.position) <= meleeWpnRadius) {
-            attacked = true;
+    public override bool attack() {
+        if (Vector2.Distance(transform.position, EnemyHealth.player.transform.position) <= meleeWpnRadius) {
             healthAndNav.inAttackSeq = true;
             StartCoroutine(attackSeq());
-        } 
+            return true;
+        }
+        return false;
+    }
+
+    public override string getAttackTag()
+    {
+        return "Melee";
     }
 
     IEnumerator attackSeq() {

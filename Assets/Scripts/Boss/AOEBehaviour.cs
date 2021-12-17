@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AOEBehaviour : MonoBehaviour
+public class AOEBehaviour : AttackBehaviour
 {
     public static PlayerController player;
     // boss will only start charging up for attack when player is within this distance
@@ -22,19 +22,18 @@ public class AOEBehaviour : MonoBehaviour
         boss = GetComponent<BossBehaviour>();
     }
 
-    void OnEnabled() {
-        attacked = false;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (!attacked && Vector2.Distance(transform.position, player.transform.position) < maxChargingDistance) {
-            Debug.Log("ready for aoe");
-            attacked = true;
+    override public bool attack() {
+        if (Vector2.Distance(transform.position, player.transform.position) < maxChargingDistance) {
             healthAndNav.inAttackSeq = true;
             StartCoroutine(attackSeq());
+            return true;
         }
+        return false;
+    }
+
+    public override string getAttackTag()
+    {
+        return "AOE";
     }
 
     public void inflictDmg() {
@@ -51,7 +50,7 @@ public class AOEBehaviour : MonoBehaviour
     // gradual increase in volume
     IEnumerator AudioQueue() {
         while (true) {
-            Debug.Log("Vol " + source.volume);
+            // Debug.Log("Vol " + source.volume);
             yield return new WaitForSeconds(0.1f);
             source.volume += 0.02f;
         }
