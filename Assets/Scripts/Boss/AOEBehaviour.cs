@@ -9,7 +9,7 @@ public class AOEBehaviour : AttackBehaviour
     public float maxChargingDistance = 4;
     public float radius = 8;
     public float damage = 10f;
-    public float fullAudioLength = 5.0f;
+    public float fullAudioLength = 3.0f;
     public float maxVolume = 0.2f;
     public bool attacked = false;
     public AudioSource source;
@@ -25,7 +25,6 @@ public class AOEBehaviour : AttackBehaviour
 
     override public bool attack() {
         if (Vector2.Distance(transform.position, player.transform.position) < maxChargingDistance) {
-            healthAndNav.inAttackSeq = true;
             StartCoroutine(attackSeq());
             return true;
         }
@@ -52,15 +51,22 @@ public class AOEBehaviour : AttackBehaviour
     // gradual increase in volume
     IEnumerator AudioQueue() {
         while (true) {
-            Debug.Log("Vol " + source.volume + " " + maxVolume);
+            // Debug.Log("Vol " + source.volume + " " + maxVolume);
             yield return new WaitForSeconds(0.1f);
             if (source.volume < maxVolume) {
-                source.volume += 0.01f;
+                source.volume += 0.02f;
             }
         }
     }
 
+    IEnumerator StopMovePrepareAttack() {
+        yield return new WaitForSeconds(fullAudioLength * 0.8f);
+        healthAndNav.inAttackSeq = true;
+        yield return null;
+    }
+
     IEnumerator attackSeq() {
+        StartCoroutine(StopMovePrepareAttack());
         yield return new WaitForSeconds(fullAudioLength * (1 - player.hear / 100));
         source.Play();
         IEnumerator audioQueue = AudioQueue();
@@ -70,7 +76,9 @@ public class AOEBehaviour : AttackBehaviour
         inflictDmg();
         source.Stop();
         source.volume = 0;
-        healthAndNav.inAttackSeq = false;
         boss.attackCompleted = true;
+        yield return new WaitForSeconds(0.5f);
+        healthAndNav.inAttackSeq = false;
+        yield return null;
     }
 }

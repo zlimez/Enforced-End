@@ -190,6 +190,7 @@ MonoBehaviour:
   health: 0
   inAttackSeq: 0
   behaviourType: 
+  animator: {fileID: 7494706291468776785}
   face: 0
   facing_right: 1
   safeDistance: 0
@@ -299,7 +300,7 @@ MonoBehaviour:
   maxChargingDistance: 4
   radius: 8
   damage: 10
-  fullAudioLength: 5
+  fullAudioLength: 3
   maxVolume: 0.2
   attacked: 0
   source: {fileID: 9057442466303404110}
