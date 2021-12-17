@@ -18,7 +18,7 @@ public class EnemyHealth : MonoBehaviour
     public Animator animator;
     // 0: right, 1: up, 2: left, 3: down
     public int face;
-    public bool facing_right = true;
+    public bool facingLeft = true;
     public float safeDistance;
     public bool reachedEndOfPath;
     private int currentWaypoint = 0;
@@ -134,7 +134,7 @@ public class EnemyHealth : MonoBehaviour
         // Debug.Log("speed" + (Vector2) velocity);
         face = determineFace(dir);
         // rb.velocity = velocity;
-        if ((velocity.x < 0 && facing_right) || (velocity.x > 0 && !facing_right)) 
+        if (((player.transform.position - transform.position).x < 0 && !facingLeft) || ((player.transform.position - transform.position).x > 0 && facingLeft)) 
             Flip();
         
         animator.SetFloat("Speed", speed);
@@ -157,7 +157,7 @@ public class EnemyHealth : MonoBehaviour
     }
 
     public void Flip() {
-        facing_right = !facing_right;
+        facingLeft = !facingLeft;
         transform.Rotate(0f, 180f, 0f);
     }
 

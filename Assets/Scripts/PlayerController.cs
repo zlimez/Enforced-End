@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class PlayerController : MonoBehaviour
 {
     public enum weapon {RIFLE, MELEE};
+    public bool facingRight = true;
     Rigidbody2D body;
     public GameObject bullet;
     public Transform firePoint;
@@ -47,7 +48,7 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(0)) {
             Vector2 point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            transform.right = point - (Vector2) transform.position;
+            firePoint.right = point - (Vector2) transform.position;
             //trigger attack animation
             // Debug.Log(transform.right);
             if (equipped == weapon.RIFLE) {
@@ -61,6 +62,8 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate() {
         animator.SetFloat("Speed", horizontal + vertical);
         body.velocity = new Vector2(horizontal * runspeed * movement / 100.0f, vertical * runspeed * movement / 100.0f);
+        if ((horizontal > 0 && !facingRight) || (horizontal < 0 && facingRight)) 
+            Flip();
     }
 
     void Shoot() {
@@ -86,5 +89,10 @@ public class PlayerController : MonoBehaviour
 
     public void deductHealth(float dmg) {
         health -= (dmg - dmgReduction * armour / 100);
+    }
+
+    void Flip() {
+        facingRight = !facingRight;
+        transform.Rotate(0f, 180f, 0f);
     }
 }
