@@ -6,7 +6,7 @@ public class BossBehaviour : MonoBehaviour
 {
     private EnemyHealth healthAndNav;
     private MeleeBehavior melee;
-    private RangedEnemyBehavior ranged;
+    private RangedBehaviour ranged;
     private AOEBehaviour aoe;
     private SummonBehaviour summon;
     public float attackInterval = 1.5f; 
@@ -19,7 +19,7 @@ public class BossBehaviour : MonoBehaviour
     void Awake() {
         healthAndNav = GetComponent<EnemyHealth>();
         melee = GetComponent<MeleeBehavior>();
-        ranged = GetComponent<RangedEnemyBehavior>();
+        ranged = GetComponent<RangedBehaviour>();
         aoe = GetComponent<AOEBehaviour>();
         summon = GetComponent<SummonBehaviour>();
         attackTypes.Add("Melee");
@@ -29,11 +29,6 @@ public class BossBehaviour : MonoBehaviour
         attackTimeCd = attackInterval;
         genAttackPattern();
     }
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -42,6 +37,7 @@ public class BossBehaviour : MonoBehaviour
             string chosenAttack = determineAttack(selected);
             healthAndNav.changeBehaviour(chosenAttack);
             attackTimeCd = attackInterval;
+            attackCompleted = false;
             switch (chosenAttack) {
                 case "Melee":
                 melee.enabled = true;
@@ -71,6 +67,10 @@ public class BossBehaviour : MonoBehaviour
         while (attackTypes.Count > 0) {
             int selected = Random.Range(0, attackTypes.Count - 1);
             sortedAttack.Add(attackTypes[selected]);
+            attackTypes.RemoveAt(selected);
+        }
+        foreach (string attack in sortedAttack) {
+            Debug.Log(attack);
         }
         gameObject.transform.GetChild(0).tag = sortedAttack[0];
     }

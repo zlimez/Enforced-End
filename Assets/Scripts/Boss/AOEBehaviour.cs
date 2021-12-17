@@ -12,11 +12,18 @@ public class AOEBehaviour : MonoBehaviour
     public float fullAudioLength = 5.0f;
     public bool attacked = false;
     public AudioSource source;
-    public GameObject testPrefab;
-    // Start is called before the first frame update
+    public EnemyHealth healthAndNav;
+    public BossBehaviour boss;
+
     void Awake()
     {
         player = player == null ? GameObject.Find("Player").GetComponent<PlayerController>() : player;
+        healthAndNav = GetComponent<EnemyHealth>();
+        boss = GetComponent<BossBehaviour>();
+    }
+
+    void OnEnabled() {
+        attacked = false;
     }
 
     // Update is called once per frame
@@ -25,6 +32,7 @@ public class AOEBehaviour : MonoBehaviour
         if (!attacked && Vector2.Distance(transform.position, player.transform.position) < maxChargingDistance) {
             Debug.Log("ready for aoe");
             attacked = true;
+            healthAndNav.inAttackSeq = true;
             StartCoroutine(attackSeq());
         }
     }
@@ -38,7 +46,6 @@ public class AOEBehaviour : MonoBehaviour
             if (hit.collider.gameObject.GetComponent<PlayerController>() != null)
                 player.deductHealth(damage);
         }
-        Instantiate(testPrefab, transform.position, Quaternion.identity);
     }
 
     // gradual increase in volume
@@ -60,6 +67,8 @@ public class AOEBehaviour : MonoBehaviour
         inflictDmg();
         source.Stop();
         source.volume = 0;
+        healthAndNav.inAttackSeq = false;
+        boss.attackCompleted = true;
         this.enabled = false;
     }
 }

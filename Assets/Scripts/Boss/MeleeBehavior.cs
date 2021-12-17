@@ -15,6 +15,10 @@ public class MeleeBehavior : MonoBehaviour
         boss = GetComponent<BossBehaviour>();
         healthAndNav = GetComponent<EnemyHealth>();
     }
+
+    void OnEnabled() {
+        attacked = false;
+    }
     void Update() {
         if (!attacked && Vector2.Distance(transform.position, EnemyHealth.player.transform.position) <= meleeWpnRadius) {
             attacked = true;

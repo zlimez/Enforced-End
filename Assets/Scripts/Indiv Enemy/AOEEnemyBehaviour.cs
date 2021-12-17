@@ -12,10 +12,12 @@ public class AOEEnemyBehaviour : MonoBehaviour
     public bool attackSeqCompleted = true;
     public AudioSource source;
     public GameObject testPrefab;
+    public Collider2D col;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         player = player == null ? GameObject.Find("Player").GetComponent<PlayerController>() : player;
+        col = GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
@@ -36,10 +38,13 @@ public class AOEEnemyBehaviour : MonoBehaviour
         Debug.Log("aoe unleashed");
         Instantiate(testPrefab, new Vector2(0, 0), Quaternion.identity);
         if (Vector2.Distance(transform.position, player.transform.position) <= radius) {
+            col.enabled = false;
             RaycastHit2D hit = Physics2D.Raycast(transform.position, player.transform.position - transform.position);
+            Debug.Log(hit.collider.gameObject.name);
             // player can hide behind wall
             if (hit.collider.gameObject.GetComponent<PlayerController>() != null)
                 player.deductHealth(damage);
+            col.enabled = true;
         }
     }
 

@@ -13,17 +13,24 @@ public class SummonBehaviour : MonoBehaviour
     public float minionDegreeSep = 10f;
     public bool attacked = false;
     private EnemyHealth healthAndNav;
+    public BossBehaviour boss;
     void Awake()
     {
         healthAndNav = GetComponent<EnemyHealth>();
+        boss = GetComponent<BossBehaviour>();
+    }
+
+    void OnEnabled() {
+        attacked = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         if (!attacked) {
-            StartCoroutine(SpawnMinions());
+            attacked = true;
             healthAndNav.inAttackSeq = true;
+            StartCoroutine(SpawnMinions());
         }
     }
 
@@ -38,6 +45,8 @@ public class SummonBehaviour : MonoBehaviour
             minionCount += 1;
         }
         healthAndNav.inAttackSeq = false;
+        boss.attackCompleted = true;
+        Debug.Log("Completed summon");
         this.enabled = false;
     }
 

@@ -125,7 +125,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8751018294327541365}
-  - component: {fileID: 1835858693956707884}
   - component: {fileID: 8751018294327541360}
   - component: {fileID: 8751018294327541363}
   - component: {fileID: 8751018294327541362}
@@ -154,27 +153,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &1835858693956707884
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8751018294327541361}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!61 &8751018294327541360
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -229,10 +207,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb9c42e8f67dd430fbee8724188b7e9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isBoss: 0
   health: 0
-  enemyType: 
-  attackType: 
-  player: {fileID: 0}
+  inAttackSeq: 0
+  behaviourType: 
+  face: 0
+  facing_right: 1
   safeDistance: 0
   reachedEndOfPath: 0
   nextWaypointDistance: 1

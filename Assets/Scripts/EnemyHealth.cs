@@ -12,7 +12,7 @@ public class EnemyHealth : MonoBehaviour
     // For boss this is determined by the dominant attack 
     public string behaviourType;
     private Seeker seeker;
-    private Rigidbody2D rb;
+    // private Rigidbody2D rb;
     public static PlayerController player;
     // 0: right, 1: up, 2: left, 3: down
     public int face;
@@ -33,8 +33,10 @@ public class EnemyHealth : MonoBehaviour
 
     void Start() {
         // for base boss tag is determined only after attack pattern is generated
-        if (gameObject.name.StartsWith("Boss"))
+        if (gameObject.name.StartsWith("Boss")) {
             health = 200f;
+            isBoss = true;
+        }
         switch (gameObject.transform.GetChild(0).tag) {
             case "Melee":
             behaviourType = "Melee";
@@ -67,14 +69,14 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
-     void Update () {
+    void Update () {
         float distToPlayer = Vector2.Distance(player.transform.position, transform.position);
         // close enough do not need to move
         if (inAttackSeq || Mathf.Abs(distToPlayer - safeDistance) <= 0.2) {
             // rb.velocity = Vector2.zero;
             return;
         }
-         // for AOE and ranged they try to move away from player if too close
+        // for AOE and ranged they try to move away from player if too close
         if (distToPlayer < safeDistance) {
             if (behaviourType == "Melee") {
                 return;
@@ -121,6 +123,8 @@ public class EnemyHealth : MonoBehaviour
 
         Vector3 dir = (path.vectorPath[currentWaypoint] - transform.position).normalized;
         Vector3 velocity = dir * speed * speedFactor;
+        Debug.Log("dir" + (Vector2) dir);
+        Debug.Log("speed" + (Vector2) velocity);
         face = determineFace(dir);
         // rb.velocity = velocity;
         if ((velocity.x < 0 && facing_right) || (velocity.x > 0 && !facing_right)) 
