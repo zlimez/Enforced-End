@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class LevelStartScript : MonoBehaviour
+public class InteractableLevelStart : MonoBehaviour
 {
     public string tooltipText = "Start Mission";
+    public string scenename = "SkyDiving";
     void Start() {
         enabled = false;
     }
@@ -20,7 +22,7 @@ public class LevelStartScript : MonoBehaviour
     }
 
     void StartLevel() {
-
+        SceneManager.LoadScene(scenename);
     }
 
     void OnTriggerEnter2D(Collider2D col) {
