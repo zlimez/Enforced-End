@@ -33,6 +33,7 @@ public class MeleeBehavior : AttackBehaviour
     IEnumerator attackSeq() {
         yield return new WaitForSeconds(attackDelay);
         // start animation
+        boss.animator.SetTrigger("Melee");
         int playerDir = EnemyHealth.determineFace(EnemyHealth.player.transform.position - transform.position);
         // if enemy is facing the correct direction 90 degree quadrants
         if (healthAndNav.face == playerDir)

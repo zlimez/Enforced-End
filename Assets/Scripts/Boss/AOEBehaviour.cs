@@ -10,6 +10,7 @@ public class AOEBehaviour : AttackBehaviour
     public float radius = 8;
     public float damage = 10f;
     public float fullAudioLength = 5.0f;
+    public float maxVolume = 0.2f;
     public bool attacked = false;
     public AudioSource source;
     public EnemyHealth healthAndNav;
@@ -38,7 +39,8 @@ public class AOEBehaviour : AttackBehaviour
 
     public void inflictDmg() {
         // start animation
-        Debug.Log("aoe unleashed");
+        // Debug.Log("aoe unleashed");
+        boss.animator.SetTrigger("Shockwave");
         if (Vector2.Distance(transform.position, player.transform.position) <= radius) {
             RaycastHit2D hit = Physics2D.Raycast(transform.position, player.transform.position - transform.position);
             // player can hide behind wall
@@ -50,9 +52,11 @@ public class AOEBehaviour : AttackBehaviour
     // gradual increase in volume
     IEnumerator AudioQueue() {
         while (true) {
-            // Debug.Log("Vol " + source.volume);
+            Debug.Log("Vol " + source.volume + " " + maxVolume);
             yield return new WaitForSeconds(0.1f);
-            source.volume += 0.02f;
+            if (source.volume < maxVolume) {
+                source.volume += 0.01f;
+            }
         }
     }
 

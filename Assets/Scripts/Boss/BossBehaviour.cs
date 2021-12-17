@@ -10,16 +10,17 @@ public class BossBehaviour : MonoBehaviour
     private AOEBehaviour aoe;
     private SummonBehaviour summon;
     private AttackBehaviour currentChosenAttack;
+    public Animator animator;
     public float attackInterval = 2.0f; 
     public float attackTimeCd;
     public float attackStuckInterval = 9.0f;
     public float attackStuckTimeCd;
     public bool attackInProgress = false;
     public bool attackCompleted = true;
-    public static List<AttackBehaviour> attackTypes = new List<AttackBehaviour>();
+    private List<AttackBehaviour> attackTypes = new List<AttackBehaviour>();
     // Start is called before the first frame update
-    public static List<AttackBehaviour> sortedAttack = new List<AttackBehaviour>();
-    public static double[] distribution = new double[] {0.4, 0.8, 0.9, 1.0};
+    private List<AttackBehaviour> sortedAttack = new List<AttackBehaviour>();
+    public double[] distribution = new double[] {0.4, 0.8, 0.9, 1.0};
     void Awake() {
         healthAndNav = GetComponent<EnemyHealth>();
         melee = GetComponent<MeleeBehavior>();

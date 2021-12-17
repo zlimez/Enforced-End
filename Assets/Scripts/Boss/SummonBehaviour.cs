@@ -34,6 +34,7 @@ public class SummonBehaviour : AttackBehaviour
 
     void SpawnMinion() {
         // start animation
+        boss.animator.SetTrigger("SpawnMinion");
         float angleDev = summonCount % 2 == 0 ? summonCount / 2 * -minionDegreeSep : (summonCount - 1) / 2 * minionDegreeSep;
         Vector2 spawnDir = Quaternion.AngleAxis(angleDev, Vector3.forward) * (EnemyHealth.player.transform.position - transform.position).normalized * spawnDistance;
         SpawnFallingMinion(spawnDir);

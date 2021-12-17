@@ -29,7 +29,8 @@ public class RangedBehaviour : AttackBehaviour
         RaycastHit hit;
         if (Physics.Linecast (firePoint.position, player.transform.position, out hit)) {
             if(hit.transform.tag == "player") {
-                Debug.Log("fire to " + hit.transform.name);
+                // Debug.Log("fire to " + hit.transform.name);
+                boss.animator.SetTrigger("ChargeLaser");
                 StartCoroutine(Shoot());
                 return true;
             }
@@ -44,6 +45,7 @@ public class RangedBehaviour : AttackBehaviour
 
     IEnumerator Shoot() {
         yield return new WaitForSeconds(targetTime);
+        boss.animator.SetTrigger("FireLaser");
         Instantiate(projectile, firePoint.position, firePoint.transform.rotation);
         body.AddForce(-firePoint.right.normalized * forceScale, ForceMode2D.Impulse);
         boss.attackCompleted = true;
