@@ -14,6 +14,7 @@ public class EnemyHealth : MonoBehaviour
     private Seeker seeker;
     // private Rigidbody2D rb;
     public static PlayerController player;
+    public Animator animator;
     // 0: right, 1: up, 2: left, 3: down
     public int face;
     public bool facing_right = true;
@@ -70,6 +71,7 @@ public class EnemyHealth : MonoBehaviour
     }
 
     void Update () {
+        animator.SetFloat("Speed", 0f);
         float distToPlayer = Vector2.Distance(player.transform.position, transform.position);
         // close enough do not need to move
         if (inAttackSeq || Mathf.Abs(distToPlayer - safeDistance) <= 0.2) {
@@ -78,13 +80,16 @@ public class EnemyHealth : MonoBehaviour
         }
         // for AOE and ranged they try to move away from player if too close
         if (distToPlayer < safeDistance) {
-            if (behaviourType == "Melee") {
+            if (behaviourType == "Melee" || behaviourType == "AOE") {
                 return;
             } else {
                 if (seeker.IsDone())
                     seeker.StartPath(transform.position, transform.position - (player.transform.position - transform.position), OnPathComplete);
             }
         } else {
+            if (behaviourType == "Ranged") {
+                return;
+            }
             if (seeker.IsDone()) 
                 seeker.StartPath(transform.position, player.transform.position, OnPathComplete);
         }
@@ -129,6 +134,8 @@ public class EnemyHealth : MonoBehaviour
         // rb.velocity = velocity;
         if ((velocity.x < 0 && facing_right) || (velocity.x > 0 && !facing_right)) 
             Flip();
+        
+        animator.SetFloat("Speed", speed);
         transform.position += velocity * Time.deltaTime;
         // gameObject.GetComponent<Rigidbody2D>().MovePosition(transform.position + velocity * Time.deltaTime);
     }

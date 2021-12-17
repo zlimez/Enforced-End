@@ -39,6 +39,8 @@ public class MeleeBehavior : AttackBehaviour
         if (healthAndNav.face == playerDir)
             EnemyHealth.player.deductHealth(damage);
         boss.attackCompleted = true;
+        yield return new WaitForSeconds(0.5f);
         healthAndNav.inAttackSeq = false;
+        yield return null;
     }
 }

@@ -54,6 +54,7 @@ public class SummonBehaviour : AttackBehaviour
         }
         healthAndNav.inAttackSeq = false;
         boss.attackCompleted = true;
+        yield return null;
     }
 
     void SpawnFallingMinion(Vector2 groundVelocity) {

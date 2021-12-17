@@ -78,6 +78,7 @@ MonoBehaviour:
   health: 0
   inAttackSeq: 0
   behaviourType: 
+  animator: {fileID: 1352716976067273662}
   face: 0
   facing_right: 1
   safeDistance: 0

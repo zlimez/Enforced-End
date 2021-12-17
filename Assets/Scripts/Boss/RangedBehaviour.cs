@@ -26,14 +26,11 @@ public class RangedBehaviour : AttackBehaviour
     override public bool attack() {
         firePoint.transform.right = player.transform.position - transform.position;
         // fire only when there is a clear shot
-        RaycastHit hit;
-        if (Physics.Linecast (firePoint.position, player.transform.position, out hit)) {
-            if(hit.transform.tag == "player") {
-                // Debug.Log("fire to " + hit.transform.name);
-                boss.animator.SetTrigger("ChargeLaser");
-                StartCoroutine(Shoot());
-                return true;
-            }
+        RaycastHit2D hit = Physics2D.Linecast (firePoint.position, player.transform.position);
+        if (hit && hit.transform.tag == "Player") {
+            boss.animator.SetTrigger("ChargeLaser");
+            StartCoroutine(Shoot());
+            return true;
         }
         return false;
     }
@@ -48,6 +45,8 @@ public class RangedBehaviour : AttackBehaviour
         boss.animator.SetTrigger("FireLaser");
         Instantiate(projectile, firePoint.position, firePoint.transform.rotation);
         body.AddForce(-firePoint.right.normalized * forceScale, ForceMode2D.Impulse);
+        yield return new WaitForSeconds(1.0f);
         boss.attackCompleted = true;
+        yield return null;
     }
 }
