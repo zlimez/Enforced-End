@@ -2,13 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ToolTipDialogueTrigger : MonoBehaviour
+public class LevelStartScript : MonoBehaviour
 {
-    public string tooltipText;
-    public Dialogue dialogue;
-
+    public string tooltipText = "Start Mission";
     void Start() {
-        dialogue.dialogueEndEvent.AddListener(enableInteract);
         enabled = false;
     }
 
@@ -17,14 +14,13 @@ public class ToolTipDialogueTrigger : MonoBehaviour
         if (Input.GetKeyDown("f"))
         {
             enabled = false;
-            TriggerDialogue();
+            StartLevel();
             TooltipManager._instance.HideToolTip();
         }
     }
 
-    public void TriggerDialogue ()
-    {
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+    void StartLevel() {
+
     }
 
     void OnTriggerEnter2D(Collider2D col) {
