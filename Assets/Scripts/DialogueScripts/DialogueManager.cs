@@ -31,7 +31,7 @@ public class DialogueManager : MonoBehaviour
     }
 
     IEnumerator TriggerStartDialogue() {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
         DialogueStartTrigger[] dialogueStartTriggers = FindObjectsOfType<DialogueStartTrigger>();
         if (dialogueStartTriggers.Length >= 1) {
             dialogueStartTriggers[0].TriggerDialogue();
