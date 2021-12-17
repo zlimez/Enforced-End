@@ -5,7 +5,6 @@ using TMPro;
 
 public class BoostStats : MonoBehaviour
 {
-    public static bool GameIsPaused = false;
     public GameObject boostStatUI;
     public PlayerController player;
     public static float statBalance;
@@ -21,14 +20,12 @@ public class BoostStats : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape)) {
-            if (GameIsPaused) {
-                Time.timeScale = 1f;
+            if (Pause.GameIsPaused) {
+                Pause.ResumeGame();
                 boostStatUI.SetActive(false);
-                GameIsPaused = false;
             } else {
-                Time.timeScale = 0f;
+                Pause.PauseGame();
                 boostStatUI.SetActive(true);
-                GameIsPaused = true;
             }
         }
     }

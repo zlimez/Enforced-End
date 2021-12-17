@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
             } else
                 equipped = weapon.RIFLE;
         }
-        if (Input.GetMouseButtonDown(0)) {
+        if (Input.GetMouseButtonDown(0) && !Pause.GameIsPaused) {
             Vector2 point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             firePoint.right = point - (Vector2) transform.position;
             //trigger attack animation
