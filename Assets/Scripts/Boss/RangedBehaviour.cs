@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RangedBehaviour : MonoBehaviour
+public class RangedBehaviour : AttackBehaviour
 {
     public bool selected = false;
     public static GameObject player;
@@ -21,38 +21,33 @@ public class RangedBehaviour : MonoBehaviour
         player = player == null ? GameObject.Find("Player") : player;
         body = GetComponent<Rigidbody2D>();
         boss = GetComponent<BossBehaviour>();
+        layermask = ~(LayerMask.GetMask("Enemy"));
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (selected && !attacked) {
-            firePoint.transform.right = player.transform.position - firePoint.transform.position;
-            // fire only when there is a clear shot
-            Debug.Log("ready to fire");
-            RaycastHit2D hit = Physics2D.Raycast(firePoint.position, firePoint.right);
-            Debug.Log("fire to " + hit.collider.gameObject.name);
-            if (hit.collider.gameObject.GetComponent<PlayerController>() != null) {
-                attacked = true;
-                StartCoroutine(Shoot());
-            }
+    override public bool attack() {
+        firePoint.transform.right = player.transform.position - transform.position;
+        // fire only when there is a clear shot
+        RaycastHit2D hit = Physics2D.Linecast (firePoint.position, player.transform.position);
+        if (hit && hit.transform.tag == "Player") {
+            boss.animator.SetTrigger("ChargeLaser");
+            StartCoroutine(Shoot());
+            return true;
         }
+        return false;
+    }
+
+    public override string getAttackTag()
+    {
+        return "Ranged";
     }
 
     IEnumerator Shoot() {
         yield return new WaitForSeconds(targetTime);
+        boss.animator.SetTrigger("FireLaser");
         Instantiate(projectile, firePoint.position, firePoint.transform.rotation);
-        // body.AddForce(-firePoint.right.normalized * forceScale, ForceMode2D.Impulse);
+        body.AddForce(-firePoint.right.normalized * forceScale, ForceMode2D.Impulse);
+        yield return new WaitForSeconds(1.0f);
         boss.attackCompleted = true;
-        deselectAttack();
-    }
-
-    public void selectAttack() {
-        selected = true;
-    }
-    
-    void deselectAttack() {
-        selected = false;
-        attacked = false;
+        yield return null;
     }
 }

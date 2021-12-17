@@ -78,6 +78,7 @@ MonoBehaviour:
   health: 0
   inAttackSeq: 0
   behaviourType: 
+  animator: {fileID: 1352716976067273662}
   face: 0
   facing_right: 1
   safeDistance: 0
@@ -126,6 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   attackInterval: 0.5
+  animator: {fileID: 1352716976067273662}
 --- !u!1 &7744951107476762702
 GameObject:
   m_ObjectHideFlags: 0

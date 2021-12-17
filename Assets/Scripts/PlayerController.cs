@@ -45,6 +45,7 @@ public class PlayerController : MonoBehaviour
             Vector2 point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             transform.right = point - (Vector2) transform.position;
             //trigger attack animation
+            // Debug.Log(transform.right);
             if (equipped == weapon.RIFLE) {
                 Shoot();
             } else {

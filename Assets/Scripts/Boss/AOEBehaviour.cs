@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AOEBehaviour : MonoBehaviour
+public class AOEBehaviour : AttackBehaviour
 {
     public bool selected = false;
     public static PlayerController player;
@@ -10,7 +10,8 @@ public class AOEBehaviour : MonoBehaviour
     public float maxChargingDistance = 4;
     public float radius = 8;
     public float damage = 10f;
-    public float fullAudioLength = 5.0f;
+    public float fullAudioLength = 3.0f;
+    public float maxVolume = 0.2f;
     public bool attacked = false;
     public AudioSource source;
     public EnemyHealth healthAndNav;
@@ -22,23 +23,25 @@ public class AOEBehaviour : MonoBehaviour
         player = player == null ? GameObject.Find("Player").GetComponent<PlayerController>() : player;
         healthAndNav = GetComponent<EnemyHealth>();
         boss = GetComponent<BossBehaviour>();
-        col = GetComponent<Collider2D>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (selected && !attacked && Vector2.Distance(transform.position, player.transform.position) < maxChargingDistance) {
-            Debug.Log("ready for aoe");
-            attacked = true;
-            healthAndNav.inAttackSeq = true;
+    override public bool attack() {
+        if (Vector2.Distance(transform.position, player.transform.position) < maxChargingDistance) {
             StartCoroutine(attackSeq());
+            return true;
         }
+        return false;
+    }
+
+    public override string getAttackTag()
+    {
+        return "AOE";
     }
 
     public void inflictDmg() {
         // start animation
-        Debug.Log("aoe unleashed");
+        // Debug.Log("aoe unleashed");
+        boss.animator.SetTrigger("Shockwave");
         if (Vector2.Distance(transform.position, player.transform.position) <= radius) {
             col.enabled = false;
             RaycastHit2D hit = Physics2D.Raycast(transform.position, player.transform.position - transform.position);
@@ -53,13 +56,22 @@ public class AOEBehaviour : MonoBehaviour
     // gradual increase in volume
     IEnumerator AudioQueue() {
         while (true) {
-            // Debug.Log("Vol " + source.volume);
+            // Debug.Log("Vol " + source.volume + " " + maxVolume);
             yield return new WaitForSeconds(0.1f);
-            source.volume += 0.02f;
+            if (source.volume < maxVolume) {
+                source.volume += 0.02f;
+            }
         }
     }
 
+    IEnumerator StopMovePrepareAttack() {
+        yield return new WaitForSeconds(fullAudioLength * 0.8f);
+        healthAndNav.inAttackSeq = true;
+        yield return null;
+    }
+
     IEnumerator attackSeq() {
+        StartCoroutine(StopMovePrepareAttack());
         yield return new WaitForSeconds(fullAudioLength * (1 - player.hear / 100));
         source.Play();
         IEnumerator audioQueue = AudioQueue();
@@ -69,17 +81,9 @@ public class AOEBehaviour : MonoBehaviour
         inflictDmg();
         source.Stop();
         source.volume = 0;
-        healthAndNav.inAttackSeq = false;
         boss.attackCompleted = true;
-        deselectAttack();
-    }
-
-    public void selectAttack() {
-        selected = true;
-    }
-
-    void deselectAttack() {
-        selected = false;
-        attacked = false;
+        yield return new WaitForSeconds(0.5f);
+        healthAndNav.inAttackSeq = false;
+        yield return null;
     }
 }
