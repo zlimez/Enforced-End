@@ -57,10 +57,10 @@ public class SummonBehaviour : AttackBehaviour
         while (minionCount < summonCount) {
             yield return new WaitForSeconds(minionSpawnInterval);
             Vector2 spawnDir = Quaternion.AngleAxis(angleDev, Vector3.forward) * (healthAndNav.player.transform.position - transform.position).normalized * spawnDistance;
-            if (gg.GetNode(Mathf.RoundToInt(spawnDir.x), Mathf.RoundToInt(spawnDir.y)).Walkable) {
-                SpawnFallingMinion(spawnDir);
-                minionCount += 1;
-            }
+            // if (gg.GetNode(Mathf.RoundToInt(spawnDir.x), Mathf.RoundToInt(spawnDir.y)).Walkable) {
+            // }
+            SpawnFallingMinion(spawnDir);
+            minionCount += 1;
             angleDev += minionDegreeSep;
         }
         healthAndNav.inAttackSeq = false;
