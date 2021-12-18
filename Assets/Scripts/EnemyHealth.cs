@@ -28,19 +28,8 @@ public class EnemyHealth : MonoBehaviour
     public float speed;
     public Path path;
     // Start is called before the first frame update
-    // void Awake()
-    // {
-    //     seeker = GetComponent<Seeker>();
-    //     // rb = GetComponent<Rigidbody2D>();
-    //     if (player == null) player = GameObject.Find("Player").GetComponent<PlayerController>();
-    //     // for base boss tag is determined only after attack pattern is generated
-    //     if (gameObject.name.StartsWith("Boss")) {
-    //         maxHealth = 200f;
-    //         isBoss = true;
-    //     }
-    // }
-
-    void Start() {
+    void Awake()
+    {
         seeker = GetComponent<Seeker>();
         // rb = GetComponent<Rigidbody2D>();
         if (player == null) player = GameObject.Find("Player").GetComponent<PlayerController>();
@@ -49,13 +38,15 @@ public class EnemyHealth : MonoBehaviour
             maxHealth = 200f;
             isBoss = true;
         }
+    }
 
+    void Start() {
         switch (gameObject.transform.GetChild(0).tag) {
             case "Melee":
             behaviourType = "Melee";
             safeDistance = 2.0f;
             if (!isBoss)
-                maxHealth = 50.0f;
+                maxHealth = 10.0f;
             speed = 5.5f;
             break;
             case "Ranged":
