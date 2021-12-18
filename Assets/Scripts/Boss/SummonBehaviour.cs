@@ -56,7 +56,7 @@ public class SummonBehaviour : AttackBehaviour
         float angleDev = summonCount % 2 == 0 ? summonCount / 2 * -minionDegreeSep : (summonCount - 1) / 2 * -minionDegreeSep;
         while (minionCount < summonCount) {
             yield return new WaitForSeconds(minionSpawnInterval);
-            Vector2 spawnDir = Quaternion.AngleAxis(angleDev, Vector3.forward) * (EnemyHealth.player.transform.position - transform.position).normalized * spawnDistance;
+            Vector2 spawnDir = Quaternion.AngleAxis(angleDev, Vector3.forward) * (healthAndNav.player.transform.position - transform.position).normalized * spawnDistance;
             if (gg.GetNode(Mathf.RoundToInt(spawnDir.x), Mathf.RoundToInt(spawnDir.y)).Walkable) {
                 SpawnFallingMinion(spawnDir);
                 minionCount += 1;
