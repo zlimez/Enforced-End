@@ -22,6 +22,7 @@ public class Bullet : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D col) {
+        if (col.gameObject.GetComponent<PlayerController>() != null) return;
         EnemyHealth hitEnemy = col.gameObject.GetComponent<EnemyHealth>();
         if (hitEnemy != null) 
             hitEnemy.deductHealth(damage);
