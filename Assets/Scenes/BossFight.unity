@@ -176,7 +176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 0}
-  player: {fileID: 0}
+  player: {fileID: 2060307896}
 --- !u!114 &166994766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2103,8 +2103,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 948965902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.34, y: -0.427, z: 0}
-  m_LocalScale: {x: 2.2, y: 2.2, z: 2.2}
+  m_LocalPosition: {x: -3.33, y: -0.45, z: 0}
+  m_LocalScale: {x: 3.13434, y: 3.13434, z: 3.13434}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -3477,7 +3477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69885aba34b984601bcd86db73b1d198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boss: {fileID: 0}
+  boss: {fileID: 1576422494}
   slider: {fileID: 0}
 --- !u!114 &1521546570
 MonoBehaviour:
@@ -3625,7 +3625,7 @@ PrefabInstance:
     - target: {fileID: 9057442466303404087, guid: 8679e8e7997652244a98652213c2127c,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9057442466303404096, guid: 8679e8e7997652244a98652213c2127c,
         type: 3}
@@ -3637,6 +3637,11 @@ PrefabInstance:
       propertyPath: isBoss
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9057442466303404105, guid: 8679e8e7997652244a98652213c2127c,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2060307896}
     - target: {fileID: 9057442466303404105, guid: 8679e8e7997652244a98652213c2127c,
         type: 3}
       propertyPath: facing_right
@@ -4846,7 +4851,7 @@ PrefabInstance:
     - target: {fileID: 435464060487107735, guid: 2043862ae839fbd4d910e069b5c2ad04,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6497508063902799773, guid: 2043862ae839fbd4d910e069b5c2ad04,
         type: 3}
@@ -5077,7 +5082,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 0}
-  player: {fileID: 0}
+  player: {fileID: 2060307896}
 --- !u!114 &2115969051
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -10,8 +10,8 @@ public class Heatbar : MonoBehaviour
     public PlayerController player;
     void Awake()
     {
+        if (player == null) player = GameObject.Find("Player").GetComponent<PlayerController>();
         slider = GetComponent<Slider>();
-        player = GameObject.Find("Player").GetComponent<PlayerController>();
     }
 
     // Update is called once per frame

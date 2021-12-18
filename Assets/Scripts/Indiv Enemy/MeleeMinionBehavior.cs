@@ -49,6 +49,7 @@ public class MeleeMinionBehavior : MonoBehaviour
     // }
 
     void OnDestroy() {
+        if (bossHealth == null) return;
         bossHealth.deductHealth(minionHealth.maxHealth * discount);
     }
 

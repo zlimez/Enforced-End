@@ -9,7 +9,7 @@ public class HealthStat : MonoBehaviour
     public PlayerController player;
     void Awake()
     {
-        player = GameObject.Find("Player").GetComponent<PlayerController>();
+        if (player == null) player = GameObject.Find("Player").GetComponent<PlayerController>();
         slider = GetComponent<Slider>();
     }
 
