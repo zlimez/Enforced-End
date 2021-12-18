@@ -10,6 +10,7 @@ public class MeleeBehavior : AttackBehaviour
     private BossBehaviour boss;
     private EnemyHealth healthAndNav;
     public bool attacked = false;
+    public AudioSource source;
 
     void Awake() {
         boss = GetComponent<BossBehaviour>();
@@ -34,6 +35,7 @@ public class MeleeBehavior : AttackBehaviour
         yield return new WaitForSeconds(attackDelay);
         // start animation
         boss.animator.SetTrigger("Melee");
+        source.Play();
         // int playerDir = EnemyHealth.determineFace(EnemyHealth.player.transform.position - transform.position);
         // // if enemy is facing the correct direction 90 degree quadrants
         // if (healthAndNav.face == playerDir)

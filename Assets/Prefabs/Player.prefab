@@ -123,7 +123,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &435464060487107732
 Transform:
   m_ObjectHideFlags: 0
@@ -133,8 +133,8 @@ Transform:
   m_GameObject: {fileID: 435464060487107735}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1.6}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 435464059669972507}
   - {fileID: 5947656294195721910}
@@ -178,15 +178,39 @@ MonoBehaviour:
   bullet: {fileID: 4069606092839164777, guid: 816315d34cf9046a8a7a054a0c1c6d4d, type: 3}
   firePoint: {fileID: 5947656294195721910}
   animator: {fileID: 6795069748774209335}
+  onDeathEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: LoseEvent, Assembly-CSharp
+        m_MethodName: onLose
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   equipped: 0
+  facingRight: 1
   runspeed: 10
   movement: 100
   sight: 100
   hear: 100
   armour: 100
-  dmgReduction: 10
+  dmgReduction: 5
   health: 100
   degradationTime: 1
+  shotInterval: 0.3
+  shotCd: 0
+  overheatThres: 50
+  canShootAgnThres: 45
+  overheated: 0
+  baseTemp: 0
+  perRoundTempInc: 5
+  baseCoolingRate: 2
   maxShootAngleDev: 40
 --- !u!70 &6497508063902799773
 CapsuleCollider2D:
@@ -201,8 +225,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.093830585, y: -0.024395943}
-  m_Size: {x: 0.6876612, y: 1.1013365}
+  m_Offset: {x: -0.14942169, y: 0.016033798}
+  m_Size: {x: 0.36422348, y: 0.7981135}
   m_Direction: 0
 --- !u!1 &1250071191101293431
 GameObject:

@@ -14,6 +14,7 @@ public class RangedBehaviour : AttackBehaviour
     public bool attacked = false;
     public int layermask;
     private BossBehaviour boss;
+    public AudioSource charge;
     // Start is called before the first frame update
     void Awake()
     {
@@ -24,6 +25,7 @@ public class RangedBehaviour : AttackBehaviour
 
     override public bool attack() {
         boss.animator.SetTrigger("ChargeLaser");
+        charge.Play();
         StartCoroutine(Shoot());
         return true;
     }
@@ -35,6 +37,7 @@ public class RangedBehaviour : AttackBehaviour
 
     IEnumerator Shoot() {
         yield return new WaitForSeconds(targetTime);
+        charge.Stop();
         boss.animator.SetTrigger("FireLaser");
         Vector3 moveDir = (player.transform.position - transform.position).normalized;
         GameObject go = Instantiate(projectile, firePoint.position, Quaternion.identity);

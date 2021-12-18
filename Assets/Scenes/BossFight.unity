@@ -1049,7 +1049,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAABAIezSY05zWAIAABIFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VMtu2zAQ/BWD57qQhTiP3lrZcXpIYsQNctGFJlcWYYoU+Ihf8L93SUmW4qIn0zOzu7PLpU5EKFsDc9osjODPmgP5MSLhTL6NevIJ9nSj1UocodN8CO7KIKJR80ad0IhPQpjVFTgj2E+1kUGcIOiVKLSp5nwDmbbOIlxQaQEpo12IVgidRmSPP+OHEHLAU3oXTkc8PSSjMx4ZKAeml3bCTtaovGKSVjXwYLkXp9NWPZlGmcJmWkUwzrSUwrZOiDvUsdOM1tZjHyjggmJnsXzQlyA2pQt5h8GvRWHBtZYMPcyEwQE1Wckv3Uytonbb+Pqk0kcD6X301CR9/ocfTyJdGF09dXUnSajhSsG2b/TAqHWDsQ7h2VfjXu2o3NK1hI8S1IteGO0VR9IZH0K9hXTW/720lpXAtj3eWL0Cff3/ywk9nGP3+0yKah2o7zcNsJI6zjtePRi8md9oOC6GbVMgGly8W/hDN8MNaolHYaxDqu1SBXtr7U2QknmcWejGu0wbBRFuTdegqHSHJaZx11d4xQ3KXjGPNLyVtnjLdU/gKiTCvT5Jrqil3l0uy5Z69wy2fPVOCgW96UC84JwyrVSzYcOZdGErbwrKBmEbL/jX1SK3CQMKd2uW3kJxc387Bs4osGk6nU7SdZGsSdw9obBPKpeN0XY8eGuqT65wz7pPyGhhaB23nRu6W4hjpQcjF6rQK2YA1GuT4WIcDBbBV8nnXOCAVuCcUPG+ySknUrMt8PySKI+dzvfO0LzPkpNafGoXkJxk8ZuRkwBfdnlp4FPALhTvkp3J+S9QSwMEFAAACAgAAEAh7CKDvv9tAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTXUVBKL0osyCgGihiCOKWZKSB2tJKZQXJqYqp5UrKRWWqaiYWZbmpKcmJqsqmRqamhUVKaQZJSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAEAh7NJjTnNYAgAAEgUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAEAh7CKDvv9tAAAAeAAAAAkAJAAAAAAAAAAAAAAApQIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAABdAwAAAAA=
+    dataString: UEsDBBQAAAgIAMA7IezSY05zWAIAABIFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VMtu2zAQ/BWD57qQhTiP3lrZcXpIYsQNctGFJlcWYYoU+Ihf8L93SUmW4qIn0zOzu7PLpU5EKFsDc9osjODPmgP5MSLhTL6NevIJ9nSj1UocodN8CO7KIKJR80ad0IhPQpjVFTgj2E+1kUGcIOiVKLSp5nwDmbbOIlxQaQEpo12IVgidRmSPP+OHEHLAU3oXTkc8PSSjMx4ZKAeml3bCTtaovGKSVjXwYLkXp9NWPZlGmcJmWkUwzrSUwrZOiDvUsdOM1tZjHyjggmJnsXzQlyA2pQt5h8GvRWHBtZYMPcyEwQE1Wckv3Uytonbb+Pqk0kcD6X301CR9/ocfTyJdGF09dXUnSajhSsG2b/TAqHWDsQ7h2VfjXu2o3NK1hI8S1IteGO0VR9IZH0K9hXTW/720lpXAtj3eWL0Cff3/ywk9nGP3+0yKah2o7zcNsJI6zjtePRi8md9oOC6GbVMgGly8W/hDN8MNaolHYaxDqu1SBXtr7U2QknmcWejGu0wbBRFuTdegqHSHJaZx11d4xQ3KXjGPNLyVtnjLdU/gKiTCvT5Jrqil3l0uy5Z69wy2fPVOCgW96UC84JwyrVSzYcOZdGErbwrKBmEbL/jX1SK3CQMKd2uW3kJxc387Bs4osGk6nU7SdZGsSdw9obBPKpeN0XY8eGuqT65wz7pPyGhhaB23nRu6W4hjpQcjF6rQK2YA1GuT4WIcDBbBV8nnXOCAVuCcUPG+ySknUrMt8PySKI+dzvfO0LzPkpNafGoXkJxk8ZuRkwBfdnlp4FPALhTvkp3J+S9QSwMEFAAACAgAwDsh7CKDvv9tAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTXUVBKL0osyCgGihiCOKWZKSB2tJKZQXJqYqp5UrKRWWqaiYWZbmpKcmJqsqmRqamhUVKaQZJSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAwDsh7NJjTnNYAgAAEgUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAwDsh7CKDvv9tAAAAeAAAAAkAJAAAAAAAAAAAAAAApQIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAABdAwAAAAA=
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -3080,11 +3080,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelLoader
       objectReference: {fileID: 0}
-    - target: {fileID: 8455546333195003423, guid: ec3855dfa59ac7742877df4260cb2769,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec3855dfa59ac7742877df4260cb2769, type: 3}
 --- !u!1 &1431415558
@@ -3622,11 +3617,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss
       objectReference: {fileID: 0}
-    - target: {fileID: 9057442466303404087, guid: 8679e8e7997652244a98652213c2127c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 9057442466303404096, guid: 8679e8e7997652244a98652213c2127c,
         type: 3}
       propertyPath: player
@@ -3634,73 +3624,18 @@ PrefabInstance:
       objectReference: {fileID: 2060307894}
     - target: {fileID: 9057442466303404105, guid: 8679e8e7997652244a98652213c2127c,
         type: 3}
-      propertyPath: isBoss
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9057442466303404105, guid: 8679e8e7997652244a98652213c2127c,
-        type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 2060307896}
     - target: {fileID: 9057442466303404105, guid: 8679e8e7997652244a98652213c2127c,
         type: 3}
-      propertyPath: facing_right
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9057442466303404105, guid: 8679e8e7997652244a98652213c2127c,
-        type: 3}
-      propertyPath: onBossDeathEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9057442466303404105, guid: 8679e8e7997652244a98652213c2127c,
-        type: 3}
-      propertyPath: onBossDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9057442466303404105, guid: 8679e8e7997652244a98652213c2127c,
-        type: 3}
       propertyPath: onBossDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 297793901}
-    - target: {fileID: 9057442466303404105, guid: 8679e8e7997652244a98652213c2127c,
-        type: 3}
-      propertyPath: onBossDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9057442466303404105, guid: 8679e8e7997652244a98652213c2127c,
-        type: 3}
-      propertyPath: onBossDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: WinPart1End
-      objectReference: {fileID: 0}
-    - target: {fileID: 9057442466303404105, guid: 8679e8e7997652244a98652213c2127c,
-        type: 3}
-      propertyPath: onBossDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: CombatEvents, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 9057442466303404105, guid: 8679e8e7997652244a98652213c2127c,
-        type: 3}
-      propertyPath: onBossDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 9057442466303404106, guid: 8679e8e7997652244a98652213c2127c,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 9057442466303404107, guid: 8679e8e7997652244a98652213c2127c,
         type: 3}
       propertyPath: m_RootOrder
       value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 9057442466303404107, guid: 8679e8e7997652244a98652213c2127c,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9057442466303404107, guid: 8679e8e7997652244a98652213c2127c,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 9057442466303404107, guid: 8679e8e7997652244a98652213c2127c,
         type: 3}
@@ -3757,16 +3692,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 2060307896}
-    - target: {fileID: 9057442466303404111, guid: 8679e8e7997652244a98652213c2127c,
-        type: 3}
-      propertyPath: radius
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 9057442466303404111, guid: 8679e8e7997652244a98652213c2127c,
-        type: 3}
-      propertyPath: fullAudioLength
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8679e8e7997652244a98652213c2127c, type: 3}
 --- !u!95 &1576422493 stripped
@@ -4735,21 +4660,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 435464060487107732, guid: 2043862ae839fbd4d910e069b5c2ad04,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 435464060487107732, guid: 2043862ae839fbd4d910e069b5c2ad04,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 435464060487107732, guid: 2043862ae839fbd4d910e069b5c2ad04,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 435464060487107732, guid: 2043862ae839fbd4d910e069b5c2ad04,
-        type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.25
       objectReference: {fileID: 0}
@@ -4798,80 +4708,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 435464060487107732, guid: 2043862ae839fbd4d910e069b5c2ad04,
-        type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 435464060487107734, guid: 2043862ae839fbd4d910e069b5c2ad04,
-        type: 3}
-      propertyPath: dmgReduction
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 435464060487107734, guid: 2043862ae839fbd4d910e069b5c2ad04,
-        type: 3}
-      propertyPath: onDeathEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 435464060487107734, guid: 2043862ae839fbd4d910e069b5c2ad04,
-        type: 3}
-      propertyPath: onDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 435464060487107734, guid: 2043862ae839fbd4d910e069b5c2ad04,
         type: 3}
       propertyPath: onDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 297793902}
-    - target: {fileID: 435464060487107734, guid: 2043862ae839fbd4d910e069b5c2ad04,
-        type: 3}
-      propertyPath: onDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 435464060487107734, guid: 2043862ae839fbd4d910e069b5c2ad04,
-        type: 3}
-      propertyPath: onDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: onLose
-      objectReference: {fileID: 0}
-    - target: {fileID: 435464060487107734, guid: 2043862ae839fbd4d910e069b5c2ad04,
-        type: 3}
-      propertyPath: onDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: LoseEvent, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 435464060487107734, guid: 2043862ae839fbd4d910e069b5c2ad04,
-        type: 3}
-      propertyPath: onDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 435464060487107735, guid: 2043862ae839fbd4d910e069b5c2ad04,
         type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 435464060487107735, guid: 2043862ae839fbd4d910e069b5c2ad04,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6497508063902799773, guid: 2043862ae839fbd4d910e069b5c2ad04,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 0.36422348
-      objectReference: {fileID: 0}
-    - target: {fileID: 6497508063902799773, guid: 2043862ae839fbd4d910e069b5c2ad04,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 0.7981135
-      objectReference: {fileID: 0}
-    - target: {fileID: 6497508063902799773, guid: 2043862ae839fbd4d910e069b5c2ad04,
-        type: 3}
-      propertyPath: m_Offset.x
-      value: -0.14942169
-      objectReference: {fileID: 0}
-    - target: {fileID: 6497508063902799773, guid: 2043862ae839fbd4d910e069b5c2ad04,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: 0.016033798
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2043862ae839fbd4d910e069b5c2ad04, type: 3}
