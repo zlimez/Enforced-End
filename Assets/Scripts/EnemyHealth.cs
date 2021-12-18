@@ -33,14 +33,14 @@ public class EnemyHealth : MonoBehaviour
         seeker = GetComponent<Seeker>();
         // rb = GetComponent<Rigidbody2D>();
         player = player == null ? GameObject.Find("Player").GetComponent<PlayerController>() : player;
-    }
-
-    void Start() {
         // for base boss tag is determined only after attack pattern is generated
         if (gameObject.name.StartsWith("Boss")) {
             maxHealth = 200f;
             isBoss = true;
         }
+    }
+
+    void Start() {
         switch (gameObject.transform.GetChild(0).tag) {
             case "Melee":
             behaviourType = "Melee";
