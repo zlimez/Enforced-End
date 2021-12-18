@@ -22,8 +22,8 @@ public class SummonBehaviour : AttackBehaviour
 
     override public bool attack() {
         healthAndNav.inAttackSeq = true;
-        // StartCoroutine(SpawnMinions());
-        SpawnMinion();
+        StartCoroutine(SpawnMinions());
+        // SpawnMinion();
         return true;
     }
 
@@ -44,6 +44,7 @@ public class SummonBehaviour : AttackBehaviour
 
     IEnumerator SpawnMinions() {
         // start animation
+        boss.animator.SetTrigger("SpawnMinion");
         int minionCount = 0;
         float angleDev = summonCount % 2 == 0 ? summonCount / 2 * -minionDegreeSep : (summonCount - 1) / 2 * minionDegreeSep;
         while (minionCount < summonCount) {

@@ -718,8 +718,13 @@ MonoBehaviour:
     - X to skip dialogue.
     - WSAD Movement.
     - Left mouse button to shoot.
-    - Esc to pause and open the armour power rerouting menu.
-    - Despite having read the instructions for operating your power armour countless
+    - Esc or backtick (`) to pause and open the armor energy rerouting menu, or the
+      boost menu.
+    - You may increase or decrease the power directed to each of the 4 systems by
+      using the '+' and '-' buttons in the boost menu.
+    - Click on the boost options to remind yourself of the functionailities.
+    - '@name=Thinking'
+    - Despite having read the instructions for operating your power armor countless
       times before, it did not hurt to revise them once more.
     dialogueEndEvent:
       m_PersistentCalls:
@@ -853,14 +858,18 @@ MonoBehaviour:
   dialogue:
     name: Terminal
     sentences:
-    - Declassified specifications of the X07 armour.
-    - 'Due to the high energy consumption of the X07 armour, soldiers are expected
+    - Declassified specifications of the X07 armor.
+    - 'Due to the high energy consumption of the X07 armor, soldiers are expected
       to exercise judgement to prioritise mission critical power armour systems, '
     - and route power away from less needed functionalities.
-    - The X07 armour at full power have been tested to be able to last several missile
+    - The X07 armor at full power have been tested to be able to last several missile
       strikes before breaking.
-    - The X07 armour have also been equipped with air recycling systems to better
+    - The X07 armor have also been equipped with air recycling systems to better
       resist biochemical attacks.
+    - The AEX31 Energy Rifle do not require ammo, and instead draws power which leaks
+      from the X07 armor.
+    - However, overuse of the AEX31 Energy Rifle causes overheat, which renders the
+      weapon unusable for a short period of time.
     dialogueEndEvent:
       m_PersistentCalls:
         m_Calls: []

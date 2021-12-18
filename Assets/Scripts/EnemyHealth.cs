@@ -46,7 +46,7 @@ public class EnemyHealth : MonoBehaviour
             behaviourType = "Melee";
             safeDistance = 2.0f;
             if (!isBoss)
-                maxHealth = 10.0f;
+                maxHealth = 6.0f;
             speed = 5.5f;
             break;
             case "Ranged":
