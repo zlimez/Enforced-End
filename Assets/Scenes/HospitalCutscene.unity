@@ -881,6 +881,10 @@ MonoBehaviour:
     - Are you finally waking up...
     - Huh?
     - Doctor! Quick! He's finally waking up!
+    - Thank goodness! By directing all of the suit's energy into armor, it was able
+      to withstand the blast...
+    - I'm glad...
+    - That you kept our promise.
     dialogueEndEvent:
       m_PersistentCalls:
         m_Calls:
@@ -928,6 +932,10 @@ MonoBehaviour:
     - Are you finally waking up...
     - Huh?
     - Doctor! Quick! He's finally waking up!
+    - Thank goodness! By directing all of the suit's energy into armor, it was able
+      to withstand the blast...
+    - I'm glad...
+    - That you kept our promise.
     dialogueEndEvent:
       m_PersistentCalls:
         m_Calls:

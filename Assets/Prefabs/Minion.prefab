@@ -82,6 +82,7 @@ MonoBehaviour:
   health: 0
   inAttackSeq: 0
   behaviourType: 
+  player: {fileID: 0}
   animator: {fileID: 1352716976067273662}
   face: 0
   facingLeft: 0
@@ -129,9 +130,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b4e24aa2ee584240bc6b6e3e2f3041c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 5
   attackInterval: 0.5
   animator: {fileID: 1352716976067273662}
+  minionHealth: {fileID: 0}
+  discount: 0.2
 --- !u!1 &7744951107476762702
 GameObject:
   m_ObjectHideFlags: 0
