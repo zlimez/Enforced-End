@@ -8,8 +8,17 @@ public class MeleeMinionBehavior : MonoBehaviour
     public float damage = 10.0f;
     public float attackInterval = 0.5f;
     public Animator animator;
+    public EnemyHealth minionHealth;
+    // minion destroyed will cause boss to lose health
+    public static EnemyHealth bossHealth;
+    public float discount = 0.2f; // ratio of dmg to enforcer health when minion is destroyed
 
     private bool cooldownDone = true;
+
+    void Awake() {
+        minionHealth = GetComponent<EnemyHealth>();
+        bossHealth = bossHealth == null ? GameObject.Find("Boss").GetComponent<EnemyHealth>() : bossHealth;
+    }
 
    
     void OnCollisionEnter2D(Collision2D col) {
@@ -38,6 +47,10 @@ public class MeleeMinionBehavior : MonoBehaviour
     //         coroutine = null;
     //     }
     // }
+
+    void OnDestroy() {
+        bossHealth.deductHealth(minionHealth.maxHealth * discount);
+    }
 
     IEnumerator resetCooldown() {
         yield return new WaitForSeconds(attackInterval);

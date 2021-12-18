@@ -5,8 +5,7 @@ using UnityEngine.Events;
 
 public class PlayerController : MonoBehaviour
 {
-    public enum weapon {RIFLE, MELEE};
-    public bool facingRight = true;
+  public enum weapon {RIFLE, MELEE};
     Rigidbody2D body;
     public GameObject bullet;
     public Transform firePoint;
@@ -15,6 +14,7 @@ public class PlayerController : MonoBehaviour
     public weapon equipped = weapon.RIFLE;
     float horizontal;
     float vertical;
+    public bool facingRight = true;
     public float runspeed = 10.0f;
     public float movement = 100.0f;
     public float sight = 100.0f;
@@ -23,6 +23,14 @@ public class PlayerController : MonoBehaviour
     public float dmgReduction = 10f;
     public float health = 100.0f;
     public float degradationTime = 1.0f;
+    public float shotInterval = 0.3f;
+    public float shotCd;
+    public float overheatThres = 50.0f;
+    public float canShootAgnThres = 45.0f;
+    public bool overheated = false;
+    public float baseTemp = 0f;
+    public float perRoundTempInc = 5.0f;
+    public float baseCoolingRate = 2.0f; // 25 degree temp diff
     public float maxShootAngleDev = 10.0f; 
     void Start()
     {
@@ -46,11 +54,21 @@ public class PlayerController : MonoBehaviour
             } else
                 equipped = weapon.RIFLE;
         }
-        if (Input.GetMouseButtonDown(0) && !Pause.GameIsPaused) {
+        shotCd -= Time.deltaTime;
+        if (overheated) 
+            overheated = baseTemp > canShootAgnThres;
+
+        if ((horizontal > 0 && !facingRight) || (horizontal < 0 && facingRight)) 
+            Flip();
+
+        if (!Pause.GameIsPaused && Input.GetMouseButton(0) && shotCd <= 0 && !overheated) {
+            shotCd = shotInterval;
             Vector2 point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            firePoint.right = point - (Vector2) transform.position;
+            Vector2 shotDir = point - (Vector2) transform.position;
+            firePoint.transform.right = shotDir;
+            if ((shotDir.x > 0 && !facingRight) || (shotDir.x < 0 && facingRight))
+                Flip();
             //trigger attack animation
-            // Debug.Log(transform.right);
             if (equipped == weapon.RIFLE) {
                 Shoot();
             } else {
@@ -62,15 +80,13 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate() {
         animator.SetFloat("Speed", horizontal + vertical);
         body.velocity = new Vector2(horizontal * runspeed * movement / 100.0f, vertical * runspeed * movement / 100.0f);
-        if ((horizontal > 0 && facingRight) || (horizontal < 0 && !facingRight)) 
-            Flip();
     }
 
     void Shoot() {
         Instantiate(bullet, firePoint.position, firePoint.transform.rotation);
+        baseTemp += perRoundTempInc;
+        overheated = baseTemp >= overheatThres;
     }
-
-    // laser attack
 
     IEnumerator degradeStats() {
         while (true) {
@@ -84,11 +100,14 @@ public class PlayerController : MonoBehaviour
                 armour -= 1.0f;
             if (health > 0)
                 health -= 0.1f;
+            if (baseTemp > 0)
+                baseTemp -= baseCoolingRate * baseTemp / 25;
         }
     }
 
     public void deductHealth(float dmg) {
-        health -= Mathf.Max(0.0f, (dmg - dmgReduction * armour / 100f));
+        Debug.Log("health deducted " + dmg);
+        health -= (dmg - dmgReduction * armour / 100);
     }
 
     void Flip() {

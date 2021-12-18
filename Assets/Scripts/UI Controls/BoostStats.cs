@@ -30,7 +30,7 @@ public class BoostStats : MonoBehaviour
         }
     }
 
-    public void boostStat(string statType) {
+ public void boostStat(string statType) {
         balanceText = balanceText == null ? balanceHolder.GetComponent<TextMeshProUGUI>() : balanceText;
         switch (statType) {
             case "movement":

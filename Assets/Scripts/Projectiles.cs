@@ -16,6 +16,7 @@ public class Projectiles : MonoBehaviour
     // }
 
     public void SetVelocity(Vector3 velocity) {
+        transform.right = velocity;
         GetComponent<Rigidbody2D>().velocity = velocity * speed;
     }
 
