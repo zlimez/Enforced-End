@@ -16,7 +16,7 @@ public class EnemyHealth : MonoBehaviour
     public string behaviourType;
     private Seeker seeker;
     // private Rigidbody2D rb;
-    public static PlayerController player;
+    public PlayerController player;
     public Animator animator;
     // 0: right, 1: up, 2: left, 3: down
     public int face;
@@ -28,19 +28,28 @@ public class EnemyHealth : MonoBehaviour
     public float speed;
     public Path path;
     // Start is called before the first frame update
-    void Awake()
-    {
+    // void Awake()
+    // {
+    //     seeker = GetComponent<Seeker>();
+    //     // rb = GetComponent<Rigidbody2D>();
+    //     if (player == null) player = GameObject.Find("Player").GetComponent<PlayerController>();
+    //     // for base boss tag is determined only after attack pattern is generated
+    //     if (gameObject.name.StartsWith("Boss")) {
+    //         maxHealth = 200f;
+    //         isBoss = true;
+    //     }
+    // }
+
+    void Start() {
         seeker = GetComponent<Seeker>();
         // rb = GetComponent<Rigidbody2D>();
-        player = player == null ? GameObject.Find("Player").GetComponent<PlayerController>() : player;
+        if (player == null) player = GameObject.Find("Player").GetComponent<PlayerController>();
         // for base boss tag is determined only after attack pattern is generated
         if (gameObject.name.StartsWith("Boss")) {
             maxHealth = 200f;
             isBoss = true;
         }
-    }
 
-    void Start() {
         switch (gameObject.transform.GetChild(0).tag) {
             case "Melee":
             behaviourType = "Melee";

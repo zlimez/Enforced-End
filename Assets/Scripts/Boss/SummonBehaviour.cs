@@ -36,7 +36,7 @@ public class SummonBehaviour : AttackBehaviour
         // start animation
         boss.animator.SetTrigger("SpawnMinion");
         float angleDev = summonCount % 2 == 0 ? summonCount / 2 * -minionDegreeSep : (summonCount - 1) / 2 * minionDegreeSep;
-        Vector2 spawnDir = Quaternion.AngleAxis(angleDev, Vector3.forward) * (EnemyHealth.player.transform.position - transform.position).normalized * spawnDistance;
+        Vector2 spawnDir = Quaternion.AngleAxis(angleDev, Vector3.forward) * (healthAndNav.player.transform.position - transform.position).normalized * spawnDistance;
         SpawnFallingMinion(spawnDir);
         healthAndNav.inAttackSeq = false;
         boss.attackCompleted = true;
@@ -48,7 +48,7 @@ public class SummonBehaviour : AttackBehaviour
         float angleDev = summonCount % 2 == 0 ? summonCount / 2 * -minionDegreeSep : (summonCount - 1) / 2 * minionDegreeSep;
         while (minionCount < summonCount) {
             yield return new WaitForSeconds(minionSpawnInterval);
-            Vector2 spawnDir = Quaternion.AngleAxis(angleDev, Vector3.forward) * (EnemyHealth.player.transform.position - transform.position).normalized * spawnDistance;
+            Vector2 spawnDir = Quaternion.AngleAxis(angleDev, Vector3.forward) * (healthAndNav.player.transform.position - transform.position).normalized * spawnDistance;
             SpawnFallingMinion(spawnDir);
             minionCount += 1;
         }
