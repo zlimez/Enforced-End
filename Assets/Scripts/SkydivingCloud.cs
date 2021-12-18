@@ -7,9 +7,9 @@ public class SkydivingCloud : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += Vector3.up * 15 * Time.deltaTime;
+        transform.position += Vector3.up * 15 * Time.unscaledDeltaTime;
         if (transform.position.y > 5.2) {
-            transform.position = new Vector3(Random.Range(-8.0f, 8.0f), -7.0f, 0);
+            transform.position = new Vector3(Random.Range(-8.0f, 8.0f), Random.Range(-8.0f, -7.0f), 0);
         }
     }
 }

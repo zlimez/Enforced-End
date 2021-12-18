@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07f917d2f247421489e1f4483493a2c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boostMenu: {fileID: 0}
   nameText: {fileID: 835426885812388211}
   dialogueText: {fileID: 835426886628474561}
   animator: {fileID: 835426885718089094}
@@ -167,8 +168,8 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: cbf4a0dcb9ddad04289e08acb4ce2ab1, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_UpdateMode: 2
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 

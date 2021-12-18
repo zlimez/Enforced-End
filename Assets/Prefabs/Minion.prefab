@@ -49,7 +49,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.14156628, y: -0.008847833}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -60,7 +60,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.1415663, y: 0.7699549}
   m_EdgeRadius: 0
 --- !u!114 &8096984203173802535
 MonoBehaviour:
@@ -75,13 +75,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBoss: 0
+  onBossDeathEvent:
+    m_PersistentCalls:
+      m_Calls: []
   maxHealth: 0
   health: 0
   inAttackSeq: 0
   behaviourType: 
   animator: {fileID: 1352716976067273662}
   face: 0
-  facing_right: 1
+  facingLeft: 0
   safeDistance: 0
   reachedEndOfPath: 0
   nextWaypointDistance: 1

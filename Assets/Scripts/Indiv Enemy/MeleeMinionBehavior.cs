@@ -31,6 +31,15 @@ public class MeleeMinionBehavior : MonoBehaviour
         }
     }
 
+    // void OnTriggerEnter2D(Collider2D col) {
+    //     if (col.gameObject.name == "Player" && cooldownDone) {
+    //         // coroutine = attackPlayer(col.gameObject.GetComponent<PlayerController>());
+    //         animator.SetTrigger("Attack");
+    //         col.gameObject.GetComponent<PlayerController>().deductHealth(damage);
+    //         StartCoroutine(resetCooldown());
+    //     }
+    // }
+
     // void OnCollisionExit2D(Collision2D col) {
     //     // Debug.Log("Contact stopped");
     //     if (col.gameObject.name == "Player") {
