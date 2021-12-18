@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Projectiles : MonoBehaviour
 {
-    public float speed = 5.0f;
+    public float speed = 8.0f;
     // public GameObject parentEnemy;
     public float damage = 15.0f;
 
