@@ -39,7 +39,7 @@ public class MeleeBehavior : AttackBehaviour
         // int playerDir = EnemyHealth.determineFace(EnemyHealth.player.transform.position - transform.position);
         // // if enemy is facing the correct direction 90 degree quadrants
         // if (healthAndNav.face == playerDir)
-        if (Vector2.Distance(transform.position, healthAndNav.player.transform.position) <= meleeWpnRadius) {
+        if (Vector2.Distance(transform.position, healthAndNav.player.transform.position) <= meleeWpnRadius + 0.5f) {
             healthAndNav.player.deductHealth(damage);
         }
         boss.attackCompleted = true;
