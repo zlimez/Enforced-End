@@ -15,23 +15,25 @@ public class SummonBehaviour : AttackBehaviour
     public bool attacked = false;
     private EnemyHealth healthAndNav;
     private BossBehaviour boss;
-    public static GridGraph gg;
+    private static GridGraph gg;
+    public float mapWidth;
+    public float mapHeight;
     void Awake()
     {
         healthAndNav = GetComponent<EnemyHealth>();
         boss = GetComponent<BossBehaviour>();
+        gg = AstarPath.active.data.gridGraph;
+        mapWidth = gg.size.x;
+        mapHeight = gg.size.y;
     }
 
+    // void Start() {
+        
+    // }
 
     override public bool attack() {
         healthAndNav.inAttackSeq = true;
-        SpawnMinion();
-        gg = AstarPath.active.data.gridGraph;
-        Debug.Log("Graph " + gg.size);
-        gg.GetNodes(node => {
-            // Here is a node
-            Debug.Log("I found a node at position " + (Vector3)node.position);
-        });
+        StartCoroutine(SpawnMinions());
         return true;
     }
 
@@ -40,36 +42,37 @@ public class SummonBehaviour : AttackBehaviour
         return "Summon";
     }
 
-    void SpawnMinion() {
-        // start animation
-        boss.animator.SetTrigger("SpawnMinion");
-        float angleDev = summonCount % 2 == 0 ? summonCount / 2 * -minionDegreeSep : (summonCount - 1) / 2 * minionDegreeSep;
-        Vector2 spawnDir = Quaternion.AngleAxis(angleDev, Vector3.forward) * (healthAndNav.player.transform.position - transform.position).normalized * spawnDistance;
-        SpawnFallingMinion(spawnDir);
-        healthAndNav.inAttackSeq = false;
-        boss.attackCompleted = true;
-    }
-
-    // IEnumerator SpawnMinions() {
+    // void SpawnMinion() {
     //     // start animation
     //     boss.animator.SetTrigger("SpawnMinion");
-    //     int minionCount = 0;
-    //     float angleDev = summonCount % 2 == 0 ? summonCount / 2 * -minionDegreeSep : (summonCount - 1) / 2 * -minionDegreeSep;
-    //     while (minionCount < summonCount) {
-    //         yield return new WaitForSeconds(minionSpawnInterval);
-    //         Vector2 spawnDir = Quaternion.AngleAxis(angleDev, Vector3.forward) * (healthAndNav.player.transform.position - transform.position).normalized * spawnDistance;
-    //         Debug.Log("spawn point x" + Mathf.RoundToInt(spawnDir.x));
-    //         Debug.Log("spawn point y" + Mathf.RoundToInt(spawnDir.y));
-    //         if (gg.GetNode(Mathf.RoundToInt(spawnDir.x), Mathf.RoundToInt(spawnDir.y)).Walkable) {
-    //             SpawnFallingMinion(spawnDir);
-    //             minionCount += 1;
-    //         }
-    //         angleDev += minionDegreeSep;
-    //     }
+    //     float angleDev = summonCount % 2 == 0 ? summonCount / 2 * -minionDegreeSep : (summonCount - 1) / 2 * minionDegreeSep;
+    //     Vector2 spawnDir = Quaternion.AngleAxis(angleDev, Vector3.forward) * (healthAndNav.player.transform.position - transform.position).normalized * spawnDistance;
+    //     SpawnFallingMinion(spawnDir);
     //     healthAndNav.inAttackSeq = false;
     //     boss.attackCompleted = true;
-    //     yield return null;
     // }
+
+    IEnumerator SpawnMinions() {
+        // start animation
+        boss.animator.SetTrigger("SpawnMinion");
+        int minionCount = 0;
+        float angleDev = summonCount % 2 == 0 ? summonCount / 2 * -minionDegreeSep : (summonCount - 1) / 2 * -minionDegreeSep;
+        while (minionCount < summonCount) {
+            yield return new WaitForSeconds(minionSpawnInterval);
+            Vector2 spawnDir = Quaternion.AngleAxis(angleDev, Vector3.forward) * (healthAndNav.player.transform.position - transform.position).normalized * spawnDistance;
+            if (spawnDir.x > Mathf.Abs(mapWidth / 2) || spawnDir.y > Mathf.Abs(mapHeight / 2)) {
+                Debug.Log("Not walkable at " + new Vector2(Mathf.RoundToInt(spawnDir.x), Mathf.RoundToInt(spawnDir.y)));
+            } else if (gg.GetNearest(spawnDir).node.Walkable) {
+                Debug.Log("Minion at " + spawnDir);
+                SpawnFallingMinion(spawnDir);
+                minionCount += 1;
+            }
+            angleDev += minionDegreeSep;
+        }
+        healthAndNav.inAttackSeq = false;
+        boss.attackCompleted = true;
+        yield return null; 
+    }
 
     void SpawnFallingMinion(Vector2 groundVelocity) {
         GameObject fallingMinion = Instantiate(droppingMinionPrefab, transform.position, Quaternion.identity);
