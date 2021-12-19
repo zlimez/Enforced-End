@@ -208,8 +208,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3909175958184105722}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.009, y: -0.489, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.004, y: 0.151, z: 0}
+  m_LocalScale: {x: 1.9965142, y: 2.7039082, z: 1.1557}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9057442466303404107}
@@ -607,7 +607,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   maxChargingDistance: 4
-  radius: 20
+  radius: 4
   damage: 10
   fullAudioLength: 2
   maxVolume: 0.2
