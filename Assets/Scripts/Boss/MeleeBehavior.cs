@@ -5,7 +5,7 @@ using UnityEngine;
 public class MeleeBehavior : AttackBehaviour
 {
     public float meleeWpnRadius = 1.0f;
-    public float attackDelay = 0.4f;
+    public float attackDelay = 0.5f;
     public float damage;
     private BossBehaviour boss;
     private EnemyHealth healthAndNav;
@@ -32,16 +32,18 @@ public class MeleeBehavior : AttackBehaviour
     }
 
     IEnumerator attackSeq() {
-        yield return new WaitForSeconds(attackDelay);
-        // start animation
         boss.animator.SetTrigger("Melee");
         source.Play();
+        yield return new WaitForSeconds(attackDelay);
+        // start animation
         // int playerDir = EnemyHealth.determineFace(EnemyHealth.player.transform.position - transform.position);
         // // if enemy is facing the correct direction 90 degree quadrants
         // if (healthAndNav.face == playerDir)
-        healthAndNav.player.deductHealth(damage);
+        if (Vector2.Distance(transform.position, healthAndNav.player.transform.position) <= meleeWpnRadius) {
+            healthAndNav.player.deductHealth(damage);
+        }
         boss.attackCompleted = true;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.4f);
         healthAndNav.inAttackSeq = false;
         yield return null;
     }

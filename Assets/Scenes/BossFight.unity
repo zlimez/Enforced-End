@@ -4721,7 +4721,7 @@ PrefabInstance:
     - target: {fileID: 435464060487107734, guid: 2043862ae839fbd4d910e069b5c2ad04,
         type: 3}
       propertyPath: dmgReduction
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 435464060487107734, guid: 2043862ae839fbd4d910e069b5c2ad04,
         type: 3}
