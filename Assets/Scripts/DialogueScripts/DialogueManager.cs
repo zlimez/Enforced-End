@@ -7,6 +7,7 @@ using UnityEngine.Events;
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager _instance;
+    public BoostStats boostMenu;
     public Text nameText;
     public Text dialogueText;
     public Animator animator;
@@ -31,7 +32,11 @@ public class DialogueManager : MonoBehaviour
     }
 
     IEnumerator TriggerStartDialogue() {
-        yield return new WaitForSeconds(2);
+        if (boostMenu != null) boostMenu.enabled = false;
+        Pause.PauseGame();
+        yield return new WaitForSecondsRealtime(1.5f);
+        if (boostMenu != null) boostMenu.enabled = true;
+        Pause.ResumeGame();
         DialogueStartTrigger[] dialogueStartTriggers = FindObjectsOfType<DialogueStartTrigger>();
         if (dialogueStartTriggers.Length >= 1) {
             dialogueStartTriggers[0].TriggerDialogue();
@@ -52,6 +57,8 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
+        if (boostMenu != null) boostMenu.enabled = false;
+        Pause.PauseGame();
         animator.SetBool("IsOpen", true);
         sentences.Clear();
         foreach (string sentence in dialogue.sentences) {
@@ -87,7 +94,7 @@ public class DialogueManager : MonoBehaviour
         dialogueText.text = "";
         foreach (char letter in sentence.ToCharArray()) {
             dialogueText.text += letter;
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSecondsRealtime(0.02f);
         }
         isSentenceTyping = false;
     }
@@ -98,5 +105,7 @@ public class DialogueManager : MonoBehaviour
         enabled = false;
         isSentenceTyping = false;
         dialogueEndEvent?.Invoke();
+        if (boostMenu != null) boostMenu.enabled = true;
+        Pause.ResumeGame();
     }
 }

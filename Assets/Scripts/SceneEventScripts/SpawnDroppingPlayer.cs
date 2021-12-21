@@ -15,12 +15,13 @@ public class SpawnDroppingPlayer : MonoBehaviour
     }
 
     IEnumerator DropPlayer() {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSecondsRealtime(0.2f);
         GameObject fallingPlayer = Instantiate(droppingPlayerPrefab, transform.position, Quaternion.identity);
         UnityEvent hitGroundEvent = new UnityEvent();
         hitGroundEvent.AddListener(onHitGround);
         fallingPlayer.GetComponent<ThrownMinion>().InitializeFallOnly(20.0f);
         fallingPlayer.GetComponent<ThrownMinion>().InitializeHitGroundEvent(hitGroundEvent);
+        fallingPlayer.GetComponent<ThrownMinion>().SetIsRealTime(true);
     }
 
     void onHitGround() {
@@ -30,7 +31,7 @@ public class SpawnDroppingPlayer : MonoBehaviour
     }
 
     IEnumerator DieAfterSeconds(float seconds) {
-        yield return new WaitForSeconds(seconds);
+        yield return new WaitForSecondsRealtime(seconds);
         Destroy(gameObject);
     }
 }

@@ -6,14 +6,15 @@ public class AOEBehaviour : AttackBehaviour
 {
     public PlayerController player;
     // boss will only start charging up for attack when player is within this distance
-    public float maxChargingDistance = 4;
-    public float radius = 8;
+    public float maxChargingDistance = 5;
+    public float radius = 10;
     public float damage = 10f;
     public float fullAudioLength = 3.0f;
     public float maxVolume = 0.2f;
     public bool attacked = false;
     public AudioSource source;
     public EnemyHealth healthAndNav;
+    public GameObject shockwaveSprite;
     private BossBehaviour boss;
 
     void Awake()
@@ -40,10 +41,7 @@ public class AOEBehaviour : AttackBehaviour
         // Debug.Log("aoe unleashed");
         boss.animator.SetTrigger("Shockwave");
         if (Vector2.Distance(transform.position, player.transform.position) <= radius) {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, player.transform.position - transform.position);
-            // player can hide behind wall
-            if (hit.collider.gameObject.GetComponent<PlayerController>() != null)
-                player.deductHealth(damage);
+            player.deductHealth(damage);
         }
     }
 
@@ -76,7 +74,9 @@ public class AOEBehaviour : AttackBehaviour
         source.Stop();
         source.volume = 0;
         boss.attackCompleted = true;
-        yield return new WaitForSeconds(0.5f);
+        shockwaveSprite.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        shockwaveSprite.SetActive(false);
         healthAndNav.inAttackSeq = false;
         yield return null;
     }

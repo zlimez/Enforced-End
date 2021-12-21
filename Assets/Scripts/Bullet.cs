@@ -6,7 +6,7 @@ public class Bullet : MonoBehaviour
 {
     public float speed = 5.0f;
     // public static GameObject rifle;
-    public float damage = 15.0f;
+    public float damage = 10.0f;
     private PlayerController player;
 
     void Awake() {
@@ -22,6 +22,7 @@ public class Bullet : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D col) {
+        if (col.gameObject.GetComponent<PlayerController>() != null) return;
         EnemyHealth hitEnemy = col.gameObject.GetComponent<EnemyHealth>();
         if (hitEnemy != null) 
             hitEnemy.deductHealth(damage);

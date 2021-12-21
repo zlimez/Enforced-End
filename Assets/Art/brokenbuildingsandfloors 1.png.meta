@@ -1,0 +1,4898 @@
+fileFormatVersion: 2
+guid: 4e89dfe448a314089a9773c6b21a131e
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 764
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0618a48c8e7e24944a09b2f0360cd37b
+      internalID: 2088664639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 764
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84b216d5b258d459888d677006c9f629
+      internalID: 1491846403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 764
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fae10490dff3c4904948bf1ad9ebd177
+      internalID: -10491913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 764
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd8223f4416cf40009dfd9ba4420040b
+      internalID: -91702965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 764
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed6aff59718cb4bf5b71b39b145d71f7
+      internalID: 688179017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 764
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27720d18c48914505ada5005d0f61713
+      internalID: -2080957470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 764
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15bafe4f27f08432e926b60b25332396
+      internalID: -377467189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 764
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50118cc59a28f4fbc86bc95d8eb8beff
+      internalID: -2088313060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 764
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54808bca27c134b2e90ef05b967f6f3d
+      internalID: 1944780764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_9
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 764
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33beac42876014b19b922bb2862998c2
+      internalID: -1189861958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_10
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 764
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9087698981d524f9aa59a8a56ed5602b
+      internalID: -797868639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_11
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 764
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d622f35a12b745699daae230976327a
+      internalID: -788379751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_12
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 764
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dcebe176a8d248f98c07dd051ab5568
+      internalID: -183073404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_13
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 764
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3477a3e2ebbab4fad864dfb911a1157f
+      internalID: -1318347271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_14
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 764
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b649550be0bcb48358f34227ff3adb9f
+      internalID: -820947529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_15
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 764
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e04f0873b2e8341c38395d5f2ded565d
+      internalID: -1740484000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_16
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 764
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b9c263c922894e1789286255e36a0fc
+      internalID: -475341417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_17
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 764
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 348a71883d69c4e42b2d966fff0153ed
+      internalID: 996052449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 700
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 157613dc6808f4a359d95a861455d445
+      internalID: -781677693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_19
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 700
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ab50e63182014155b3897f82e6aafac
+      internalID: -2054044777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_20
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 700
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04a0ba43a76de4984a411a7323f979c3
+      internalID: -319420820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_21
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 700
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5a809fe03d33405eaf3940cc34552e7
+      internalID: 150245801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_22
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 700
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a221069ce324840358863a6862146096
+      internalID: -458166157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_23
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 700
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b57e1c3e4261245fba363c873dffff27
+      internalID: -722215657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_24
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 700
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7289b882ff2da4bd2b4a5f432051c0d4
+      internalID: -1476879796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_25
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 700
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9de73a881fa9e4a21b6db4d95be99fac
+      internalID: 997684836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_26
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 700
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da205e95b98d4423a9725b93b69783b1
+      internalID: 1547935515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_27
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 700
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac39a0cd6b5b14488b423d851246ae1e
+      internalID: -1687712755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_28
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 700
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4ad69df3cda04309ac38a0380d1ebd1
+      internalID: -1067953913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_29
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 700
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 959774789c96b4892bdc7d11c287b2cc
+      internalID: 778646586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_30
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 700
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d44ffe517fe754b07a304d121d5f4aab
+      internalID: 681820028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_31
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 700
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0287b6e4de60b47d1bfc2c05c6b05e03
+      internalID: -1644923756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_32
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 700
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1293ef626511e40c09ade0d1f5e77a56
+      internalID: -765467716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_33
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 700
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 486d0da340ef7445bbd7838536222743
+      internalID: 656419628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_34
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 700
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43e9a19b4049d47678de00183b3a23eb
+      internalID: -1644751288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_35
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 700
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b72c12d5f4e441b59dbbe2437c655d9
+      internalID: -1958609506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 636
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 837c3bf7c58e843a0bc697c47b6e2e67
+      internalID: -181290621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_37
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 636
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91bf3cfbf2d254ab082e37ad6549adce
+      internalID: -1111534676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_38
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 636
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 898d71fadab924d07a75a7bf17db0ed4
+      internalID: 219466703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_39
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 636
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a2bc8428d45f4a35bcd344c930d61c3
+      internalID: 354950999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_40
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 636
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2810aa2c080784214baf5958af1bdb9b
+      internalID: 85250388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_41
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 636
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58719d2c2454349638c7128d68168813
+      internalID: 10867282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_42
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 636
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd4a2988866824b32b82e81718b0070f
+      internalID: -1790468894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_43
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 636
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bc2c78ba219144beb5322a4736b0987
+      internalID: 1859216768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_44
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 636
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a88bf7adb33da4ae78988fe80cc32df8
+      internalID: -1099363654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_45
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 636
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e39cab2a6d28040a8bc94827a380aa8f
+      internalID: -1852804654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_46
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 636
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 729c014ee1cfc4986a184e087d57eb82
+      internalID: -595981556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_47
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 636
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80192b408ff464cbc8c2524b20387f39
+      internalID: 469844270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_48
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 636
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7fb0c9abadae43d18aa4191205fe4c8
+      internalID: 1880215107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_49
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 636
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb8d70be6d1d6490da13ce5bd591918a
+      internalID: 1017490821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_50
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 636
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 555f4159e6c44458aa9b551c10cc3b6f
+      internalID: -833151420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_51
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 636
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90242d2cbb5c346dc9c34b6af055be03
+      internalID: 1069649773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_52
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 636
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c57308e66c837425698b15ce312f4e22
+      internalID: 2067529079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_53
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 636
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68f52fb7a3d0f49eeb77d02d8bdce3c5
+      internalID: 861583786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 572
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: decd02e23ab3540d2890cb44fc2dada7
+      internalID: -345795857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_55
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 572
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 558e0c5ac71f84cfe941b79bb09d0688
+      internalID: 951547488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_56
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 572
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1aa69ca4bc7e46f8a300e49d0a51239
+      internalID: 2011973050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_57
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 572
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 637f7ab673ba440aca5af33955ea6bcb
+      internalID: 1069129424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_58
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 572
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25b82ae62806e4d0983e81cd12f06b80
+      internalID: 1770564012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_59
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 572
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d66ad8bcfec040bc8b7f470fdaf5e44
+      internalID: 1445739320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_60
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 572
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c710dcc22d82f454b99947c1b2070e75
+      internalID: -1145485742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_61
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 572
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acfd86b1380484eff98fb1936fefce41
+      internalID: -1559673252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_62
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 572
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6781c448bf6de412eb2546053eeff716
+      internalID: -880045296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_63
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 572
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 331c6a91e73e24fe49ea508cb28f3a8c
+      internalID: -764732442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_64
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 572
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a49c8dec2786d40dd9ca38283b4a31fc
+      internalID: -1998653254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_65
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 572
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b186871679a5409d8791a8e685645eb
+      internalID: -842934120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_66
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 572
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e340843f282c4a0aa4b4b46f33b7cc7
+      internalID: -2118259833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_67
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 572
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a43809d2ad9f04411a85ef269fdb0211
+      internalID: 1987287996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_68
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 572
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ba14b0da2412403a97c2bf2ca6686b2
+      internalID: -1122648176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_69
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 572
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3302f05ac7c8244ba972c1c7bcbd5551
+      internalID: 1355816890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_70
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 572
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f46a84768f54a434f94693649196bb3b
+      internalID: 1524224441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_71
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 572
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61f81964d9b384895af9708b0a5ae165
+      internalID: 674126394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 508
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63b902ef480ca4560a6ae15a70c3dfd6
+      internalID: -528810963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_73
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 508
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cbe79cda23834481bafdf009702e8a9
+      internalID: -1675443163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_74
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 508
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46922a82f49a44d899296185febc4d04
+      internalID: 1274135585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_75
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 508
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25bea48e9719d44fca47eabfd4baeaba
+      internalID: 1747693458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_76
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 508
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95b5c2d96ddfb412082780a6193021a2
+      internalID: 1678132058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_77
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 508
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec23e98a526654f43b8d3dd84bfa8372
+      internalID: 397814400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_78
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 508
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c54bb92045e049b5a13cc3dc052b1c2
+      internalID: -1399327635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_79
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 508
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab2f6eb35bf62471396d01f8a259455b
+      internalID: -1048132030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_80
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 508
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c64bf6f8660f4b4abcf87583b4264d6
+      internalID: -185203219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_81
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 508
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8e50848b954b4187a1afb73dac1fe05
+      internalID: -2143071132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_82
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 508
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ccc17e56c03a4840ae2250a745b450f
+      internalID: -2041851484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_83
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 508
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a661ccddac6ec4b15868189bafdc92d1
+      internalID: 1733367763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_84
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 508
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50e7142b3ec2c49f49be868479d89372
+      internalID: -1515608895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_85
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 508
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6bb6185563504d8c9cffb6daaf11660
+      internalID: 375344613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_86
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 508
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e753d76d21db14454806aebd413db9dd
+      internalID: 1302573044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_87
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 508
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef83ee2a2471e412ea5f0dc0202d540d
+      internalID: 2033167024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_88
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 508
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 992bef5138e904540a80eb25b42202cc
+      internalID: 2041130909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_89
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 508
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a10a5553b6fe54b44b90b6a6fe006cb3
+      internalID: 1840699122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 444
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ae67a21b84234883b1187843e0bcb9d
+      internalID: 510377028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_91
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 444
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab4961ceb1c904955a0fbc3d2ee2ae51
+      internalID: -1052999342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_92
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 444
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88c5f453542914b96a78e141673825dd
+      internalID: 31831765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_93
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 444
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7169cde41fc04427b1bfc561d43d723
+      internalID: 1164123912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_94
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 444
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 402698e6a991e464bba6a6ce09c4a338
+      internalID: -704098919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_95
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 444
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22b88fa70e0fd4f3aa7e186af3767a8b
+      internalID: 1727279335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_96
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 444
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0423bba3a923402285b500b74ecb297
+      internalID: -848995999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_97
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 444
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f0b897a3a4eb4038aaf978e54df202b
+      internalID: 836002386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_98
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 444
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b33cf8e04ab3408691add52904cf625
+      internalID: -1417715161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_99
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 444
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdf707f07cbcc410ca1d7df35e29278d
+      internalID: 159162733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_100
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 444
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e71c465d428e44153a691c12caf3df13
+      internalID: -235997815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_101
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 444
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 766b0815bd2cc4a6c9233ff82c985b7e
+      internalID: -705341298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_102
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 444
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 946f87a20b064435bbc5eb8afb69943c
+      internalID: -720766451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_103
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 444
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 608eab0ac0b9e4365a8aba459476af07
+      internalID: -234656710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_104
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 444
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a4515e8494a3459c9402cc37f319117
+      internalID: 285911349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_105
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 444
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c61ec3ca83d094bb89f99c09672a5d14
+      internalID: -1391146870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_106
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 444
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 550b23440d8974a0db20ab597d98cac4
+      internalID: -389571161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_107
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 444
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d97052a9afbd447c7b71d68d61a7e1d0
+      internalID: -822651834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_108
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 380
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 287e401e41586428e9a07ba2609d2499
+      internalID: -782380402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_109
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 380
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 681ba5abdb7e04972a2260bbee86ff4d
+      internalID: -1382774241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_110
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 380
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7f0e1bfe79ec428c8e9057035b03198
+      internalID: 2021313347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_111
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 380
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 172f16255bd244d8abb4d762147ad581
+      internalID: -284778645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_112
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 380
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7a7fc18da9b34f9b89800da2e0bb40c
+      internalID: -824938790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_113
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 380
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b823b9ef6fb85450689c0cc8cd487678
+      internalID: 842989211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_114
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 380
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc8fa303eea77449c99cfbbfd829d7f0
+      internalID: 1746779411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_115
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 380
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce85eb8dcc65045a5b152310a5a74b99
+      internalID: 253778907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_116
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 380
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc716cb82aa3146808e03a8903c75109
+      internalID: -1538935047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_117
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 380
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93ef83c8832e04bb585cbc5271000138
+      internalID: 530630811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_118
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 380
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8a5d8f17d5d54903be6cf5be02ea090
+      internalID: -473133375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_119
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 380
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c9bc64776e8143ec93180b146d15995
+      internalID: 425484767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_120
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 380
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9f25234a820b478f93619435f64d102
+      internalID: 723289181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_121
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 380
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71c0c2f2d1dd24b7687d0aec50643f5f
+      internalID: -793525667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_122
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 380
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95bf9cd4987e349ce9af8f29d793b921
+      internalID: -347659289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_123
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 380
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 534a5dfbd3e3849c1864725d01fceaef
+      internalID: -93812759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_124
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 380
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb18311661b644b4a98e3cc17613ced3
+      internalID: -401099515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_125
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 380
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a07788967b2a14d72b408d4507d4849e
+      internalID: 1299999831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_126
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 316
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b4ba1a19e4854089b825a2ce64ae701
+      internalID: 1528151752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_127
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 316
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8295acc488c674c36ba18cffd0189e58
+      internalID: -1794348109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_128
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 316
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b1971d646c814b92bc2324c32d86227
+      internalID: 1200319362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_129
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 316
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e273b274946b74d638fa397d2c1d6bd3
+      internalID: 1603329938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_130
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 316
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0aecb340902d41e0a572b6d8b5d07d1
+      internalID: -547758770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_131
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 316
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6c2218b8ff2140a8a77fca3511f5a32
+      internalID: 2132798386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_132
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 316
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38a3cb7a4fd9a45cf9a5aba6b83c715d
+      internalID: 1065213443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_133
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 316
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b62241c084c7e4804b60df102e9f255b
+      internalID: -310442911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_134
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 316
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92a2c02807df74f26a98405f3642ca8b
+      internalID: -1959986376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_135
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 316
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15b3b3fbcb62d433fa26e362aedd2fd4
+      internalID: 1876334960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_136
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 316
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4459f35b68dae4f48999edf59ec629d4
+      internalID: 529426499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_137
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 316
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ced3ce3c2a91549bbbb1d891ca34c839
+      internalID: 701282165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_138
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 316
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 698b52c7754c642a19bf0c3b623623e9
+      internalID: -481205006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_139
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 316
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b70db5af0af64d8c97313c11653719f
+      internalID: 1218989580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_140
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 316
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cf415ef0e4e34995872184f8a5f3c12
+      internalID: 690119924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_141
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 316
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6c3937af4fc64002b52f5d6e3a8ef68
+      internalID: 384122241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_142
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 316
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82c20198cdc364459a66478006aeae10
+      internalID: -1477282967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_143
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 316
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b608de3547484b5b8fe2e38d190cade
+      internalID: -1682327179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_144
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 252
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c590c89de9e01419d807d8e02f7131f3
+      internalID: 1515245353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_145
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 252
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39db6ad87a67d449f8897e18a79a630e
+      internalID: -812511767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_146
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 252
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b68e33d388b504c30b118bf2c1f36ad0
+      internalID: 420401683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_147
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 252
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb9611b1e296c48d8b33667a74bcb117
+      internalID: 872962214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_148
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 252
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7262e7ef257b2483397e01b4b26cbb9a
+      internalID: -1060201883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_149
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 252
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 655e3dc723c6542ba88dfa98f767d2b9
+      internalID: 641272833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_150
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 252
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bebc552263c6449b09c6bc759247e418
+      internalID: -2114136008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_151
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 252
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9322a2e13d4e4fec9e3f0a96a2e0908
+      internalID: 32436424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_152
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 252
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a1a9224165a94d079fd05fbf3da0117
+      internalID: -277017897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_153
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 252
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3b86d683c0f44fd9bd438aacfe4e830
+      internalID: 1378930318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_154
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 252
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf4a9c6d8d99147a68d68fec9808bd36
+      internalID: 996111504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_155
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 252
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5a5793e810aa4ff3835a493ff830981
+      internalID: -487041666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_156
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 252
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 232b30e8ed9834cfcb5e77fd546822ed
+      internalID: -427765795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_157
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 252
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98b3a9f6fdc7b44d5b8c7f0ee0cf79e5
+      internalID: -1313201755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_158
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 252
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62baed76ffa2b43308e80cafe69a9f81
+      internalID: 1450356951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_159
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 252
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9714d7f8a9cb49f2bd0bbf43ad1a9fa
+      internalID: -1526475584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_160
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 252
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e335801bd4c144c4dbc9e2739e6a41ba
+      internalID: -1925832253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_161
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 252
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 979c5eb0a226d456bb96e6326e81782b
+      internalID: -1300002562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_162
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 188
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3c787923414b49e0adaf6d1a8e98892
+      internalID: 775884416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_163
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 188
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52a42671a87b841b7be8b65145733465
+      internalID: 194472876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_164
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 188
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81fc11701f1274dc99bcc36b40c34c6b
+      internalID: 472531768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_165
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 188
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9d7152be63ad48e898ae0de126ae1d8
+      internalID: -580650319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_166
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 188
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2d97e6f188624dbd99d634cfa32b8e7
+      internalID: 1906466109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_167
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 188
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a7f48492566b4da18353b6716a5bce1
+      internalID: 1354489905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_168
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 188
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4cbb1acb4fbe401f8ff9b055853c0b5
+      internalID: -1773267759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_169
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 188
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d0b1caefa64e403b851d2f92d73c590
+      internalID: 1097002951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_170
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 188
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1cf4b7be6f1e4e3fb0457e0c57abd24
+      internalID: 456860018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_171
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 188
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01c8af8dffc384cfe92a631c1269d004
+      internalID: -837796360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_172
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 188
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12cb89abdd3104c01b709e48fc7340f4
+      internalID: 334767298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_173
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 188
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abab593fa9f654de983812964f8cf53b
+      internalID: 1220969273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_174
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 188
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da7a2af88662d46709635459d79d93c6
+      internalID: -407872924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_175
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 188
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b21e071ed844d482fadbc1f46d69a657
+      internalID: -640831417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_176
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 188
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1378353b2a8ba457b875705aa6c0fcdb
+      internalID: -1325447022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_177
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 188
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffc41b9234aad4cd794737aec13bd346
+      internalID: -918408665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_178
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 188
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bddc85bbf6fc94abe94cfb445e039d9c
+      internalID: 1047060531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_179
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 188
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 192c144c81384403f9f6fb6bd3e7c6b1
+      internalID: -693228101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_180
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 124
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28aab99211c0f469490a284d21371106
+      internalID: 863944909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_181
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 124
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca6bf02cf8ed54f46bbb1397cb59dea8
+      internalID: -85343727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_182
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 124
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47b035149c96c4d81a1add7ff5997d54
+      internalID: -1912771817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_183
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 124
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d18f1adda7964602a1fa3c68da8530e
+      internalID: 608930664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_184
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 124
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cbcd201f30db43de9cacec6d510eada
+      internalID: -870898732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_185
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 124
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14db088525285474b95206d16abb6f61
+      internalID: -1201187890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_186
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 124
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c661ef3dbc1b4cb59f7564415a69ce8
+      internalID: -943461456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_187
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 124
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91f98d250404d495b8b193b631ce4c41
+      internalID: -1260524207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_188
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 124
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 988e5d53e592142b0800392a68d3bf44
+      internalID: 1278943845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_189
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 124
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd89ff53f454c4717946ec331452d084
+      internalID: 1593168916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_190
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 124
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72f6df5520fd0434fb81ef3c6fd18e35
+      internalID: 2031907492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_191
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 124
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d1e79510c7b14af199ef8822cd315d6
+      internalID: -2124697966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_192
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 124
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf388753fc9b647558649b1e93da92f3
+      internalID: -1225750653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_193
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 124
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a6c9718fc7a6412babc305b105a2634
+      internalID: 739895128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_194
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 124
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2d1599e2e29d4a96b202c125086f102
+      internalID: -1264770705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_195
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 124
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80f1b94aa754b4d0ab51f60fe327d097
+      internalID: 1407231534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_196
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 124
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fbe947e161c349829828014e659856a
+      internalID: 1112341239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_197
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 124
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 416bca241c3fe409fadcc50903021433
+      internalID: 1775872358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_198
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 60
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1d81119b464f480bb4e941dc23ffc4f
+      internalID: -1797959093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_199
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 60
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32956a3aa02fb4b6eb53d24c0af89abb
+      internalID: -1744069173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_200
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 60
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01abcfd1b3d46498da606eb3289e4f7f
+      internalID: -1713614760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_201
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 60
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 819bdc4a3d0cf4621b0155b0d3e8bed2
+      internalID: -1647546245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_202
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 60
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bef56ded58de47cb939418b5522b1ef
+      internalID: 1547355877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_203
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 60
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69922fb921a814d27ade3c0422622803
+      internalID: 1765421277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_204
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 60
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1858a5bfd7bb4dcca1f6b44226d19da
+      internalID: 1173322654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_205
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 60
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27d395375f27e4270a7a4bbf4bff0dbe
+      internalID: 1962133443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_206
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 60
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaa164950376c4ec19af8d8d8bd5b0b5
+      internalID: 12399115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_207
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 60
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9577892bdc21f49fb9479abc99fe9941
+      internalID: 744839438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_208
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 60
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2fbc32f584bc48a2b9a6ee231216cff
+      internalID: -264474074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_209
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 60
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5431f693002de40508ba10f2460d2e63
+      internalID: 1748891213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_210
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 60
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61b805f00177949709688cd064441262
+      internalID: -630431832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_211
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 60
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a894513ba79e04e769ca0dd1c8647efa
+      internalID: -462564678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_212
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 60
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c1644612bc6b4000a3d184f1be8925e
+      internalID: 1488440588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_213
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 60
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bebf19baf88ea4be786036b59e702ffe
+      internalID: 2047991250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_214
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 60
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af9624a11f90c489ab91d2961b47d4ee
+      internalID: 1464073608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brokenbuildingsandfloors 1_215
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 60
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db033060424a6498dafddf05509093fb
+      internalID: 911150497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      brokenbuildingsandfloors 1_132: 1065213443
+      brokenbuildingsandfloors 1_47: 469844270
+      brokenbuildingsandfloors 1_55: 951547488
+      brokenbuildingsandfloors 1_72: -528810963
+      brokenbuildingsandfloors 1_5: -2080957470
+      brokenbuildingsandfloors 1_28: -1067953913
+      brokenbuildingsandfloors 1_70: 1524224441
+      brokenbuildingsandfloors 1_90: 510377028
+      brokenbuildingsandfloors 1_56: 2011973050
+      brokenbuildingsandfloors 1_80: -185203219
+      brokenbuildingsandfloors 1_16: -475341417
+      brokenbuildingsandfloors 1_112: -824938790
+      brokenbuildingsandfloors 1_120: 723289181
+      brokenbuildingsandfloors 1_185: -1201187890
+      brokenbuildingsandfloors 1_213: 2047991250
+      brokenbuildingsandfloors 1_184: -870898732
+      brokenbuildingsandfloors 1_157: -1313201755
+      brokenbuildingsandfloors 1_192: -1225750653
+      brokenbuildingsandfloors 1_4: 688179017
+      brokenbuildingsandfloors 1_131: 2132798386
+      brokenbuildingsandfloors 1_154: 996111504
+      brokenbuildingsandfloors 1_14: -820947529
+      brokenbuildingsandfloors 1_202: 1547355877
+      brokenbuildingsandfloors 1_206: 12399115
+      brokenbuildingsandfloors 1_41: 10867282
+      brokenbuildingsandfloors 1_179: -693228101
+      brokenbuildingsandfloors 1_209: 1748891213
+      brokenbuildingsandfloors 1_2: -10491913
+      brokenbuildingsandfloors 1_169: 1097002951
+      brokenbuildingsandfloors 1_119: 425484767
+      brokenbuildingsandfloors 1_31: -1644923756
+      brokenbuildingsandfloors 1_17: 996052449
+      brokenbuildingsandfloors 1_20: -319420820
+      brokenbuildingsandfloors 1_44: -1099363654
+      brokenbuildingsandfloors 1_110: 2021313347
+      brokenbuildingsandfloors 1_116: -1538935047
+      brokenbuildingsandfloors 1_191: -2124697966
+      brokenbuildingsandfloors 1_158: 1450356951
+      brokenbuildingsandfloors 1_68: -1122648176
+      brokenbuildingsandfloors 1_98: -1417715161
+      brokenbuildingsandfloors 1_105: -1391146870
+      brokenbuildingsandfloors 1_99: 159162733
+      brokenbuildingsandfloors 1_160: -1925832253
+      brokenbuildingsandfloors 1_176: -1325447022
+      brokenbuildingsandfloors 1_32: -765467716
+      brokenbuildingsandfloors 1_197: 1775872358
+      brokenbuildingsandfloors 1_173: 1220969273
+      brokenbuildingsandfloors 1_71: 674126394
+      brokenbuildingsandfloors 1_190: 2031907492
+      brokenbuildingsandfloors 1_35: -1958609506
+      brokenbuildingsandfloors 1_69: 1355816890
+      brokenbuildingsandfloors 1_96: -848995999
+      brokenbuildingsandfloors 1_146: 420401683
+      brokenbuildingsandfloors 1_58: 1770564012
+      brokenbuildingsandfloors 1_113: 842989211
+      brokenbuildingsandfloors 1_180: 863944909
+      brokenbuildingsandfloors 1_127: -1794348109
+      brokenbuildingsandfloors 1_139: 1218989580
+      brokenbuildingsandfloors 1_145: -812511767
+      brokenbuildingsandfloors 1_149: 641272833
+      brokenbuildingsandfloors 1_3: -91702965
+      brokenbuildingsandfloors 1_201: -1647546245
+      brokenbuildingsandfloors 1_86: 1302573044
+      brokenbuildingsandfloors 1_198: -1797959093
+      brokenbuildingsandfloors 1_167: 1354489905
+      brokenbuildingsandfloors 1_88: 2041130909
+      brokenbuildingsandfloors 1_21: 150245801
+      brokenbuildingsandfloors 1_26: 1547935515
+      brokenbuildingsandfloors 1_82: -2041851484
+      brokenbuildingsandfloors 1_152: -277017897
+      brokenbuildingsandfloors 1_108: -782380402
+      brokenbuildingsandfloors 1_114: 1746779411
+      brokenbuildingsandfloors 1_163: 194472876
+      brokenbuildingsandfloors 1_153: 1378930318
+      brokenbuildingsandfloors 1_7: -2088313060
+      brokenbuildingsandfloors 1_91: -1052999342
+      brokenbuildingsandfloors 1_177: -918408665
+      brokenbuildingsandfloors 1_130: -547758770
+      brokenbuildingsandfloors 1_181: -85343727
+      brokenbuildingsandfloors 1_189: 1593168916
+      brokenbuildingsandfloors 1_53: 861583786
+      brokenbuildingsandfloors 1_187: -1260524207
+      brokenbuildingsandfloors 1_117: 530630811
+      brokenbuildingsandfloors 1_61: -1559673252
+      brokenbuildingsandfloors 1_40: 85250388
+      brokenbuildingsandfloors 1_38: 219466703
+      brokenbuildingsandfloors 1_188: 1278943845
+      brokenbuildingsandfloors 1_67: 1987287996
+      brokenbuildingsandfloors 1_111: -284778645
+      brokenbuildingsandfloors 1_178: 1047060531
+      brokenbuildingsandfloors 1_175: -640831417
+      brokenbuildingsandfloors 1_62: -880045296
+      brokenbuildingsandfloors 1_186: -943461456
+      brokenbuildingsandfloors 1_9: -1189861958
+      brokenbuildingsandfloors 1_101: -705341298
+      brokenbuildingsandfloors 1_36: -181290621
+      brokenbuildingsandfloors 1_148: -1060201883
+      brokenbuildingsandfloors 1_122: -347659289
+      brokenbuildingsandfloors 1_57: 1069129424
+      brokenbuildingsandfloors 1_92: 31831765
+      brokenbuildingsandfloors 1_34: -1644751288
+      brokenbuildingsandfloors 1_94: -704098919
+      brokenbuildingsandfloors 1_193: 739895128
+      brokenbuildingsandfloors 1_1: 1491846403
+      brokenbuildingsandfloors 1_6: -377467189
+      brokenbuildingsandfloors 1_93: 1164123912
+      brokenbuildingsandfloors 1_19: -2054044777
+      brokenbuildingsandfloors 1_214: 1464073608
+      brokenbuildingsandfloors 1_25: 997684836
+      brokenbuildingsandfloors 1_147: 872962214
+      brokenbuildingsandfloors 1_73: -1675443163
+      brokenbuildingsandfloors 1_129: 1603329938
+      brokenbuildingsandfloors 1_155: -487041666
+      brokenbuildingsandfloors 1_121: -793525667
+      brokenbuildingsandfloors 1_10: -797868639
+      brokenbuildingsandfloors 1_161: -1300002562
+      brokenbuildingsandfloors 1_204: 1173322654
+      brokenbuildingsandfloors 1_135: 1876334960
+      brokenbuildingsandfloors 1_66: -2118259833
+      brokenbuildingsandfloors 1_27: -1687712755
+      brokenbuildingsandfloors 1_45: -1852804654
+      brokenbuildingsandfloors 1_125: 1299999831
+      brokenbuildingsandfloors 1_13: -1318347271
+      brokenbuildingsandfloors 1_166: 1906466109
+      brokenbuildingsandfloors 1_79: -1048132030
+      brokenbuildingsandfloors 1_126: 1528151752
+      brokenbuildingsandfloors 1_171: -837796360
+      brokenbuildingsandfloors 1_54: -345795857
+      brokenbuildingsandfloors 1_65: -842934120
+      brokenbuildingsandfloors 1_183: 608930664
+      brokenbuildingsandfloors 1_151: 32436424
+      brokenbuildingsandfloors 1_128: 1200319362
+      brokenbuildingsandfloors 1_23: -722215657
+      brokenbuildingsandfloors 1_150: -2114136008
+      brokenbuildingsandfloors 1_30: 681820028
+      brokenbuildingsandfloors 1_123: -93812759
+      brokenbuildingsandfloors 1_89: 1840699122
+      brokenbuildingsandfloors 1_212: 1488440588
+      brokenbuildingsandfloors 1_162: 775884416
+      brokenbuildingsandfloors 1_33: 656419628
+      brokenbuildingsandfloors 1_106: -389571161
+      brokenbuildingsandfloors 1_200: -1713614760
+      brokenbuildingsandfloors 1_109: -1382774241
+      brokenbuildingsandfloors 1_172: 334767298
+      brokenbuildingsandfloors 1_133: -310442911
+      brokenbuildingsandfloors 1_83: 1733367763
+      brokenbuildingsandfloors 1_168: -1773267759
+      brokenbuildingsandfloors 1_43: 1859216768
+      brokenbuildingsandfloors 1_22: -458166157
+      brokenbuildingsandfloors 1_77: 397814400
+      brokenbuildingsandfloors 1_208: -264474074
+      brokenbuildingsandfloors 1_199: -1744069173
+      brokenbuildingsandfloors 1_164: 472531768
+      brokenbuildingsandfloors 1_11: -788379751
+      brokenbuildingsandfloors 1_24: -1476879796
+      brokenbuildingsandfloors 1_115: 253778907
+      brokenbuildingsandfloors 1_195: 1407231534
+      brokenbuildingsandfloors 1_84: -1515608895
+      brokenbuildingsandfloors 1_78: -1399327635
+      brokenbuildingsandfloors 1_144: 1515245353
+      brokenbuildingsandfloors 1_210: -630431832
+      brokenbuildingsandfloors 1_156: -427765795
+      brokenbuildingsandfloors 1_0: 2088664639
+      brokenbuildingsandfloors 1_42: -1790468894
+      brokenbuildingsandfloors 1_174: -407872924
+      brokenbuildingsandfloors 1_81: -2143071132
+      brokenbuildingsandfloors 1_194: -1264770705
+      brokenbuildingsandfloors 1_74: 1274135585
+      brokenbuildingsandfloors 1_140: 690119924
+      brokenbuildingsandfloors 1_141: 384122241
+      brokenbuildingsandfloors 1_102: -720766451
+      brokenbuildingsandfloors 1_159: -1526475584
+      brokenbuildingsandfloors 1_85: 375344613
+      brokenbuildingsandfloors 1_203: 1765421277
+      brokenbuildingsandfloors 1_205: 1962133443
+      brokenbuildingsandfloors 1_15: -1740484000
+      brokenbuildingsandfloors 1_138: -481205006
+      brokenbuildingsandfloors 1_50: -833151420
+      brokenbuildingsandfloors 1_59: 1445739320
+      brokenbuildingsandfloors 1_124: -401099515
+      brokenbuildingsandfloors 1_136: 529426499
+      brokenbuildingsandfloors 1_12: -183073404
+      brokenbuildingsandfloors 1_51: 1069649773
+      brokenbuildingsandfloors 1_29: 778646586
+      brokenbuildingsandfloors 1_37: -1111534676
+      brokenbuildingsandfloors 1_8: 1944780764
+      brokenbuildingsandfloors 1_170: 456860018
+      brokenbuildingsandfloors 1_64: -1998653254
+      brokenbuildingsandfloors 1_75: 1747693458
+      brokenbuildingsandfloors 1_196: 1112341239
+      brokenbuildingsandfloors 1_60: -1145485742
+      brokenbuildingsandfloors 1_95: 1727279335
+      brokenbuildingsandfloors 1_182: -1912771817
+      brokenbuildingsandfloors 1_18: -781677693
+      brokenbuildingsandfloors 1_137: 701282165
+      brokenbuildingsandfloors 1_52: 2067529079
+      brokenbuildingsandfloors 1_143: -1682327179
+      brokenbuildingsandfloors 1_63: -764732442
+      brokenbuildingsandfloors 1_118: -473133375
+      brokenbuildingsandfloors 1_48: 1880215107
+      brokenbuildingsandfloors 1_134: -1959986376
+      brokenbuildingsandfloors 1_39: 354950999
+      brokenbuildingsandfloors 1_76: 1678132058
+      brokenbuildingsandfloors 1_207: 744839438
+      brokenbuildingsandfloors 1_142: -1477282967
+      brokenbuildingsandfloors 1_49: 1017490821
+      brokenbuildingsandfloors 1_165: -580650319
+      brokenbuildingsandfloors 1_104: 285911349
+      brokenbuildingsandfloors 1_87: 2033167024
+      brokenbuildingsandfloors 1_46: -595981556
+      brokenbuildingsandfloors 1_215: 911150497
+      brokenbuildingsandfloors 1_107: -822651834
+      brokenbuildingsandfloors 1_103: -234656710
+      brokenbuildingsandfloors 1_97: 836002386
+      brokenbuildingsandfloors 1_211: -462564678
+      brokenbuildingsandfloors 1_100: -235997815
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

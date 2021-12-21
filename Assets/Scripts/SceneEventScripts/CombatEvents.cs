@@ -27,13 +27,13 @@ public class CombatEvents : MonoBehaviour
     }
 
     IEnumerator DelayForceTriggerTransition() {
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSecondsRealtime(1.0f);
         changeSceneCrossfade.ForceTriggerTransition("#FFFFFF");
     }
 
     public void EndingCheck() {
-        cyborgAnimator.SetTrigger("Die");
-        if (playerController.armour > 60) {
+        // cyborgAnimator.SetTrigger("Die");
+        if (playerController.armour > 50) {
             changeSceneCrossfade.LoadNextLevelWithColor("HospitalCutscene", "#FFFFFF");
         } else {
             PlayerDied();

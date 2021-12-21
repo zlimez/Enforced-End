@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
+using UnityEngine.Events;
 
 public class EnemyHealth : MonoBehaviour
 {
     public bool isBoss;
+    public UnityEvent onBossDeathEvent;
     public float maxHealth;
     public float health;
     // freeze movement when in attackSeq
@@ -14,86 +16,104 @@ public class EnemyHealth : MonoBehaviour
     public string behaviourType;
     private Seeker seeker;
     // private Rigidbody2D rb;
-    public static PlayerController player;
+    public PlayerController player;
+    public Transform target;
     public Animator animator;
     // 0: right, 1: up, 2: left, 3: down
     public int face;
-    public bool facing_right = true;
+    public bool facingLeft = true;
     public float safeDistance;
     public bool reachedEndOfPath;
     private int currentWaypoint = 0;
     public float nextWaypointDistance = 1f;
     public float speed;
     public Path path;
-    // Start is called before the first frame update
+    public Vector2 velocity;
+
     void Awake()
     {
         seeker = GetComponent<Seeker>();
-        // rb = GetComponent<Rigidbody2D>();
-        player = player == null ? GameObject.Find("Player").GetComponent<PlayerController>() : player;
-    }
-
-    void Start() {
+        if (player == null) player = GameObject.Find("Player").GetComponent<PlayerController>();
         // for base boss tag is determined only after attack pattern is generated
         if (gameObject.name.StartsWith("Boss")) {
             maxHealth = 200f;
             isBoss = true;
+            // if (player == null) player = GameObject.Find("Player");
+            // Debug.Log(player);
         }
+    }
+
+    void Start() {
         switch (gameObject.transform.GetChild(0).tag) {
             case "Melee":
             behaviourType = "Melee";
-            safeDistance = 0.25f;
+            safeDistance = 2.0f;
             if (!isBoss)
-                maxHealth = 50.0f;
-            speed = 7.5f;
+                maxHealth = 30.0f;
+            speed = 5.0f;
             break;
             case "Ranged":
             behaviourType = "Ranged";
             safeDistance = 5.0f;
             if (!isBoss)
-                maxHealth = 75.0f;
-            speed = 5f;
+                maxHealth = 30.0f;
+            speed = 2.5f;
             break;
             case "AOE":
             behaviourType = "AOE";
-            safeDistance = 2.0f;
+            safeDistance = 3.0f;
             if (!isBoss)
-                maxHealth = 100.0f;
-            speed = 3.0f;
+                maxHealth = 30.0f;
+            speed = 2.0f;
             break; 
             case "Summon":
             behaviourType = "Summon";
             safeDistance = 5.0f;
             if (!isBoss)
-                maxHealth = 100.0f;
-            speed = 3.0f;
+                maxHealth = 30.0f;
+            speed = 2.0f;
             break;
         }
         health = maxHealth;
+        SetTarget();
+    }
+
+    void SetTarget() {
+        if (isBoss) {
+            target = player.transform;
+        } else {
+            target = MeleeMinionBehavior.GetContactPoint();
+            Debug.Log("Player pos " + target.parent.position + " , Contact point " + target.position);
+        }
     }
 
     void Update () {
         animator.SetFloat("Speed", 0f);
-        float distToPlayer = Vector2.Distance(player.transform.position, transform.position);
+        float distToPlayer = Vector2.Distance(target.position, transform.position);
         // close enough do not need to move
-        if (inAttackSeq || Mathf.Abs(distToPlayer - safeDistance) <= 0.2) {
-            // rb.velocity = Vector2.zero;
+        if (inAttackSeq) {
             return;
         }
         // for AOE and ranged they try to move away from player if too close
         if (distToPlayer < safeDistance) {
-            if (behaviourType == "Melee" || behaviourType == "AOE") {
+            if (behaviourType == "Melee") {
+                Vector3 moveDir = (target.position - transform.position).normalized * speed * Mathf.Sqrt(distToPlayer);
+                transform.position += moveDir * Time.deltaTime;
+                Debug.Log("Smooth melee apporach " + moveDir);
+                // rb.velocity = moveDir;
+                return;
+            } else if (behaviourType == "AOE") {
                 return;
             } else {
                 if (seeker.IsDone())
-                    seeker.StartPath(transform.position, transform.position - (player.transform.position - transform.position), OnPathComplete);
+                    seeker.StartPath(transform.position, transform.position - (target.position - transform.position), OnPathComplete);
             }
         } else {
             if (behaviourType == "Ranged") {
                 return;
             }
             if (seeker.IsDone()) 
-                seeker.StartPath(transform.position, player.transform.position, OnPathComplete);
+                seeker.StartPath(transform.position, target.position, OnPathComplete);
         }
 
         if (path == null) {
@@ -130,17 +150,20 @@ public class EnemyHealth : MonoBehaviour
 
         Vector3 dir = (path.vectorPath[currentWaypoint] - transform.position).normalized;
         Vector3 velocity = dir * speed * speedFactor;
-        // Debug.Log("dir" + (Vector2) dir);
-        // Debug.Log("speed" + (Vector2) velocity);
+        Debug.Log("Dir " + dir);
+        Debug.Log("Actual " + velocity);
         face = determineFace(dir);
-        // rb.velocity = velocity;
-        if ((velocity.x < 0 && facing_right) || (velocity.x > 0 && !facing_right)) 
+        if (((target.position - transform.position).x < 0 && !facingLeft) || ((target.position - transform.position).x > 0 && facingLeft)) 
             Flip();
         
         animator.SetFloat("Speed", speed);
         transform.position += velocity * Time.deltaTime;
-        // gameObject.GetComponent<Rigidbody2D>().MovePosition(transform.position + velocity * Time.deltaTime);
     }
+
+    // void FixedUpdate() {
+    //     Debug.Log("Velocity " + velocity);
+    //     rb.velocity = velocity;
+    // }
 
     public void OnPathComplete (Path p) {
         if (!p.error) {
@@ -151,13 +174,20 @@ public class EnemyHealth : MonoBehaviour
     }
 
     public void deductHealth(float amount) {
+        if (!enabled) return;
         health -= amount;
-        if (health <= 0) 
-            Destroy(gameObject);
+        if (health <= 0) {
+            if (isBoss) {
+                onBossDeathEvent.Invoke();
+                enabled = false;
+            } else {
+                Destroy(gameObject);
+            }
+        }
     }
 
     public void Flip() {
-        facing_right = !facing_right;
+        facingLeft = !facingLeft;
         transform.Rotate(0f, 180f, 0f);
     }
 
