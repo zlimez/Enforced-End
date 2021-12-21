@@ -6,7 +6,7 @@ public class Bullet : MonoBehaviour
 {
     public float speed = 5.0f;
     // public static GameObject rifle;
-    public float damage = 15.0f;
+    public float damage = 10.0f;
     private PlayerController player;
 
     void Awake() {

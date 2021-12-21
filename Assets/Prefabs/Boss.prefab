@@ -253,8 +253,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -888973317
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -1420950625, guid: f2cb72921fd47bc48b02d086b6ae23d5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -503,6 +503,7 @@ MonoBehaviour:
   reachedEndOfPath: 0
   nextWaypointDistance: 1
   speed: 0
+  velocity: {x: 0, y: 0}
 --- !u!114 &9057442466303404104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -725,11 +726,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   droppingMinionPrefab: {fileID: 3600490940536270333, guid: 2483aaa2566510147be065cfaedd6bb2,
     type: 3}
-  summonCount: 5
+  summonCount: 3
   minionSpawnInterval: 1
   spawnDistance: 4
   minionDegreeSep: 10
   attacked: 0
+  mapWidth: 0
+  mapHeight: 0
 --- !u!50 &9057442466303404098
 Rigidbody2D:
   serializedVersion: 4
@@ -738,11 +741,11 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9057442466303404087}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 0.0001
+  m_UseAutoMass: 1
+  m_Mass: 0.33009207
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
@@ -776,7 +779,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9057442467107885148}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.6, y: 0, z: 0}
+  m_LocalPosition: {x: -0.75, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

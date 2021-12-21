@@ -17,6 +17,7 @@ public class EnemyHealth : MonoBehaviour
     private Seeker seeker;
     // private Rigidbody2D rb;
     public PlayerController player;
+    public Transform target;
     public Animator animator;
     // 0: right, 1: up, 2: left, 3: down
     public int face;
@@ -27,16 +28,18 @@ public class EnemyHealth : MonoBehaviour
     public float nextWaypointDistance = 1f;
     public float speed;
     public Path path;
-    // Start is called before the first frame update
+    public Vector2 velocity;
+
     void Awake()
     {
         seeker = GetComponent<Seeker>();
-        // rb = GetComponent<Rigidbody2D>();
         if (player == null) player = GameObject.Find("Player").GetComponent<PlayerController>();
         // for base boss tag is determined only after attack pattern is generated
         if (gameObject.name.StartsWith("Boss")) {
             maxHealth = 200f;
             isBoss = true;
+            // if (player == null) player = GameObject.Find("Player");
+            // Debug.Log(player);
         }
     }
 
@@ -46,61 +49,71 @@ public class EnemyHealth : MonoBehaviour
             behaviourType = "Melee";
             safeDistance = 2.0f;
             if (!isBoss)
-                maxHealth = 6.0f;
-            speed = 5.5f;
+                maxHealth = 30.0f;
+            speed = 5.0f;
             break;
             case "Ranged":
             behaviourType = "Ranged";
             safeDistance = 5.0f;
             if (!isBoss)
-                maxHealth = 75.0f;
+                maxHealth = 30.0f;
             speed = 2.5f;
             break;
             case "AOE":
             behaviourType = "AOE";
-            safeDistance = 2.0f;
+            safeDistance = 3.0f;
             if (!isBoss)
-                maxHealth = 100.0f;
-            speed = 1.5f;
+                maxHealth = 30.0f;
+            speed = 2.0f;
             break; 
             case "Summon":
             behaviourType = "Summon";
             safeDistance = 5.0f;
             if (!isBoss)
-                maxHealth = 100.0f;
-            speed = 1.5f;
+                maxHealth = 30.0f;
+            speed = 2.0f;
             break;
         }
         health = maxHealth;
+        SetTarget();
+    }
+
+    void SetTarget() {
+        if (isBoss) {
+            target = player.transform;
+        } else {
+            target = MeleeMinionBehavior.GetContactPoint();
+            Debug.Log("Player pos " + target.parent.position + " , Contact point " + target.position);
+        }
     }
 
     void Update () {
         animator.SetFloat("Speed", 0f);
-        float distToPlayer = Vector2.Distance(player.transform.position, transform.position);
+        float distToPlayer = Vector2.Distance(target.position, transform.position);
         // close enough do not need to move
         if (inAttackSeq) {
-            // rb.velocity = Vector2.zero;
             return;
         }
         // for AOE and ranged they try to move away from player if too close
         if (distToPlayer < safeDistance) {
             if (behaviourType == "Melee") {
-                Vector3 moveDir = (player.transform.position - transform.position).normalized * speed * Random.Range(0F, 1F);
+                Vector3 moveDir = (target.position - transform.position).normalized * speed * Mathf.Sqrt(distToPlayer);
                 transform.position += moveDir * Time.deltaTime;
+                Debug.Log("Smooth melee apporach " + moveDir);
+                // rb.velocity = moveDir;
                 return;
-            }
-            else if (behaviourType == "AOE") {
+            } else if (behaviourType == "AOE") {
                 return;
             } else {
                 if (seeker.IsDone())
-                    seeker.StartPath(transform.position, transform.position - (player.transform.position - transform.position), OnPathComplete);
+                    seeker.StartPath(transform.position, transform.position - (target.position - transform.position), OnPathComplete);
             }
         } else {
             if (behaviourType == "Ranged") {
                 return;
             }
             if (seeker.IsDone()) 
-                seeker.StartPath(transform.position, player.transform.position, OnPathComplete);
+                seeker.StartPath(transform.position, target.position, OnPathComplete);
         }
 
         if (path == null) {
@@ -137,17 +150,20 @@ public class EnemyHealth : MonoBehaviour
 
         Vector3 dir = (path.vectorPath[currentWaypoint] - transform.position).normalized;
         Vector3 velocity = dir * speed * speedFactor;
-        // Debug.Log("dir" + (Vector2) dir);
-        // Debug.Log("speed" + (Vector2) velocity);
+        Debug.Log("Dir " + dir);
+        Debug.Log("Actual " + velocity);
         face = determineFace(dir);
-        // rb.velocity = velocity;
-        if (((player.transform.position - transform.position).x < 0 && !facingLeft) || ((player.transform.position - transform.position).x > 0 && facingLeft)) 
+        if (((target.position - transform.position).x < 0 && !facingLeft) || ((target.position - transform.position).x > 0 && facingLeft)) 
             Flip();
         
         animator.SetFloat("Speed", speed);
         transform.position += velocity * Time.deltaTime;
-        // gameObject.GetComponent<Rigidbody2D>().MovePosition(transform.position + velocity * Time.deltaTime);
     }
+
+    // void FixedUpdate() {
+    //     Debug.Log("Velocity " + velocity);
+    //     rb.velocity = velocity;
+    // }
 
     public void OnPathComplete (Path p) {
         if (!p.error) {

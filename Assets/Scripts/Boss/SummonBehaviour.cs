@@ -27,10 +27,6 @@ public class SummonBehaviour : AttackBehaviour
         mapHeight = gg.size.y;
     }
 
-    // void Start() {
-        
-    // }
-
     override public bool attack() {
         healthAndNav.inAttackSeq = true;
         StartCoroutine(SpawnMinions());
@@ -42,16 +38,6 @@ public class SummonBehaviour : AttackBehaviour
         return "Summon";
     }
 
-    // void SpawnMinion() {
-    //     // start animation
-    //     boss.animator.SetTrigger("SpawnMinion");
-    //     float angleDev = summonCount % 2 == 0 ? summonCount / 2 * -minionDegreeSep : (summonCount - 1) / 2 * minionDegreeSep;
-    //     Vector2 spawnDir = Quaternion.AngleAxis(angleDev, Vector3.forward) * (healthAndNav.player.transform.position - transform.position).normalized * spawnDistance;
-    //     SpawnFallingMinion(spawnDir);
-    //     healthAndNav.inAttackSeq = false;
-    //     boss.attackCompleted = true;
-    // }
-
     IEnumerator SpawnMinions() {
         // start animation
         boss.animator.SetTrigger("SpawnMinion");
@@ -59,7 +45,7 @@ public class SummonBehaviour : AttackBehaviour
         float angleDev = summonCount % 2 == 0 ? summonCount / 2 * -minionDegreeSep : (summonCount - 1) / 2 * -minionDegreeSep;
         while (minionCount < summonCount) {
             yield return new WaitForSeconds(minionSpawnInterval);
-            Vector2 spawnDir = Quaternion.AngleAxis(angleDev, Vector3.forward) * (healthAndNav.player.transform.position - transform.position).normalized * spawnDistance;
+            Vector2 spawnDir = Quaternion.AngleAxis(angleDev, Vector3.forward) * (healthAndNav.target.position - transform.position).normalized * spawnDistance;
             if (spawnDir.x > Mathf.Abs(mapWidth / 2) || spawnDir.y > Mathf.Abs(mapHeight / 2)) {
                 Debug.Log("Not walkable at " + new Vector2(Mathf.RoundToInt(spawnDir.x), Mathf.RoundToInt(spawnDir.y)));
             } else if (gg.GetNearest(spawnDir).node.Walkable) {

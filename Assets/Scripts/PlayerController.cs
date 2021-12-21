@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
     public bool overheated = false;
     public float baseTemp = 0f;
     public float perRoundTempInc = 5.0f;
-    public float baseCoolingRate = 2.0f; // 25 degree temp diff
+    public float baseCoolingRate = 3.0f; // 25 degree temp diff
     public float maxShootAngleDev = 10.0f; 
     void Start()
     {
@@ -57,17 +57,16 @@ public class PlayerController : MonoBehaviour
         shotCd -= Time.deltaTime;
         if (overheated) 
             overheated = baseTemp > canShootAgnThres;
-
-        if ((horizontal > 0 && !facingRight) || (horizontal < 0 && facingRight)) 
+        
+        Vector2 mouseDir = (Vector2) Camera.main.ScreenToWorldPoint(Input.mousePosition) - (Vector2) transform.position;
+        if ((mouseDir.x > 0 && !facingRight) || (mouseDir.x < 0 && facingRight)) 
             Flip();
 
         if (!Pause.GameIsPaused && Input.GetMouseButton(0) && shotCd <= 0 && !overheated) {
             shotCd = shotInterval;
-            Vector2 point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector2 shotDir = point - (Vector2) transform.position;
-            firePoint.transform.right = shotDir;
-            if ((shotDir.x > 0 && !facingRight) || (shotDir.x < 0 && facingRight))
-                Flip();
+            firePoint.transform.right = mouseDir;
+            // if ((shotDir.x > 0 && !facingRight) || (shotDir.x < 0 && facingRight))
+            //     Flip();
             //trigger attack animation
             if (equipped == weapon.RIFLE) {
                 Shoot();

@@ -6,8 +6,8 @@ public class AOEBehaviour : AttackBehaviour
 {
     public PlayerController player;
     // boss will only start charging up for attack when player is within this distance
-    public float maxChargingDistance = 4;
-    public float radius = 8;
+    public float maxChargingDistance = 5;
+    public float radius = 10;
     public float damage = 10f;
     public float fullAudioLength = 3.0f;
     public float maxVolume = 0.2f;

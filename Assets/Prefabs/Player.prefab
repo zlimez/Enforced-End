@@ -123,7 +123,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &435464060487107732
 Transform:
   m_ObjectHideFlags: 0
@@ -153,8 +153,8 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 20
+  m_UseAutoMass: 1
+  m_Mass: 0.22884466
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
@@ -205,7 +205,7 @@ MonoBehaviour:
   degradationTime: 1
   shotInterval: 0.3
   shotCd: 0
-  overheatThres: 50
+  overheatThres: 80
   canShootAgnThres: 45
   overheated: 0
   baseTemp: 0
@@ -225,8 +225,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.14942169, y: 0.016033798}
-  m_Size: {x: 0.36422348, y: 0.7981135}
+  m_Offset: {x: -0.14942169, y: -0.024869293}
+  m_Size: {x: 0.36422348, y: 1.0598948}
   m_Direction: 0
 --- !u!1 &1250071191101293431
 GameObject:
@@ -337,7 +337,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6615748741207484609}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.7, y: 0, z: 0}
+  m_LocalPosition: {x: 0.266, y: 0.049, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

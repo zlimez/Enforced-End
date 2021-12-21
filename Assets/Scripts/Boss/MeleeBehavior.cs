@@ -11,6 +11,7 @@ public class MeleeBehavior : AttackBehaviour
     private EnemyHealth healthAndNav;
     public bool attacked = false;
     public AudioSource source;
+    public PlayerController player;
 
     void Awake() {
         boss = GetComponent<BossBehaviour>();
@@ -36,10 +37,13 @@ public class MeleeBehavior : AttackBehaviour
         // start animation
         boss.animator.SetTrigger("Melee");
         source.Play();
-        // int playerDir = EnemyHealth.determineFace(EnemyHealth.player.transform.position - transform.position);
-        // // if enemy is facing the correct direction 90 degree quadrants
-        // if (healthAndNav.face == playerDir)
-        healthAndNav.player.deductHealth(damage);
+        int playerDir = EnemyHealth.determineFace(player.transform.position - transform.position);
+        // if enemy is facing the correct direction 90 degree quadrants, enables dodging
+        if (healthAndNav.face == playerDir && Vector2.Distance(transform.position, player.transform.position) <= meleeWpnRadius) {
+            // Debug.Log("Boss facing " + playerDir + " Distance " + Vector2.Distance(transform.position, healthAndNav.player.transform.position));
+            player.deductHealth(damage);
+        }
+        // Debug.Log("Boss facing " + healthAndNav.face + " Player at " + playerDir + "Distance " + Vector2.Distance(transform.position, healthAndNav.player.transform.position));
         boss.attackCompleted = true;
         yield return new WaitForSeconds(0.5f);
         healthAndNav.inAttackSeq = false;

@@ -90,6 +90,8 @@ MonoBehaviour:
   reachedEndOfPath: 0
   nextWaypointDistance: 1
   speed: 0
+  rb: {fileID: 0}
+  velocity: {x: 0, y: 0}
 --- !u!114 &5254456563982475935
 MonoBehaviour:
   m_ObjectHideFlags: 0
