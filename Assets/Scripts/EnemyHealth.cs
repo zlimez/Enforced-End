@@ -38,41 +38,35 @@ public class EnemyHealth : MonoBehaviour
         if (gameObject.name.StartsWith("Boss")) {
             maxHealth = 200f;
             isBoss = true;
-            // if (player == null) player = GameObject.Find("Player");
-            // Debug.Log(player);
         }
     }
 
     void Start() {
         switch (gameObject.transform.GetChild(0).tag) {
             case "Melee":
-            behaviourType = "Melee";
-            safeDistance = 2.0f;
-            if (!isBoss)
-                maxHealth = 30.0f;
-            speed = 5.0f;
-            break;
+                behaviourType = "Melee";
+                safeDistance = 2.0f;
+                if (maxHealth == 0) maxHealth = 30.0f;
+                speed = 5.0f;
+                break;
             case "Ranged":
-            behaviourType = "Ranged";
-            safeDistance = 5.0f;
-            if (!isBoss)
-                maxHealth = 30.0f;
-            speed = 2.5f;
-            break;
+                behaviourType = "Ranged";
+                safeDistance = 5.0f;
+                if (maxHealth == 0) maxHealth = 30.0f;
+                speed = 2.5f;
+                break;
             case "AOE":
-            behaviourType = "AOE";
-            safeDistance = 3.0f;
-            if (!isBoss)
-                maxHealth = 30.0f;
-            speed = 2.0f;
-            break; 
+                behaviourType = "AOE";
+                safeDistance = 3.0f;
+                if (maxHealth == 0) maxHealth = 30.0f;
+                speed = 2.0f;
+                break; 
             case "Summon":
-            behaviourType = "Summon";
-            safeDistance = 5.0f;
-            if (!isBoss)
-                maxHealth = 30.0f;
-            speed = 2.0f;
-            break;
+                behaviourType = "Summon";
+                safeDistance = 5.0f;
+                if (maxHealth == 0) maxHealth = 30.0f;
+                speed = 2.0f;
+                break;
         }
         health = maxHealth;
         SetTarget();
@@ -177,13 +171,20 @@ public class EnemyHealth : MonoBehaviour
         if (!enabled) return;
         health -= amount;
         if (health <= 0) {
+            enabled = false;
             if (isBoss) {
                 onBossDeathEvent.Invoke();
-                enabled = false;
             } else {
-                Destroy(gameObject);
+                animator.SetTrigger("Die");
+                StartCoroutine(DelayDeath());
             }
         }
+    }
+
+    IEnumerator DelayDeath() {
+        yield return new WaitForSeconds(1.0f);
+        Destroy(gameObject);
+        yield return null;
     }
 
     public void Flip() {

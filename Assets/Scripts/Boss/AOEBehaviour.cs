@@ -57,7 +57,7 @@ public class AOEBehaviour : AttackBehaviour
     }
 
     IEnumerator StopMovePrepareAttack() {
-        yield return new WaitForSeconds(fullAudioLength * 0.8f);
+        yield return new WaitForSeconds(fullAudioLength * 0.9f);
         healthAndNav.inAttackSeq = true;
         yield return null;
     }

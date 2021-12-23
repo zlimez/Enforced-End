@@ -832,6 +832,8 @@ MonoBehaviour:
     - According to recent reports, the Paladin Enforcer model tend to form their
       own ideas on which strategies they use.
     - Observe its attack patterns carefully and think about how to counter them.
+    - The shockwave attack is especially dangerous, but you can hide behind walls
+      to reduce the impact.
     - "And well\u2026 good luck!"
     dialogueEndEvent:
       m_PersistentCalls:
@@ -3878,6 +3880,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3909175958184105722, guid: 8679e8e7997652244a98652213c2127c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9057442466303404087, guid: 8679e8e7997652244a98652213c2127c,
         type: 3}
       propertyPath: m_Name
@@ -3888,6 +3895,16 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 2060307894}
+    - target: {fileID: 9057442466303404096, guid: 8679e8e7997652244a98652213c2127c,
+        type: 3}
+      propertyPath: targetTime
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 9057442466303404097, guid: 8679e8e7997652244a98652213c2127c,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2060307896}
     - target: {fileID: 9057442466303404105, guid: 8679e8e7997652244a98652213c2127c,
         type: 3}
       propertyPath: player
@@ -3958,6 +3975,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 2060307896}
+    - target: {fileID: 9057442466303404111, guid: 8679e8e7997652244a98652213c2127c,
+        type: 3}
+      propertyPath: radius
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8679e8e7997652244a98652213c2127c, type: 3}
 --- !u!95 &1576422493 stripped
@@ -3989,7 +4011,6 @@ GameObject:
   - component: {fileID: 1686101334}
   - component: {fileID: 1686101336}
   - component: {fileID: 1686101335}
-  - component: {fileID: 1686101337}
   m_Layer: 7
   m_Name: Top
   m_TagString: Untagged
@@ -4221,22 +4242,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!19719996 &1686101337
-TilemapCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1686101333}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0.00001
 --- !u!1 &1722946553
 GameObject:
   m_ObjectHideFlags: 0
@@ -4833,6 +4838,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 435464060487107734, guid: 2043862ae839fbd4d910e069b5c2ad04,
         type: 3}
+      propertyPath: dmgReduction
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 435464060487107734, guid: 2043862ae839fbd4d910e069b5c2ad04,
+        type: 3}
+      propertyPath: canShootAgnThres
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 435464060487107734, guid: 2043862ae839fbd4d910e069b5c2ad04,
+        type: 3}
       propertyPath: onDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 297793902}
@@ -5062,21 +5077,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 835426885718089091, guid: 151c9fb6b0bf49e4793b5a3e323576f1,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.35
-      objectReference: {fileID: 0}
-    - target: {fileID: 835426885718089091, guid: 151c9fb6b0bf49e4793b5a3e323576f1,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.35
-      objectReference: {fileID: 0}
-    - target: {fileID: 835426885718089091, guid: 151c9fb6b0bf49e4793b5a3e323576f1,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.35
       objectReference: {fileID: 0}
     - target: {fileID: 835426885718089091, guid: 151c9fb6b0bf49e4793b5a3e323576f1,
         type: 3}
@@ -5428,6 +5428,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: 0, y: -2, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 5
+      m_TileSpriteIndex: 5
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: 6, y: -2, z: 0}
     second:
       serializedVersion: 2
@@ -5462,7 +5472,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 3
-      m_TileSpriteIndex: 3
+      m_TileSpriteIndex: 6
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -5508,6 +5518,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: -3, y: 0, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 6
+      m_TileSpriteIndex: 3
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: 5, y: 0, z: 0}
     second:
       serializedVersion: 2
@@ -5543,6 +5563,16 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 1
       m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 3, y: 1, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 5
+      m_TileSpriteIndex: 5
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -5750,6 +5780,10 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: a45e17ae916b1584898d3c8e233df822, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 00ec6adb7c2791142bbb16cf50428f10, type: 2}
+  - m_RefCount: 2
+    m_Data: {fileID: 11400000, guid: 7e5b795216456084cbe6b2b571063b15, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: a902075a21b9c4b4abe18a56806f1827, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
@@ -5758,11 +5792,15 @@ Tilemap:
   - m_RefCount: 47
     m_Data: {fileID: -1609640251, guid: 640769263cc9cdc41a9ddd4d9fec97de, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: -1070622464, guid: 1eb42c8ea8b40324aa84b245e2437ff5, type: 3}
+    m_Data: {fileID: -184918339, guid: 1eb42c8ea8b40324aa84b245e2437ff5, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -868906733, guid: 1eb42c8ea8b40324aa84b245e2437ff5, type: 3}
+  - m_RefCount: 2
+    m_Data: {fileID: -1010623234, guid: 1eb42c8ea8b40324aa84b245e2437ff5, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -1070622464, guid: 1eb42c8ea8b40324aa84b245e2437ff5, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 50
+  - m_RefCount: 53
     m_Data:
       e00: 1
       e01: 0
@@ -5781,7 +5819,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 50
+  - m_RefCount: 53
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -5853,7 +5891,7 @@ PrefabInstance:
     - target: {fileID: 2165286986289103482, guid: 8555744bc426e4fe28fe8d5d36e484e3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2165286986289103482, guid: 8555744bc426e4fe28fe8d5d36e484e3,
         type: 3}

@@ -78,11 +78,12 @@ MonoBehaviour:
   onBossDeathEvent:
     m_PersistentCalls:
       m_Calls: []
-  maxHealth: 0
+  maxHealth: 1
   health: 0
   inAttackSeq: 0
   behaviourType: 
   player: {fileID: 0}
+  target: {fileID: 0}
   animator: {fileID: 1352716976067273662}
   face: 0
   facingLeft: 0
@@ -90,7 +91,6 @@ MonoBehaviour:
   reachedEndOfPath: 0
   nextWaypointDistance: 1
   speed: 0
-  rb: {fileID: 0}
   velocity: {x: 0, y: 0}
 --- !u!114 &5254456563982475935
 MonoBehaviour:
@@ -137,6 +137,7 @@ MonoBehaviour:
   animator: {fileID: 1352716976067273662}
   minionHealth: {fileID: 0}
   discount: 0.2
+  contactPointChosen: {fileID: 0}
 --- !u!1 &7744951107476762702
 GameObject:
   m_ObjectHideFlags: 0

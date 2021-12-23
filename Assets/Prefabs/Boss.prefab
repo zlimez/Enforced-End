@@ -208,9 +208,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3909175958184105722}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.009, y: -0.489, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 9057442466303404107}
   m_RootOrder: 3
@@ -496,6 +496,7 @@ MonoBehaviour:
   inAttackSeq: 0
   behaviourType: 
   player: {fileID: 0}
+  target: {fileID: 0}
   animator: {fileID: 7494706291468776785}
   face: 0
   facingLeft: 1
@@ -573,6 +574,7 @@ MonoBehaviour:
   damage: 15
   attacked: 0
   source: {fileID: 355287716}
+  player: {fileID: 0}
 --- !u!114 &9057442466303404096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -592,7 +594,6 @@ MonoBehaviour:
   forceScale: 4
   targetTime: 2
   attacked: 0
-  layermask: 0
   charge: {fileID: 1313992192}
 --- !u!114 &9057442466303404111
 MonoBehaviour:
@@ -608,7 +609,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   maxChargingDistance: 4
-  radius: 20
+  radius: 5
   damage: 10
   fullAudioLength: 2
   maxVolume: 0.2

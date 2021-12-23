@@ -43,17 +43,18 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         if (health <= 0) {
+            animator.SetTrigger("Die");
             onDeathEvent?.Invoke();
             enabled = false;
         }
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
-        if (Input.GetKeyDown(KeyCode.E)) {
-            if (equipped == weapon.RIFLE) {
-                equipped = weapon.MELEE;
-            } else
-                equipped = weapon.RIFLE;
-        }
+        // if (Input.GetKeyDown(KeyCode.E)) {
+        //     if (equipped == weapon.RIFLE) {
+        //         equipped = weapon.MELEE;
+        //     } else
+        //         equipped = weapon.RIFLE;
+        // }
         shotCd -= Time.deltaTime;
         if (overheated) 
             overheated = baseTemp > canShootAgnThres;
@@ -78,7 +79,9 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate() {
         animator.SetFloat("Speed", horizontal + vertical);
-        body.velocity = new Vector2(horizontal * runspeed * movement / 100.0f, vertical * runspeed * movement / 100.0f);
+        Vector2 baseVelocity = new Vector2(horizontal, vertical); 
+        baseVelocity.Normalize();
+        body.velocity = baseVelocity * runspeed * movement / 100.0f;
     }
 
     void Shoot() {
@@ -90,17 +93,19 @@ public class PlayerController : MonoBehaviour
     IEnumerator degradeStats() {
         while (true) {
             yield return new WaitForSeconds(degradationTime);
-            if (sight > 0)
+            if (sight >= 1)
                 sight -= 1.0f;
-            if (hear > 0)
+            if (hear >= 1)
                 hear -= 1.0f;
-            movement -= 1.0f;
-            if (movement > 0)
+            if (movement >= 1)
+                movement -= 1.0f;
+            if (armour >= 1)
                 armour -= 1.0f;
             if (health > 0)
                 health -= 0.1f;
             if (baseTemp > 0)
                 baseTemp -= baseCoolingRate * baseTemp / 25;
+            AudioListener.volume = 0.2f + (hear / 128f);
         }
     }
 

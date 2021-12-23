@@ -32,56 +32,62 @@ public class BoostStats : MonoBehaviour
 
  public void boostStat(string statType) {
         balanceText = balanceText == null ? balanceHolder.GetComponent<TextMeshProUGUI>() : balanceText;
+        float remainder = 0;
         switch (statType) {
             case "movement":
-            if (statBalance >= 20) {
-                player.movement += 20;
-                StatBar.allBars[0].value += 20;
-                statBalance -= 20;
-            } else {
-                player.movement += statBalance;
-                StatBar.allBars[0].value += statBalance;
-                statBalance = 0;
-            }
-            player.movement = Mathf.Min(player.movement, 100);
-            break;
+                if (statBalance >= 20) {
+                    player.movement += 20;
+                    StatBar.allBars[0].value += 20;
+                    statBalance -= 20;
+                } else {
+                    player.movement += statBalance;
+                    StatBar.allBars[0].value += statBalance;
+                    statBalance = 0;
+                }
+                remainder = Mathf.Max(player.movement - 100, 0);
+                player.movement = Mathf.Min(player.movement, 100);
+                break;
             case "armour":
-            if (statBalance >= 20) {
-                player.armour += 20;
-                StatBar.allBars[1].value += 20;
-                statBalance -= 20;
-            } else {
-                player.armour += statBalance;
-                StatBar.allBars[1].value += statBalance;
-                statBalance = 0;
-            }
-            player.armour = Mathf.Min(player.armour, 100);
-            break;
+                if (statBalance >= 20) {
+                    player.armour += 20;
+                    StatBar.allBars[1].value += 20;
+                    statBalance -= 20;
+                } else {
+                    player.armour += statBalance;
+                    StatBar.allBars[1].value += statBalance;
+                    statBalance = 0;
+                }
+                remainder = Mathf.Max(player.armour - 100, 0);
+                player.armour = Mathf.Min(player.armour, 100);
+                break;
             case "hearing":
-            if (statBalance >= 20) {
-                player.hear += 20;
-                StatBar.allBars[2].value += 20;
-                statBalance -= 20;
-            } else {
-                player.hear += statBalance;
-                StatBar.allBars[2].value += statBalance;
-                statBalance = 0;
-            }
-            player.hear = Mathf.Min(player.hear, 100);
-            break;
+                if (statBalance >= 20) {
+                    player.hear += 20;
+                    StatBar.allBars[2].value += 20;
+                    statBalance -= 20;
+                } else {
+                    player.hear += statBalance;
+                    StatBar.allBars[2].value += statBalance;
+                    statBalance = 0;
+                }
+                remainder = Mathf.Max(player.hear - 100, 0);
+                player.hear = Mathf.Min(player.hear, 100);
+                break;
             case "sight":
-            if (statBalance >= 20) {
-                player.sight += 20;
-                StatBar.allBars[3].value += 20;
-                statBalance -= 20;
-            } else {
-                player.sight += statBalance;
-                StatBar.allBars[3].value += statBalance;
-                statBalance = 0;
-            }
-            player.sight = Mathf.Min(player.sight, 100);
-            break;
+                if (statBalance >= 20) {
+                    player.sight += 20;
+                    StatBar.allBars[3].value += 20;
+                    statBalance -= 20;
+                } else {
+                    player.sight += statBalance;
+                    StatBar.allBars[3].value += statBalance;
+                    statBalance = 0;
+                }
+                remainder = Mathf.Max(player.sight - 100, 0);
+                player.sight = Mathf.Min(player.sight, 100);
+                break;
         }
+        statBalance += remainder;
         balanceText.SetText("Balance: " + statBalance);
     }
 
@@ -90,7 +96,7 @@ public class BoostStats : MonoBehaviour
         balanceText = balanceText == null ? balanceHolder.GetComponent<TextMeshProUGUI>() : balanceText;
         switch (statType) {
             case "movement":
-            if (player.movement >= 20) {
+            if (player.movement >= 21) {
                 statBalance += 20;
                 player.movement -= 20;
                 StatBar.allBars[0].value -= 20;

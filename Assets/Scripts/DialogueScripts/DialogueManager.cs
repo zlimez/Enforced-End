@@ -34,7 +34,7 @@ public class DialogueManager : MonoBehaviour
     IEnumerator TriggerStartDialogue() {
         if (boostMenu != null) boostMenu.enabled = false;
         Pause.PauseGame();
-        yield return new WaitForSecondsRealtime(1.5f);
+        yield return new WaitForSecondsRealtime(1.0f);
         if (boostMenu != null) boostMenu.enabled = true;
         Pause.ResumeGame();
         DialogueStartTrigger[] dialogueStartTriggers = FindObjectsOfType<DialogueStartTrigger>();

@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1542430139
   m_SortingLayer: 4
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -1141995484, guid: 8fa4ae44edbe64a4b95e3051b396ec79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -206,12 +206,12 @@ MonoBehaviour:
   shotInterval: 0.3
   shotCd: 0
   overheatThres: 80
-  canShootAgnThres: 70
+  canShootAgnThres: 50
   overheated: 0
   baseTemp: 0
   perRoundTempInc: 5
-  baseCoolingRate: 2
-  maxShootAngleDev: 40
+  baseCoolingRate: 3
+  maxShootAngleDev: 30
 --- !u!70 &6497508063902799773
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -280,7 +280,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -298,8 +298,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1542430139
+  m_SortingLayer: 4
   m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b,
     type: 3}
