@@ -210,7 +210,7 @@ MonoBehaviour:
   overheated: 0
   baseTemp: 0
   perRoundTempInc: 5
-  baseCoolingRate: 3
+  baseCoolingRate: 2
   maxShootAngleDev: 40
 --- !u!70 &6497508063902799773
 CapsuleCollider2D:
