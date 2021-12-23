@@ -78,7 +78,7 @@ MonoBehaviour:
   onBossDeathEvent:
     m_PersistentCalls:
       m_Calls: []
-  maxHealth: 1
+  maxHealth: 9
   health: 0
   inAttackSeq: 0
   behaviourType: 

@@ -832,9 +832,12 @@ MonoBehaviour:
     - According to recent reports, the Paladin Enforcer model tend to form their
       own ideas on which strategies they use.
     - Observe its attack patterns carefully and think about how to counter them.
-    - The shockwave attack is especially dangerous, but you can hide behind walls
-      to reduce the impact.
-    - "And well\u2026 good luck!"
+    - The shockwave attack is especially dangerous and it's only indicator is sound
+      based.
+    - To reduce the impact of the shockwave, try to hide behind walls.
+    - And try to destroy the bugbots too, that causes the boss to take additional
+      damage.
+    - Good luck out there!
     dialogueEndEvent:
       m_PersistentCalls:
         m_Calls: []

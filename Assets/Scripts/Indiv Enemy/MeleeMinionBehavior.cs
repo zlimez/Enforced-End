@@ -11,7 +11,7 @@ public class MeleeMinionBehavior : MonoBehaviour
     public EnemyHealth minionHealth;
     // minion destroyed will cause boss to lose health
     public static EnemyHealth bossHealth;
-    public float discount = 0.4f; // ratio of dmg to enforcer health when minion is destroyed
+    public float discount = 0.9f; // ratio of dmg to enforcer health when minion is destroyed
     public Transform contactPointChosen;
     public static List<Transform> contactPoints;
     public static bool contactsInitiated = false;

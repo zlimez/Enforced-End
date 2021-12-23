@@ -885,14 +885,20 @@ MonoBehaviour:
     - 'Due to the high energy consumption of the X07 armor, soldiers are expected
       to exercise judgement to prioritise mission critical power armour systems, '
     - and route power away from less needed functionalities.
+    - Unused power will not degrade.
     - The X07 armor at full power have been tested to be able to last several missile
-      strikes before breaking.
+      strikes before the soldier sustains fatal injuries.
+    - However, the armor will be barely functional at that point, and will be unable
+      to resist precise strikes by an enemy.
+    - In that case, for the soldier is advised to sacrifice their life good of the
+      city and activate the self destruct sequence before the enemy is able to destroy
+      the power core.
     - The X07 armor have also been equipped with air recycling systems to better
       resist biochemical attacks.
     - The AEX31 Energy Rifle do not require ammo, and instead draws power which leaks
       from the X07 armor.
-    - However, overuse of the AEX31 Energy Rifle causes overheat, which renders the
-      weapon unusable for a short period of time.
+    - Overuse of the AEX31 Energy Rifle causes overheat, which slows the recharge
+      time, and temporaily renders the weapon unusable.
     dialogueEndEvent:
       m_PersistentCalls:
         m_Calls: []

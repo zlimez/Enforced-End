@@ -47,7 +47,8 @@ public class SummonBehaviour : AttackBehaviour
             yield return new WaitForSeconds(minionSpawnInterval);
             Vector2 spawnDir = Quaternion.AngleAxis(angleDev, Vector3.forward) * (healthAndNav.target.position - transform.position).normalized * spawnDistance;
             if (spawnDir.x > Mathf.Abs(mapWidth / 2) || spawnDir.y > Mathf.Abs(mapHeight / 2)) {
-                Debug.Log("Not walkable at " + new Vector2(Mathf.RoundToInt(spawnDir.x), Mathf.RoundToInt(spawnDir.y)));
+                // Debug.Log("Not walkable at " + new Vector2(Mathf.RoundToInt(spawnDir.x), Mathf.RoundToInt(spawnDir.y)));
+                Debug.Log("Not walkable");
             } else if (gg.GetNearest(spawnDir).node.Walkable) {
                 Debug.Log("Minion at " + spawnDir);
                 SpawnFallingMinion(spawnDir);
